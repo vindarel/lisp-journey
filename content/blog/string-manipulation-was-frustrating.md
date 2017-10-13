@@ -44,7 +44,7 @@ I just don't know how come this lib didn't exist yet.
 
 You can install it with
 
-    (ql:quicklisp "str")
+    (ql:quickload "str")
 
 See on https://github.com/vindarel/cl-str.
 
