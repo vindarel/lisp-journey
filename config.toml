@@ -1,0 +1,57 @@
+baseURL = "lisp-journey"
+languageCode = "en-us"
+title = "Lisp journey"
+theme = "hugo_theme_beg"
+# author = ""
+
+[Indexes]
+tag = "tags"
+
+# Cocoa
+# lacks tags
+
+# [permalinks]
+# blog  = "blog/:slug/"
+
+[[menu.main]]
+name                   = "Posts"
+weight                 = -120
+identifier             = "blog"
+url                    = "/posts/"
+
+[[menu.main]]
+name                   = "About"
+weight                 = -110
+identifier             = "home"
+url                    = "/about/"
+
+[[menu.main]]
+name                   = "Good resources"
+weight                 = -115
+identifier             = "resources"
+url                    = "/resources/"
+
+# [params]
+# email                  = "you@example.space"
+# description = "My Common Lisp journey. Discovering the language and the ecosystem."
+# latestpostscount       = 20
+# gitlab = "vindarel"
+
+# other
+
+# [permalinks]
+# blog  = "/blog/:year/:month/:title/"
+
+# [params]
+# logoimage =
+
+# [[menu.main]]
+# weight = 1
+# name = "Home"
+# url = "/"
+
+# [[menu.main]]
+# weight = 2
+# name = "Blog"
+# url = "/blog/"
+# identifier = "blog"
