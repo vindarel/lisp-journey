@@ -1,4 +1,5 @@
-baseURL = "/common-lisp-journey/"
+# baseURL = "common-lisp-journey/"
+baseURL = "lisp-journey/"
 languageCode = "en-us"
 title = "Lisp journey"
 theme = "hugo_theme_beg"
