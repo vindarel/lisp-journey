@@ -18,7 +18,7 @@ tag = "tags"
 name                   = "Posts"
 weight                 = -120
 identifier             = "blog"
-url                    = "/posts/"
+url                    = "/blog/"
 
 [[menu.main]]
 name                   = "Lisp software"
