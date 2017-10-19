@@ -21,16 +21,22 @@ identifier             = "blog"
 url                    = "/posts/"
 
 [[menu.main]]
-name                   = "About"
+name                   = "Lisp software"
 weight                 = -110
-identifier             = "home"
-url                    = "/about/"
+identifier             = "software"
+url                    = "/software/"
 
 [[menu.main]]
 name                   = "Good resources"
-weight                 = -115
+weight                 = -105
 identifier             = "resources"
 url                    = "/resources/"
+
+[[menu.main]]
+name                   = "About"
+weight                 = -10
+identifier             = "home"
+url                    = "/about/"
 
 # [params]
 # email                  = "you@example.space"
