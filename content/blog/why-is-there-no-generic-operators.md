@@ -53,7 +53,7 @@ for web stuff.
 
 Fortunately [CL21](http://cl21.org/) introduces (more) generic
 operators, particularly for sequences it defines `length`, `append`,
-`setf`, `first`, `rest`, `subseq`, `replace`, `take`, `drop`, `fill`,
+`setf`, `getf`, `first`, `rest`, `subseq`, `replace`, `take`, `drop`, `fill`,
 `take-while`, `drop-while`, `last`, `butlast`, `find-if`, `search`,
 `remove-if`, `delete-if`, `reverse`, `reduce`, `sort`, `split`,
 `join`, `remove-duplicates`, `every`, `some`, `map`, `sum` (and some
