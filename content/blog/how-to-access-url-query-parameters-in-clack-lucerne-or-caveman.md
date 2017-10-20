@@ -65,7 +65,7 @@ lucerne:*request*)`. So to get the value of a given param:
 
     (assoc "a-param" (clack.request:query-parameter lucerne:*request*) :test 'string=)
 
-and this returns the key and the value, so we need another `cdr` to ge the value…
+and this returns the key and the value, so we need another `cdr` to get the value…
 
 ~~~lisp
 (defun query-param (param)
