@@ -16,10 +16,10 @@ Indeed, there are 8 or so `map` functions. The one we're used to is
 type: `(map 'list (lambda…`. "filter" is named `remove-if-not`.
 
 => improved in [cl21](http://cl21.org/). It defines the usual `map`
-and `keep-if` and more functional verbs: `take`, `drop`, `fill`,
-`take-while`, `drop-while`, `last`, `butlast`, `find-if`, `remove-if`,
-`delete-if`, `reverse`, `reduce`, `sort`, `remove-duplicates`,
-`every`, `some`, `map`, `sum`,…
+and `keep-if` and more functional verbs: `take`, `drop`, `take-while`,
+`drop-while`, `butlast`, `sum`,… in addition to `fill`, `last`,
+`find-if[-not]`, `remove-if[-not]`, `delete[-if[-not]]`, `reverse`,
+`reduce`, `sort`, `remove-duplicates`, `every`, `some`,…
 
 
 ### Functional composition
@@ -36,6 +36,19 @@ and it seems abandonware (and its documentation is an old pdf paper
 but now hopefully this wiki is better).
 
 CL21 has an operator to compose functions: https://github.com/cl21/cl21/wiki/Language-Difference-between-CL21-and-Common-Lisp#function
+
+### Threading macros (pipes)
+
+We have two packages in Quicklisp:
+
+* [cl-arrows](https://github.com/nightfly19/cl-arrows) defines `->`,
+  `->>` and the generalized ones `-<>` and `-<>>`. At the time of
+  writing it has two unanswered PRs to add more, like the
+  "when-guarded"-"nil shortcuting diamond wand" `some->`.
+* [arrow-macros](https://github.com/hipeta/arrow-macros) is a bit more
+  complete but has more dependencies (it needs a code walker) which
+  are not portable (failed on ECL, Allegro, ABCL, Clisp). It has the
+  `some->`, `cond->` and `as->` ones.
 
 
 ### Data structures
@@ -81,3 +94,5 @@ in the wild. It defines some macros to write shorter lambdas:
 - `f_n` takes one `&rest` argument
 - `f_%` ignores its rest argument
 - `m` is a lambda "that has a macro-lambda-list instead of an ordinary lambda-list".
+
+Hope this helps !
