@@ -4,6 +4,8 @@ languageCode = "en-us"
 title = "Lisp journey"
 theme = "hugo_theme_beg"
 # author = ""
+# pygmentsCodeFences = "true"
+# pygmentsUseClassic = true
 
 [Indexes]
 tag = "tags"

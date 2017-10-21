@@ -63,7 +63,9 @@ It is only scarcely documented on Clack's
 We can access the parameters with `(clack.request:query-parameter
 lucerne:*request*)`. So to get the value of a given param:
 
-    (assoc "a-param" (clack.request:query-parameter lucerne:*request*) :test 'string=)
+~~~lisp
+(assoc "a-param" (clack.request:query-parameter lucerne:*request*) :test 'string=)
+~~~
 
 and this returns the key and the value, so we need another `cdr` to get the value…
 
