@@ -95,4 +95,6 @@ in the wild. It defines some macros to write shorter lambdas:
 - `f_%` ignores its rest argument
 - `m` is a lambda "that has a macro-lambda-list instead of an ordinary lambda-list".
 
+You might like [Trivia](https://github.com/guicho271828/trivia) for **pattern matching** too.
+
 Hope this helps !
