@@ -9,6 +9,7 @@ Common Lisp may have more libraries than you think. See:
 * [Quickdocs](http://quickdocs.org/) - the library documentation hosting for CL.
 * the [Awesome-cl](https://github.com/CodyReichert/awesome-cl) list, a
   curated list of libraries.
+* [lisp-lang.org's recommended libraries](http://lisp-lang.org/wiki/article/recommended-libraries) (from [State of the CL ecosystem, 2015](http://borretti.me/article/common-lisp-sotu-2015))
 
 Quicklisp is the de-facto package manager, but not the only tool.
 
@@ -34,7 +35,10 @@ namespace, a Python module or a Java package.
 
 [Quicklisp](https://www.quicklisp.org/beta/) is more than a package
 manager, it is also a central repository (a *dist*) that ensures that
-all libraries build together.
+all libraries build together. This involves some manual work (like
+reporting errors to package authors), so this is why Quicklisp
+releases its dist updates once a month (but fear not, we have other
+tools).
 
 It provides its own *dist* but it is also possible to build our own.
 
@@ -115,8 +119,6 @@ See more: https://wiki.debian.org/CommonLisp
 
 ## Advanced dependencies management
 
-Note that you don't need to know that to get started.
-
 Quicklisp installs the libraries into `~/quicklisp/local-projects/`. A
 library installed here is automatically available for every project.
 
@@ -130,11 +132,16 @@ available right-away:
 (ql:quickload "package")
 ~~~
 
+And also given the `M-.` "go to this symbol definition" feature in
+Slime (and `M-,` to go back), it's really easy to not only explore but
+start tweaking and extending other libraries.
+
 ### How to work with local versions of libraries
 
 If we need libraries to be installed locally, for only one project, or
 in order to easily ship a list of dependencies with an application, we
-can use [Qlot](https://github.com/fukamachi/qlot).
+can use [Qlot](https://github.com/fukamachi/qlot). This is like
+Python's virtual environments.
 
 Quicklisp also provides
 [Quicklisp bundles](https://www.quicklisp.org/beta/bundles.html). They
@@ -143,7 +150,7 @@ and loadable without involving Quicklisp.
 
 At last, there's
 [Quicklisp controller](https://github.com/quicklisp/quicklisp-controller)
-to help us build *dists*.
+to help us build *dists*. Some projects use this, like CL21.
 
 ## Read more
 
@@ -152,4 +159,4 @@ to help us build *dists*.
 
 ## See also
 
-* [Qi](https://github.com/CodyReichert/qi) - a package manager for Common Lisp (untested)
+* [Qi](https://github.com/CodyReichert/qi) - a package manager for Common Lisp
