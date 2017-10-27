@@ -1,5 +1,5 @@
 ---
-title: "How to install a Common Lisp development environment"
+title: "Getting started: how to install a Common Lisp development environment"
 date: 2017-05-03T10:41:33+02:00
 draft: false
 ---
@@ -13,7 +13,7 @@ steps and most of all, help every CL enthousiast discover
 
 (and this post is editable through its [Gitlab repository](https://gitlab.com/lisp-journey/lisp-journey.gitlab.io/))
 
-## Portable and multiplatform development environment
+## Portable, a multiplatform development environment
 
 The productive Shinmera was waiting for the last details to be fixed
 before showing [Portacle](https://portacle.github.io/) but it was
@@ -38,7 +38,12 @@ Now you can run `sbcl` and write lisp at the prompt:
 
 ~~~lisp
 (print "hello lisp!")
+(quit) ;; or C-d
 ~~~
+
+More are packaged for Debian and probably for your distro, notably
+[ECL](https://gitlab.com/embeddable-common-lisp/ecl/), and note that
+you can install more easily with [Roswell](https://github.com/roswell/roswell/wiki).
 
 If you find the prompt horribly unfriendly (no history, no navigation…) use rlwrap:
 
@@ -53,8 +58,8 @@ but still, we really need an editor.
 
 ### Editors support
 
-You're not bound to Emacs, there's good support for Vim and an Atom
-package in active development.
+You're not bound to Emacs, there's good support for Vim, Sublime Text
+(via the SublimeREPL package) and Atom.
 
 See [lisp-lang.org/editors](http://lisp-lang.org/wiki/article/editors).
 
