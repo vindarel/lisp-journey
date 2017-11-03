@@ -30,3 +30,4 @@ Screencasts:
   [Demos](https://www.youtube.com/playlist?list=PLkDl6Irujx9Mh3BWdBmt4JtIrwYgihTWp)
   (of small programs).
 * [Pushing pixels with Lisp](https://www.youtube.com/watch?v=82o5NeyZtvw)
+* [McClim interactive GUI demos](https://www.youtube.com/watch?v=XGmo0E_S46I)
