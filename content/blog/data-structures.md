@@ -5,14 +5,14 @@ draft: false
 ---
 
 What the heck are alists and plists exactly, how do we manipulate data
-structures ? It seems tedious sometimes, is there helpers ?
+structures ? It seems tedious sometimes, are there helpers ?
 
-**Better read in the [Cookbook](https://lispcookbook.github.io/cl-cookbook/data-structures.html)**.
+**Best read in the [Cookbook](https://lispcookbook.github.io/cl-cookbook/data-structures.html)**.
 
 We hope to give here a clear reference of the common data
 structures. To really learn the language, you should take the time to
 read other resources. The following ones, which we relied upon,
-also have many more details:
+have many more details:
 
 - [Practical CL](http://gigamonkeys.com/book/they-called-it-lisp-for-a-reason-list-processing.html), by Peter Seibel
 - [CL Recipes](http://weitz.de/cl-recipes/), by E. Weitz, full of explanations and tips,
@@ -27,17 +27,17 @@ also have many more details:
 **Table of Contents**
 
 - [Building lists. Cons cells, lists.](#building-lists-cons-cells-lists)
-- [car/cdr or first/rest (and second... to tenth)](#carcdr-or-firstrest-and-second-to-tenth)
-- [last, butlast, nbutlast (&optional n)](#last-butlast-nbutlast-optional-n)
-- [reverse, nreverse](#reverse-nreverse)
-- [append](#append)
-- [push (item, place)](#push-item-place)
-- [pop](#pop)
-- [nthcdr (index, list)](#nthcdr-index-list)
-- [car/cdr and composites (cadr, caadr…) - accessing lists inside lists](#carcdr-and-composites-cadr-caadr---accessing-lists-inside-lists)
-- [destructuring-bind (parameter*, list)](#destructuring-bind-parameter-list)
-- [Predicates: null, listp](#predicates-null-listp)
-- [ldiff, tailp, list*, make-list, fill, revappend, nreconc, consp, atom](#ldiff-tailp-list-make-list-fill-revappend-nreconc-consp-atom)
+    - [car/cdr or first/rest (and second... to tenth)](#carcdr-or-firstrest-and-second-to-tenth)
+    - [last, butlast, nbutlast (&optional n)](#last-butlast-nbutlast-optional-n)
+    - [reverse, nreverse](#reverse-nreverse)
+    - [append](#append)
+    - [push (item, place)](#push-item-place)
+    - [pop](#pop)
+    - [nthcdr (index, list)](#nthcdr-index-list)
+    - [car/cdr and composites (cadr, caadr…) - accessing lists inside lists](#carcdr-and-composites-cadr-caadr---accessing-lists-inside-lists)
+    - [destructuring-bind (parameter*, list)](#destructuring-bind-parameter-list)
+    - [Predicates: null, listp](#predicates-null-listp)
+    - [ldiff, tailp, list*, make-list, fill, revappend, nreconc, consp, atom](#ldiff-tailp-list-make-list-fill-revappend-nreconc-consp-atom)
 - [Sequences](#sequences)
     - [Predicates: every, some,…](#predicates-every-some)
     - [Functions](#functions)
