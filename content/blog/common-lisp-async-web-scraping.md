@@ -268,6 +268,14 @@ we get:
   200 200 200 200)
 ```
 
+*update*: we could write something like the following with
+`handler-case` to be more flexible:
+
+~~~lisp
+ (handler-case ( <code> )
+   (error (c)
+     ( <return sthg> )))
+~~~
 
 it works, but *it took a very long time*. How much time precisely ?
 with `(time …)`:
@@ -355,3 +363,5 @@ More helpful libraries:
   [awesome-cl](https://github.com/CodyReichert/awesome-cl) list,
   [Cliki](http://www.cliki.net/) or
   [Quickdocs](http://quickdocs.org/search?q=web).
+- [Mockingbird](https://github.com/Chream/mockingbird) is nice to mock
+  network requests in unit tests.
