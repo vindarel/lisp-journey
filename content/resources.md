@@ -29,8 +29,13 @@ Screencasts:
   (game dev),
   [Demos](https://www.youtube.com/playlist?list=PLkDl6Irujx9Mh3BWdBmt4JtIrwYgihTWp)
   (of small programs).
-* [Pushing pixels with Lisp](https://www.youtube.com/watch?v=82o5NeyZtvw)
+* [Pushing pixels with Lisp](https://www.youtube.com/watch?v=82o5NeyZtvw), and by the same author:
+ * [CEPL demo](https://www.youtube.com/watch?v=a2tTpjGOhjw&index=20&list=RDxzTH_ZqaFKI) - working with OpenGL
+ * the [author's channel](https://www.youtube.com/channel/UCMV8p6Lb-bd6UZtTc_QD4zA).
+
 * [McClim interactive GUI demos](https://www.youtube.com/watch?v=XGmo0E_S46I). [Code examples](https://github.com/robert-strandh/McCLIM/blob/master/Examples/demodemo.lisp).
+
+and more on [Cliki](http://www.cliki.net/Lisp%20Videos).
 
 Example websites built with Lisp:
 
