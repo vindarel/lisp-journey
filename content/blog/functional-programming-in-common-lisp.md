@@ -15,11 +15,17 @@ Indeed, there are 8 or so `map` functions. The one we're used to is
 `mapcar`. The simple `map` needs a second argument to specify its return
 type: `(map 'list (lambda…`. "filter" is named `remove-if-not`.
 
+`mapcan` can also be useful. It concatenates the items into one
+list. So with `mapcar` we get a list of lists with our items, with
+`mapcan` simply a list of our items.
+
 => improved in [cl21](http://cl21.org/). It defines the usual `map`
 and `keep-if` and more functional verbs: `take`, `drop`, `take-while`,
 `drop-while`, `butlast`, `sum`,… in addition to `fill`, `last`,
 `find-if[-not]`, `remove-if[-not]`, `delete[-if[-not]]`, `reverse`,
 `reduce`, `sort`, `remove-duplicates`, `every`, `some`,…
+
+_Note_: remember that we still have access to `cl` symbols in CL21.
 
 
 ### Functional composition
@@ -75,7 +81,7 @@ This macro is very simple. It should be in a library, I don't want to copy-paste
 [cl21's short lambdas](https://lispcookbook.github.io/cl-cookbook/cl21.html#shorter-lambda)
 (that were not documented…):
 
-````
+```
 (map ^(foo-bar %) items)
 ```
 or with `(lm (x)…`. Unused arguments will be ignored automatically.
