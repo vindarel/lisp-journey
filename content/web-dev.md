@@ -161,6 +161,9 @@ we need a step more for web apps:
 ~~~
 
 
+A Debian package for every Quicklisp system: [http://margaine.com/2015/12/22/quicklisp-packagecloud-debian-packages.html](http://margaine.com/2015/12/22/quicklisp-packagecloud-debian-packages.html).
+
+
 ## Multiplatform delivery with Electron (Ceramic)
 
 [Ceramic](https://ceramic.github.io/) makes all the work for us.
