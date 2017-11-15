@@ -25,6 +25,7 @@ self-contained executables, shipping a multiplatform web app.
 - [Web frameworks](#web-frameworks)
     - [Debugging](#debugging)
     - [Tests](#tests)
+    - [Migrations](#migrations)
 - [Template engines](#template-engines)
     - [HTML-based](#html-based)
 - [Javascript](#javascript)
@@ -57,6 +58,66 @@ self-contained executables, shipping a multiplatform web app.
 ### Persistent datastores
 
 ### Migrations
+
+[Mito](https://github.com/fukamachi/mito) advertises migrations and DB
+schema versioning. "Should work with MySQL, Postgres and SQLite3 on
+SBCL and CCL".
+
+~~~lisp
+(ensure-table-exists 'user)
+;-> ;; CREATE TABLE IF NOT EXISTS "user" (
+;       "id" BIGSERIAL NOT NULL PRIMARY KEY,
+;       "name" VARCHAR(64) NOT NULL,
+;       "email" VARCHAR(128),
+;       "created_at" TIMESTAMP,
+;       "updated_at" TIMESTAMP
+;   ) () [0 rows] | MITO.DAO:ENSURE-TABLE-EXISTS
+
+;; No changes
+(mito:migration-expressions 'user)
+;=> NIL
+
+(defclass user ()
+  ((name :col-type (:varchar 64)
+         :initarg :name
+         :accessor user-name)
+   (email :col-type (:varchar 128)
+          :initarg :email
+          :accessor user-email))
+  (:metaclass mito:dao-table-class)
+  (:unique-keys email))
+
+(mito:migration-expressions 'user)
+;=> (#<SXQL-STATEMENT: ALTER TABLE user ALTER COLUMN email TYPE character varying(128), ALTER COLUMN email SET NOT NULL>
+;    #<SXQL-STATEMENT: CREATE UNIQUE INDEX unique_user_email ON user (email)>)
+
+(mito:migrate-table 'user)
+;-> ;; ALTER TABLE "user" ALTER COLUMN "email" TYPE character varying(128), ALTER COLUMN "email" SET NOT NULL () [0 rows] | MITO.MIGRATION.TABLE:MIGRATE-TABLE
+;   ;; CREATE UNIQUE INDEX "unique_user_email" ON "user" ("email") () [0 rows] | MITO.MIGRATION.TABLE:MIGRATE-TABLE
+;-> (#<SXQL-STATEMENT: ALTER TABLE user ALTER COLUMN email TYPE character varying(128), ALTER COLUMN email SET NOT NULL>
+;    #<SXQL-STATEMENT: CREATE UNIQUE INDEX unique_user_email ON user (email)>)
+~~~
+
+Didn't try.
+
+[Crane](https://github.com/eudoxia0/crane) also advertises **automatic** migrations.
+
+~~~lisp
+(deftable user ()
+  (name :type text :uniquep t :nullp nil)
+  (age :type integer :nullp t :initform 18)
+  (description :type text))
+~~~
+
+> Just make the changes, and Crane will compute the diffs and perform all the ALTER TABLEs for you.
+
+When we look at the
+[issues](https://github.com/eudoxia0/crane/issues), we see some
+pending since 2014 / 2015: migrations don't work for SQLite, it
+doesn't have linear history like in Rails or Django, there is no
+switch to not make them automatic yet. The author knows that very
+well. Let's hope he comes back to work more on this in a near future !
+
 
 ## Forms
 
