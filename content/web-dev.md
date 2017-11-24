@@ -55,13 +55,24 @@ self-contained executables, shipping a multiplatform web app.
 
 ### SQL
 
-### Persistent datastores
+[Mito](https://github.com/fukamachi/mito) works for MySQL, Postgres
+and SQLite3 on SBCL and CCL.
 
-### Migrations
+We can define models with a regular class which has a `mito:dao-table-class` `:metaclass`:
 
-[Mito](https://github.com/fukamachi/mito) advertises migrations and DB
-schema versioning. "Should work with MySQL, Postgres and SQLite3 on
-SBCL and CCL".
+~~~lisp
+(defclass user ()
+  ((name :col-type (:varchar 64)
+         :initarg :name
+         :accessor user-name)
+   (email :col-type (:varchar 128)
+          :initarg :email
+          :accessor user-email))
+  (:metaclass mito:dao-table-class)
+  (:unique-keys email))
+~~~
+
+We create the table with `ensure-table-exists`:
 
 ~~~lisp
 (ensure-table-exists 'user)
@@ -72,25 +83,30 @@ SBCL and CCL".
 ;       "created_at" TIMESTAMP,
 ;       "updated_at" TIMESTAMP
 ;   ) () [0 rows] | MITO.DAO:ENSURE-TABLE-EXISTS
+~~~
 
-;; No changes
-(mito:migration-expressions 'user)
-;=> NIL
 
-(defclass user ()
-  ((name :col-type (:varchar 64)
-         :initarg :name
-         :accessor user-name)
-   (email :col-type (:varchar 128)
-          :initarg :email
-          :accessor user-email))
-  (:metaclass mito:dao-table-class)
-  (:unique-keys email))
+### Persistent datastores
 
+### Migrations
+
+[Mito](https://github.com/fukamachi/mito) has migrations support and
+DB schema versioning for MySQL, Postgres and SQLite3, on SBCL and
+CCL. Once we have changed our model definition, we have commands to
+see the generated SQL and to apply the migration.
+
+
+We inspect the SQL: (suppose we just added the email field into the `user` class above)
+
+~~~lisp
 (mito:migration-expressions 'user)
 ;=> (#<SXQL-STATEMENT: ALTER TABLE user ALTER COLUMN email TYPE character varying(128), ALTER COLUMN email SET NOT NULL>
 ;    #<SXQL-STATEMENT: CREATE UNIQUE INDEX unique_user_email ON user (email)>)
+~~~
 
+and we can apply the migration:
+
+~~~lisp
 (mito:migrate-table 'user)
 ;-> ;; ALTER TABLE "user" ALTER COLUMN "email" TYPE character varying(128), ALTER COLUMN "email" SET NOT NULL () [0 rows] | MITO.MIGRATION.TABLE:MIGRATE-TABLE
 ;   ;; CREATE UNIQUE INDEX "unique_user_email" ON "user" ("email") () [0 rows] | MITO.MIGRATION.TABLE:MIGRATE-TABLE
@@ -98,25 +114,13 @@ SBCL and CCL".
 ;    #<SXQL-STATEMENT: CREATE UNIQUE INDEX unique_user_email ON user (email)>)
 ~~~
 
-Didn't try.
 
-[Crane](https://github.com/eudoxia0/crane) also advertises **automatic** migrations.
+[Crane](https://github.com/eudoxia0/crane) advertises **automatic**
+migrations, i.e. it would run them after a `C-c C-c`. Unfortunately Crane has
+some issues, it doesn't work with sqlite yet and the author is busy
+elsewhere. It didn't work for me at first try.
 
-~~~lisp
-(deftable user ()
-  (name :type text :uniquep t :nullp nil)
-  (age :type integer :nullp t :initform 18)
-  (description :type text))
-~~~
-
-> Just make the changes, and Crane will compute the diffs and perform all the ALTER TABLEs for you.
-
-When we look at the
-[issues](https://github.com/eudoxia0/crane/issues), we see some
-pending since 2014 / 2015: migrations don't work for SQLite, it
-doesn't have linear history like in Rails or Django, there is no
-switch to not make them automatic yet. The author knows that very
-well. Let's hope he comes back to work more on this in a near future !
+Let's hope the author comes back to work on this in a near future.
 
 
 ## Forms
@@ -147,6 +151,8 @@ browser. Can return a custom error page in production.
 ## Tests
 
 Testing with a local DB.
+
+We would use [envy](https://github.com/fukamachi/envy) to switch configurations.
 
 
 ## Misc
