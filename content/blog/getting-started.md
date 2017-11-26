@@ -53,7 +53,11 @@ and now this will be slightly better:
 
     rwrap sbcl
 
-but still, we really need an editor.
+Even better, a slight wrapper around the SBCL REPL with readline
+support (Emacs and Vim modes, history, etc):
+[sbcli](https://github.com/hellerve/sbcli), straightforward to use.
+
+But still, we really need an editor.
 
 
 ### Editors support
