@@ -23,9 +23,12 @@ self-contained executables, shipping a multiplatform web app.
 **Table of Contents**
 
 - [Web frameworks](#web-frameworks)
+    - [URL routing](#url-routing)
+        - [Accessing parameters](#accessing-parameters)
+    - [Data storage](#data-storage)
+        - [Migrations](#migrations)
     - [Debugging](#debugging)
     - [Tests](#tests)
-    - [Migrations](#migrations)
 - [Template engines](#template-engines)
     - [HTML-based](#html-based)
 - [Javascript](#javascript)
@@ -48,6 +51,66 @@ self-contained executables, shipping a multiplatform web app.
 ## Websockets
 
 ## URL routing
+
+### Accessing parameters
+
+[Lucerne](http://borretti.me/lucerne/docs/overview.html) has a nice
+`with-params` macro that makes accessing post or url query parameters a breeze:
+
+~~~lisp
+@route app (:post "/tweet")
+(defview tweet ()
+  (if (lucerne-auth:logged-in-p)
+      (let ((user (current-user)))
+        (with-params (tweet)
+          (utweet.models:tweet user tweet))
+        (redirect "/"))
+      (render-template (+index+)
+                       :error "You are not logged in.")))
+~~~
+
+---
+
+[Snooze](https://github.com/joaotavora/snooze)'s way is simple and
+lispy: we define routes like methods and parameters as keys:
+
+~~~lisp
+(defroute lispdoc (:get :text/* name &key (package :cl) (doctype 'function))
+   ...
+~~~
+
+matches `/lispdoc`, `/lispdoc/foo` and `/lispdoc/foo?package=arg`.
+
+---
+
+On the contrary, I find Caveman's and Ningle's ways cumbersome.
+
+Ningle:
+
+~~~lisp
+(setf (ningle:route *app* "/hello/:name")
+      #'(lambda (params)
+          (format nil "Hello, ~A" (cdr (assoc "name" params :test #'string=)))))
+~~~
+
+> The above controller will be invoked when you access to "/hello/Eitaro" or "/hello/Tomohiro", and then (cdr (assoc "name" params :test #'string=)) will be "Eitaro" and "Tomohiro".
+
+and it doesn't say about query parameters. I had to [ask](https://stackoverflow.com/questions/43778570/how-to-get-url-query-parameters-in-clack-lucerne-or-caveman):
+
+~~~lisp
+(assoc "the-query-param" (clack.request:query-parameter lucerne:*request*) :test 'string=)
+~~~
+
+Caveman:
+
+> Parameter keys contain square brackets ("[" & "]") will be parsed as structured parameters. You can access the parsed parameters as _parsed in routers.
+
+~~~lisp
+(defroute "/edit" (&key _parsed)
+  (format nil "~S" (cdr (assoc "person" _parsed :test #'string=))))
+;=> "((\"name\" . \"Eitaro\") (\"email\" . \"e.arrows@gmail.com\") (\"birth\" . ((\"year\" . 2000) (\"month\" . 1) (\"day\" . 1))))"
+~~~
+
 
 ## Session an cookies
 
