@@ -37,7 +37,7 @@ Screencasts:
  * [CEPL demo](https://www.youtube.com/watch?v=a2tTpjGOhjw&index=20&list=RDxzTH_ZqaFKI) - working with OpenGL
  * the [author's channel](https://www.youtube.com/channel/UCMV8p6Lb-bd6UZtTc_QD4zA).
 
-* [McClim interactive GUI demos](https://www.youtube.com/watch?v=XGmo0E_S46I). [Code examples](https://github.com/robert-strandh/McCLIM/blob/master/Examples/demodemo.lisp).
+* [McClim interactive GUI demos](https://www.youtube.com/watch?v=XGmo0E_S46I). [Code examples](https://github.com/robert-strandh/McCLIM/blob/master/Examples/demodemo.lisp). Presentation of [Clim listener, Clim debugger, drawing objects into the GUI repl](https://www.youtube.com/watch?v=kfBmRsPRdGg).
 
 and more on [Cliki](http://www.cliki.net/Lisp%20Videos).
 
