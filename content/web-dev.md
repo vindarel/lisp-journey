@@ -285,7 +285,8 @@ This is the general way:
 we need a step more for web apps:
 
 ~~~lisp
-(sb-thread:join-thread (find-if (lambda (th)
+(defun main ()
+    (sb-thread:join-thread (find-if (lambda (th)
                                 (search "hunchentoot" (sb-thread:thread-name th)))
                               (sb-thread:list-all-threads))))
 ~~~
