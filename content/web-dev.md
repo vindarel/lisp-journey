@@ -343,6 +343,47 @@ This last line was buggy for us.
 
 # Deployment
 
+## Running the app on a web server
+
+### Manually
+
+    sbcl --load <my-app> --eval (start-my-app)
+
+For example, a `run` Makefile target:
+
+```
+run:
+	sbcl --load my-app.asd \
+	     --eval '(ql:quickload :my-app)' \
+	     --eval '(my-app:start-app)'  ;; given this function starts clack or hunchentoot.
+```
+
+this keeps sbcl in the foreground. Can use `tmux` or just `C-z bg` to put it in background.
+
+Then, need of a task supervisor ? See example projects below (as Quickutil).
+
+What to do in case of useless SBCL on a VPS, with error message
+
+> ensure_space failed to allocate 1040384 bytes at 0x20000000
+
+[SO question](https://stackoverflow.com/questions/47803915/useless-sbcl-on-my-linux-vps-ensure-space-failed-to-allocate-n-bytes)
+
+
+### with [Clack](http://quickdocs.org/clack/)
+
+```
+$ clackup app.lisp
+Hunchentoot server is started.
+Listening on localhost:5000.
+```
+
+### with Docker
+
+So we have various implementations ready to use: sbcl, ecl, ccl… with Quicklisp well configured.
+
+https://lispcookbook.github.io/cl-cookbook/testing.html#gitlab-ci
+
+
 ## Connecting to a remote Swank server
 
 Little example here: [http://cvberry.com/tech_writings/howtos/remotely_modifying_a_running_program_using_swank.html](http://cvberry.com/tech_writings/howtos/remotely_modifying_a_running_program_using_swank.html).
