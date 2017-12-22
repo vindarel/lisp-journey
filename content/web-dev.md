@@ -449,6 +449,60 @@ So we have various implementations ready to use: sbcl, ecl, ccl… with Quicklis
 
 https://lispcookbook.github.io/cl-cookbook/testing.html#gitlab-ci
 
+
+### Daemonizing, restarting in case of crashes, handling logs
+
+See how to do that on your system.
+
+Most GNU/Linux distros now come with Systemd.
+
+Examples [search](https://lmddgtfy.net/?q=systemd%20daemonize%20application) result:
+
+- https://seanmcgary.com/posts/deploying-nodejs-applications-with-systemd/
+
+It is as simple as writing a configuration file:
+
+```
+# /etc/systemd/system/my-app.service
+[Unit]
+Description=stupid simple example
+
+[Service]
+WorkingDirectory=/path/to/your/app
+ExecStart=/usr/local/bin/sthg sthg
+Type=simple
+Restart=always
+RestartSec=10
+```
+
+running a command to start it:
+
+    sudo systemctl start my-app.service
+
+a command to check its status:
+
+    systemctl status my-app.service
+
+
+and Systemd can handle **logging** (we write to stdout or stderr, it writes logs):
+
+    journalctl -f -u my-app.service
+
+
+and it handles crashes and **restarts the app**:
+
+    Restart=always
+
+and it can **start the app after a reboot**:
+
+    [Install]
+    WantedBy=basic.target
+
+to enable it:
+
+    sudo systemctl enable my-app.service
+
+
 ### Debugging SBCL error: ensure_space: failed to allocate n bytes
 
 If you get this error with SBCL on your server:
