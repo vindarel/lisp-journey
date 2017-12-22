@@ -31,12 +31,18 @@ self-contained executables, shipping a multiplatform web app.
     - [Tests](#tests)
 - [Template engines](#template-engines)
     - [HTML-based](#html-based)
+    - [Lisp-based](#lisp-based)
 - [Javascript](#javascript)
     - [The case Weblbocks - Reblocks, 2017](#the-case-weblbocks---reblocks-2017)
 - [Shipping](#shipping)
     - [Building](#building)
     - [Multiplatform delivery with Electron (Ceramic)](#multiplatform-delivery-with-electron-ceramic)
 - [Deployment](#deployment)
+    - [Running the app on a web server](#running-the-app-on-a-web-server)
+        - [Manually](#manually)
+        - [with [Clack](http://quickdocs.org/clack/)](#with-clackhttpquickdocsorgclack)
+        - [with Docker](#with-docker)
+        - [Debugging SBCL error: ensure_space: failed to allocate n bytes](#debugging-sbcl-error-ensurespace-failed-to-allocate-n-bytes)
     - [Connecting to a remote Swank server](#connecting-to-a-remote-swank-server)
     - [Hot reload](#hot-reload)
 - [Appendice I: Example websites built with Lisp:](#appendice-i-example-websites-built-with-lisp)
@@ -258,7 +264,7 @@ Truncated example:
 
 I prefer the semantics of
 [Spinneret](https://github.com/ruricolist/spinneret) over cl-who. It
-also has more features (like embeddable markdown).
+also has more features (like embeddable markdown, warns on malformed html, and more).
 
 # Javascript
 
@@ -383,6 +389,19 @@ So we have various implementations ready to use: sbcl, ecl, ccl… with Quicklis
 
 https://lispcookbook.github.io/cl-cookbook/testing.html#gitlab-ci
 
+### Debugging SBCL error: ensure_space: failed to allocate n bytes
+
+If you get this error with SBCL on your server:
+
+```
+mmap: wanted 1040384 bytes at 0x20000000, actually mapped at 0x715fa2145000
+ensure_space: failed to allocate 1040384 bytes at 0x20000000
+(hint: Try "ulimit -a"; maybe you should increase memory limits.)
+```
+
+then disable [ASLR](https://en.wikipedia.org/wiki/Address_space_layout_randomization):
+
+    sudo bash -c "echo 0 > /proc/sys/kernel/randomize_va_space"
 
 ## Connecting to a remote Swank server
 
