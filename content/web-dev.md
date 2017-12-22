@@ -285,7 +285,7 @@ We can build an executable also for web apps. That makes for a simple deployment
 This is the general way:
 
 ~~~lisp
-(sb-ext:save-lisp-and-die #p"name-of-executable" :toplevel #'main-function :executable t)
+(sb-ext:save-lisp-and-die #p"name-of-executable" :toplevel #'main :executable t)
 ~~~
 
 we need a step more for web apps:
@@ -297,8 +297,68 @@ we need a step more for web apps:
                               (sb-thread:list-all-threads))))
 ~~~
 
+One more gotcha, illustrated with `lparallel`. The lisp doesn't want
+to see running threads while building the executable. So if you use
+`lparallel`, and thus need to instantiate its kernels, also do it
+inside the main function.
 
-A Debian package for every Quicklisp system: [http://margaine.com/2015/12/22/quicklisp-packagecloud-debian-packages.html](http://margaine.com/2015/12/22/quicklisp-packagecloud-debian-packages.html).
+So, I use the following pattern:
+
+~~~lisp
+(defun main ()
+  (setf lparallel:*kernel* (lparallel:make-kernel 2))
+  (start-app :port 9003)
+  (sb-thread:join-thread (find-if (lambda (th)
+                                    (search "hunchentoot" (sb-thread:thread-name th)))
+                                  (sb-thread:list-all-threads))))
+~~~
+
+I can now build my web app, send it to my VPS and see it live.
+
+When I run it, Hunchentoot stays listening at the foreground:
+
+```
+$ ./my-webapp
+Hunchentoot server is started.
+Listening on localhost:9003.
+```
+
+On my VPS, I need to put it in the background (`C-z bg`), or use a `tmux` session
+(`tmux`, then `C-b d` to detach it).
+
+To be complete, you'll notice that we can not `C-c` our running app,
+we get trapped into the debugger (which responds only to `C-z` and
+`kill`). As with any command line, we have to catch the corresponding
+signal. We also `stop` our app. See
+[our cl-torrents tutorial](https://vindarel.github.io/cl-torrents/tutorial.html#org8567d07)
+on how to build command-line applications.
+
+~~~lisp
+(defun main ()
+  (start-app :port 9003)
+  (handler-case (sb-thread:join-thread (find-if (lambda (th)
+                                                  (search "hunchentoot" (sb-thread:thread-name th)))
+                                                (sb-thread:list-all-threads)))
+    (#+sbcl sb-sys:interactive-interrupt
+      #+ccl  ccl:interrupt-signal-condition
+      #+clisp system::simple-interrupt-condition
+      #+ecl ext:interactive-interrupt
+      #+allegro excl:interrupt-signal
+      () (progn
+           (format *error-output* "Aborting.~&")
+           (clack:stop *server*)
+           (sb-ext:exit :code 1)) ;; libs like unix-opts have portable exit functions.
+    ;; for others, unhandled errors (we might want to do the same).
+    (error (c) (format t "Woops, an unknown error occured:~&~a~&" c))))
+~~~
+
+
+See also how to daemonize an application (below in Deployment).
+
+
+To see:
+
+- a Debian package for every Quicklisp system: [http://margaine.com/2015/12/22/quicklisp-packagecloud-debian-packages.html](http://margaine.com/2015/12/22/quicklisp-packagecloud-debian-packages.html).
 
 
 ## Multiplatform delivery with Electron (Ceramic)
