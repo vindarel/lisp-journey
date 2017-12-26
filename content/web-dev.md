@@ -426,13 +426,7 @@ run:
 
 this keeps sbcl in the foreground. Can use `tmux` or just `C-z bg` to put it in background.
 
-Then, need of a task supervisor ? See example projects below (as Quickutil).
-
-What to do in case of useless SBCL on a VPS, with error message
-
-> ensure_space failed to allocate 1040384 bytes at 0x20000000
-
-[SO question](https://stackoverflow.com/questions/47803915/useless-sbcl-on-my-linux-vps-ensure-space-failed-to-allocate-n-bytes)
+Then, we need of a task supervisor, that will restart our app on failures, start it after a reboot, handle logging. See the section below and example projects (such as Quickutil).
 
 
 ### with [Clack](http://quickdocs.org/clack/)
