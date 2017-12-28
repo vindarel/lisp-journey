@@ -52,6 +52,8 @@ self-contained executables, shipping a multiplatform web app.
 
 # Web frameworks
 
+[Radiance](https://github.com/Shirakumo/radiance), with extensive tutorial and existing apps.
+
 ## Servers - Hunchentoot, Clack
 
 ## Websockets
@@ -198,11 +200,17 @@ Let's hope the author comes back to work on this in a near future.
 
 ## Debugging
 
-On an error we enter the interactive REPL.
+On an error we are usually dropped into the interactive debugger by default.
+
+Snooze gives options:
+
+* use the debugger,
+* print the stacktrace in the browser (like clack-errors below, but built-in),
+* display a custom 404.
 
 
 [clack-errors](https://github.com/eudoxia0/clack-errors). Like a Flask
-or Django stacktrace in the browser.
+or Django stacktrace in the browser. For Caveman, Ningle and family.
 
 > By default, when Clack throws an exception when rendering a page, the server waits for the response until it times out while the exception waits in the REPL. This isn't very useful. So now there's this.
 
@@ -219,7 +227,7 @@ browser. Can return a custom error page in production.
 
 ## Tests
 
-Testing with a local DB.
+Testing with a local DB: what's involved ?
 
 We would use [envy](https://github.com/fukamachi/envy) to switch configurations.
 
@@ -408,6 +416,8 @@ Done!
 This last line was buggy for us.
 
 # Deployment
+
+Radiance's tutorial talks about deployment. https://github.com/Shirakumo/radiance-tutorial/blob/master/Part%207.md
 
 ## Running the app on a web server
 
