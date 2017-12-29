@@ -300,9 +300,10 @@ we need a step more for web apps:
 
 ~~~lisp
 (defun main ()
-    (sb-thread:join-thread (find-if (lambda (th)
-                                (search "hunchentoot" (sb-thread:thread-name th)))
-                              (sb-thread:list-all-threads))))
+    ;; with bordeaux-threads. Also sb-ext: join-thread, thread-name, list-all-threads.
+    (bt:join-thread (find-if (lambda (th)
+                                (search "hunchentoot" (bt:thread-name th)))
+                              (bt:all-threads))))
 ~~~
 
 One more gotcha, illustrated with `lparallel`. The lisp doesn't want
@@ -316,9 +317,9 @@ So, I use the following pattern:
 (defun main ()
   (setf lparallel:*kernel* (lparallel:make-kernel 2))
   (start-app :port 9003)
-  (sb-thread:join-thread (find-if (lambda (th)
-                                    (search "hunchentoot" (sb-thread:thread-name th)))
-                                  (sb-thread:list-all-threads))))
+  (bt:join-thread (find-if (lambda (th)
+                                (search "hunchentoot" (bt:thread-name th)))
+                           (bt:all-threads))))
 ~~~
 
 I can now build my web app, send it to my VPS and see it live.
@@ -344,9 +345,10 @@ on how to build command-line applications.
 ~~~lisp
 (defun main ()
   (start-app :port 9003)
-  (handler-case (sb-thread:join-thread (find-if (lambda (th)
-                                                  (search "hunchentoot" (sb-thread:thread-name th)))
-                                                (sb-thread:list-all-threads)))
+  ;; with bordeaux-threads
+  (handler-case (bt:join-thread (find-if (lambda (th)
+                                             (search "hunchentoot" (bt:thread-name th)))
+                                         (bt:all-threads)))
     (#+sbcl sb-sys:interactive-interrupt
       #+ccl  ccl:interrupt-signal-condition
       #+clisp system::simple-interrupt-condition
@@ -355,7 +357,7 @@ on how to build command-line applications.
       () (progn
            (format *error-output* "Aborting.~&")
            (clack:stop *server*)
-           (sb-ext:exit :code 1)) ;; libs like unix-opts have portable exit functions.
+           (uiop:quit 1)) ;; portable exit, included in ASDF, already loaded.
     ;; for others, unhandled errors (we might want to do the same).
     (error (c) (format t "Woops, an unknown error occured:~&~a~&" c))))
 ~~~
