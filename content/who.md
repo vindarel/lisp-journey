@@ -9,7 +9,7 @@ draft = true
 
 Following [Lisp Companies blog post](http://pchristensen.com/blog/lisp-companies/) (2008, many dead links).
 
-Reddit and [lispjobs](https://lispjobs.wordpress.com/) are the major sources.
+Reddit and [lispjobs](https://lispjobs.wordpress.com/) are the major sources. Sponsors can be found on the [European Lisp Symposium](http://www.european-lisp-symposium.org/) website..
 
 Of course, see
 
