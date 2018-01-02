@@ -29,6 +29,7 @@ Now *[best read in the Common Lisp Cookbook](https://lispcookbook.github.io/cl-c
 
 - [Building a self-contained executable](#building-a-self-contained-executable)
     - [With SBCL](#with-sbcl)
+    - [With ASDF [updated]](#with-asdf-updated)
     - [With Buildapp or Roswell](#with-buildapp-or-roswell)
     - [For web apps](#for-web-apps)
     - [Size and startup times of executables per implementation](#size-and-startup-times-of-executables-per-implementation)
@@ -97,6 +98,31 @@ build:
          --eval "(sb-ext:save-lisp-and-die #p\"my-app\" :toplevel #my-app:main :executable t)"
 ```
 
+## With ASDF [updated]
+
+Now that we'seen the basics, we need a portable method. Since its
+version 3.1, ASDF allows to do that. It introduces the [`make` command](https://common-lisp.net/project/asdf/asdf.html#Convenience-Functions),
+that reads parameters from the .asd. Add this to your .asd declaration:
+
+~~~
+:build-operation "program-op" ;; leave as is
+:build-pathname "<binary-name>"
+:entry-point "<my-package:main-function>"
+~~~
+
+and call `asdf:make :my-package`.
+
+So, in a Makefile:
+
+~~~lisp
+LISP ?= sbcl
+
+build:
+    $(LISP) --load torrents.asd \
+    	--eval '(ql:quickload :my-app)' \
+		--eval '(asdf:make :my-app)' \
+		--eval '(quit)'
+~~~
 ## With Buildapp or Roswell
 
 We might  like a more  shell-friendly way to build  our executable,
