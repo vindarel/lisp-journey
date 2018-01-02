@@ -15,7 +15,7 @@ exploration. Watch if they'd better go to the
 Because Common Lisp is the most hidden world I know. It's puzzling and
 a shame, really.
 
-I have some experience with Lisp writting Emacs Lisp packages, but I
+I have some experience with Lisp writting [Emacs Lisp packages](https://gitlab.com/emacs-stuff/), but I
 mostly write Python (and Javascript) at work and for my personal
 projects. I'm frustrated by its limitations and I see great potential
 in CL for web apps, so this will be the direction of my wanderings.
