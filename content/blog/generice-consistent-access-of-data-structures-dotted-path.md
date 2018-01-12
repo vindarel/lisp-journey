@@ -231,5 +231,5 @@ doesn't have the requested field.
 
 ---
 
-Usage will tell how it is useful. It isn't to power lispers, I
-hope it will be to fellow newcomers.
+Usage will tell how it is useful, and
+I hope it will be to fellow newcomers.
