@@ -35,7 +35,7 @@ have two possibilities, see below.
 
 Oh, and we can be confident *it is a battle-tested library*, since it
 is the one that powers [Djula](https://github.com/mmontone/djula/)'s
-template tags (seen
+template variables interplolation (doc is
 [here](http://mmontone.github.io/djula/doc/build/html/variables.html)), where we can write
 
     {{ var.foo }}
@@ -225,6 +225,11 @@ and so, a *nested dotted access* through an object and a plist:
 #Dmy-obj.plist.foo
 ;; "foo"
 ~~~
+
+It will return `nil` instead of an error if someone in the middle
+doesn't have the requested field.
+
+---
 
 Usage will tell how it is useful. It isn't to power lispers, I
 hope it will be to fellow newcomers.
