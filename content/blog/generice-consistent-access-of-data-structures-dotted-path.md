@@ -23,6 +23,8 @@ solves those problems, it's always
 
 (if you're into this, note that [CL21 also does this with a generic and extensible `getf`](https://lispcookbook.github.io/cl-cookbook/cl21.html#generic-functions)).
 
+edit: also [rutils](https://github.com/vseloved/rutils) with `generic-elt` or `?` in the `rutilsx` contrib package.
+
 Access also solves another usecase.
 
 Sometimes we deal with *nested data structures* (alist inside alist
