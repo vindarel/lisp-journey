@@ -65,7 +65,7 @@ But still, we really need an editor.
 You're not bound to Emacs, there's good support for Vim, Sublime Text
 (via the SublimeREPL package) and Atom.
 
-See [lisp-lang.org/editors](http://lisp-lang.org/wiki/article/editors).
+See the [Cookbook#editors](https://lispcookbook.github.io/cl-cookbook/editor-support.html).
 
 For Emacs, [Slime](https://github.com/slime/slime) is the de-facto
 solution (there's also the Sly fork). It is in the GNU Elpa default
