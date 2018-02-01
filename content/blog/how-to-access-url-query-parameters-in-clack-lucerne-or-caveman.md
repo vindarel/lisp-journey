@@ -4,6 +4,12 @@ date: 2017-05-04T12:59:30+02:00
 draft: false
 ---
 
+**edit**: I found [Snooze](https://github.com/joaotavora/snooze) (by
+Sly and Yasnippet's author) easier and cleaner in this regard. It also
+has built-in settings to choose where to catch errors: with Slime's
+debugger, with a full stacktrace in the browser or displaying a custom
+error page.
+
 If you're using Lucerne don't search more like I did, its
 `with-params` macro works with url query parameters (as well as POST
 parameters).
