@@ -9,6 +9,9 @@ or "Common Lisp is not very functional-programming oriented". What are the optio
 I mean, `map` is uncommon and there is no short words like `take` etc
 for functional composition. Right ?
 
+
+**edit** see those [snippets](/blog/snippets-functional-style-more/).
+
 ### Map and filter
 
 Indeed, there are 8 or so `map` functions. The one we're used to is
