@@ -6,12 +6,14 @@ draft = false
 
 From
 [sjl's utilities](https://github.com/sjl/cl-losh/blob/master/losh.lisp)
-(thanks so much for the nice docstrings). The goal here is to
-read some code and learn about (hidden) gems.
+(thanks so much for the nice docstrings). The goal here is to read
+some code and learn about (hidden) gems.
 
-That's what I find interesting, I left things behind.
+The following snippets should be copy-pastable. They are the ones I
+find most interesting, I left some behind.
 
-Alexandria or Quickutil functions can be imported one by one with [Quickutil](http://quickutil.org/).
+To reduce the dependency load, Alexandria or Quickutil functions can
+be imported one by one with [Quickutil](http://quickutil.org/).
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
@@ -602,11 +604,11 @@ Pretty print a hash-table:
   "Print a pretty representation of `hash-table` to `stream.`
   Respects `*print-length*` when printing the elements.
   "
-  (let* ((keys (hash-table-keys hash-table))
-         (vals (hash-table-values hash-table))
+  (let* ((keys (alexandria:hash-table-keys hash-table))
+         (vals (alexandria:hash-table-values hash-table))
          (count (hash-table-count hash-table))
          (key-width (-<> keys
-                      (mapcar (compose #'length #'prin1-to-string) <>)
+                      (mapcar (alexandria:compose #'length #'prin1-to-string) <>)
                       (reduce #'max <> :initial-value 0)
                       (clamp 0 20 <>))))
     (print-unreadable-object (hash-table stream :type t)
@@ -644,8 +646,33 @@ Pretty print a hash-table:
     (write-char #\space stream)
     (prin1 (hash-table-contents hash-table) stream)))
 
+;; needed:
+(defun clamp (from to value)
+  "Clamp `value` between `from` and `to`."
+  (let ((max (max from to))
+        (min (min from to)))
+    (cond
+      ((> value max) max)
+      ((< value min) min)
+      (t value))))
+
+;; see
+(defmacro -<> (expr &rest forms)
+  "Thread the given forms, with `<>` as a placeholder."
+  ;; I am going to lose my fucking mind if I have to program lisp without
+  ;; a threading macro, but I don't want to add another dep to this library, so
+  ;; here we are.
+  `(let* ((<> ,expr)
+          ,@(mapcar (lambda (form)
+                      (if (symbolp form)
+                        `(<> (,form <>))
+                        `(<> ,form)))
+                    forms))
+     <>))
+
 ~~~
 
+For the `-<>` threading macro, see [cl-arrows](https://github.com/nightfly19/cl-arrows) and [arrow-macros](https://github.com/hipeta/arrow-macros).
 
 ## Profiling (with SBCL)
 
