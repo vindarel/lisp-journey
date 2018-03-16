@@ -41,6 +41,12 @@ identifier             = "resources"
 url                    = "/resources/"
 
 [[menu.main]]
+name                   = "Who ?"
+weight                 = -100
+identifier             = "who"
+url                    = "/who/"
+
+[[menu.main]]
 name                   = "About"
 weight                 = -10
 identifier             = "home"
