@@ -18,7 +18,7 @@ a shame, really.
 I have some experience with Lisp writting [Emacs Lisp packages](https://gitlab.com/emacs-stuff/), but I
 mostly write Python (and Javascript) at work and for my personal
 projects. I'm frustrated by its limitations and I see great potential
-in CL for web apps, so this will be the direction of my wanderings.
+in CL for web apps, specially with the [awesome update of Weblocks going on](https://github.com/40ants/weblocks/blob/reblocks/docs/source/quickstart.rst), so this will be the direction of my wanderings.
 
 ---
 
