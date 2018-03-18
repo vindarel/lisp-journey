@@ -11,7 +11,8 @@ ignore it or post-process it ? It's very simple, a
 and we're good:
 
 ~~~lisp
-(let ((*standard-output* (make-string-output-stream)))
+(let ((*standard-output* (make-string-output-stream))
+      (*error-output* (make-string-output-stream)))
   (apply function args) ;; anything
   (setf standard-output (get-output-stream-string *standard-output*)))
 (print-results standard-output))
@@ -27,5 +28,13 @@ Above, just don't forget to get the output content with
 A thing to note is that if your app printed stuff on error output and
 standard output consecutively, now it will print all standard output
 as a single block.
+
+(**edit**) Of course, `with-output-to-string` is simpler to capture one stream:
+
+~~~lisp
+(setf standard-output (with-output-to-string (*standard-output*)
+                        (apply function args)))
+~~~
+
 
 - [make-string-output-stream on the hyperspec](http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_s_2.htm#make-string-output-stream)
