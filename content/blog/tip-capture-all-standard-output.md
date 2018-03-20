@@ -36,5 +36,38 @@ as a single block.
                         (apply function args)))
 ~~~
 
+**edit 2**, thanks to [redditers](https://www.reddit.com/r/learnlisp/comments/837i0j/tip_capture_standard_and_error_output/):
 
-- [make-string-output-stream on the hyperspec](http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_s_2.htm#make-string-output-stream)
+Don't bind *`standard-output`* directly; bind the string stream to a
+lexical, then bind `*standard-output*` to that:
+
+~~~lisp
+(with-output-to-string (s)
+  (let ((*standard-output* s)) (write-string "abc")))
+-> "abc"
+~~~
+
+Now, let's bind both `*standard-output*` and `*standard-error*` to s:
+
+~~~lisp
+(with-output-to-string (s)
+  (let ((*standard-output* s)
+        (*standard-error* s))
+    (write-string "abc")
+    (write-string "def" *standard-error*)))
+-> "abcdef"
+~~~
+
+Eliminate s and just bind `*standard-output*` and then tie
+`*standard-error*` to the same stream:
+
+~~~lisp
+(with-output-to-string (*standard-output*)
+  (let ((*standard-error* *standard-output*))
+    (write-string "abc")
+    (write-string "def" *standard-error*)))
+--> "abcdef"
+~~~
+
+
+The conclusion stays: it's handy and easy :)
