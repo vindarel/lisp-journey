@@ -36,6 +36,7 @@ If you are looking for CL *libraries*, you of course had a look to the
 ### Internet
 
 - [nEXT browser](https://github.com/nEXT-Browser/nEXT) - Qt based **web browser**.
+- [cl-torrents](https://github.com/vindarel/cl-torrents) - (my) library, cli and readline app to search for torrents on popular trackers, with an extensive tutorial.
 
 ### Publishing software
 
