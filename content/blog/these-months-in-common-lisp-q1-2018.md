@@ -75,6 +75,7 @@ Discoveries:
 
 # Discussion
 
+- [Portacle hits #1 on Hackernews](https://news.ycombinator.com/item?id=16591592)
 - [What do you plan to work on in 2018?](https://www.reddit.com/r/lisp/comments/7n90l4/what_do_you_plan_to_work_on_in_2018/)
 - [Pros and cons of different ways to declare types in Common Lisp?](https://www.reddit.com/r/lisp/comments/87gyhq/pros_and_cons_of_different_ways_to_declare_types/)
 - [Has anyone considered or started a project to write a CL implementation in WebAssembly?](https://www.reddit.com/r/lisp/comments/7z7wuq/has_anyone_considered_or_started_a_project_to/)
