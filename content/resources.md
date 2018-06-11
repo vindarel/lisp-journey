@@ -26,6 +26,7 @@ Screencasts:
   short videos on various topics: inspecting a condition, basics of
   lisp's evaluation model,…
 * [Common Lisp Tutorials](https://www.youtube.com/playlist?list=PL2VAYZE_4wRIoHsU5cEBIxCYcbHzy4Ypj), of which [Emacs and Slime - useful keyboard shortcuts](https://www.youtube.com/watch?v=sBcPNr1CKKw&index=4&list=PL2VAYZE_4wRIoHsU5cEBIxCYcbHzy4Ypj)
+* [Common Lisp Study Group](https://www.youtube.com/channel/UCYg6qFXDE5SGT_YXhuJPU0A/videos) (long videos)
 * [Web development in Emacs with Common Lisp and ClojureSCript](https://www.youtube.com/watch?v=bl8jQ2wRh6k) -
   building [Potato](https://github.com/cicakhq/potato), a Slack-like app.
 * Shinmera playlists:
