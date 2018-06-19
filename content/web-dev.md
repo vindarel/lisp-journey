@@ -42,6 +42,8 @@ self-contained executables, shipping a multiplatform web app.
         - [Manually](#manually)
         - [with [Clack](http://quickdocs.org/clack/)](#with-clackhttpquickdocsorgclack)
         - [with Docker](#with-docker)
+        - [On Heroku](#on-heroku)
+        - [Daemonizing, restarting in case of crashes, handling logs](#daemonizing-restarting-in-case-of-crashes-handling-logs)
         - [Debugging SBCL error: ensure_space: failed to allocate n bytes](#debugging-sbcl-error-ensurespace-failed-to-allocate-n-bytes)
     - [Connecting to a remote Swank server](#connecting-to-a-remote-swank-server)
     - [Hot reload](#hot-reload)
@@ -454,6 +456,11 @@ Listening on localhost:5000.
 So we have various implementations ready to use: sbcl, ecl, ccl… with Quicklisp well configured.
 
 https://lispcookbook.github.io/cl-cookbook/testing.html#gitlab-ci
+
+
+### On Heroku
+
+See [heroku-buildpack-common-lisp](https://gitlab.com/duncan-bayne/heroku-buildpack-common-lisp) and the [Awesome CL#deploy](https://github.com/CodyReichert/awesome-cl#deployment) section.
 
 
 ### Daemonizing, restarting in case of crashes, handling logs
