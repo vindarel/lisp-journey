@@ -10,9 +10,6 @@ theme = "hugo_theme_beg"
 [Indexes]
 tag = "tags"
 
-# Cocoa
-# lacks tags
-
 # [permalinks]
 # blog  = "blog/:slug/"
 
