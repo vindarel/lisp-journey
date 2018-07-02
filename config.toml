@@ -25,11 +25,11 @@ weight                 = -110
 identifier             = "software"
 url                    = "/software/"
 
-# [[menu.main]]
-# name                   = "State of web dev"
-# weight                 = -110
-# identifier             = "web-dev"
-# url                    = "/web-dev/"
+[[menu.main]]
+name                   = "Web dev"
+weight                 = -108
+identifier             = "web-dev"
+url                    = "/web-dev/"
 
 [[menu.main]]
 name                   = "Good resources"
