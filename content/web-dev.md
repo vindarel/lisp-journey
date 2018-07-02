@@ -22,18 +22,36 @@ self-contained executables, shipping a multiplatform web app.
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
+- [Web application environments](#web-application-environments)
+    - [Clack, Lack](#clack-lack)
 - [Web frameworks](#web-frameworks)
-    - [URL routing](#url-routing)
-        - [Accessing parameters](#accessing-parameters)
+    - [Hunchentoot](#hunchentoot)
+    - [Caveman](#caveman)
+    - [Lucerne](#lucerne)
+    - [Snooze](#snooze)
+    - [Radiance](#radiance)
+    - [Weblocks](#weblocks)
+- [Tasks](#tasks)
+    - [Accessing url parameters](#accessing-url-parameters)
+    - [Session an cookies](#session-an-cookies)
     - [Data storage](#data-storage)
+    - [SQL](#sql)
+        - [Persistent datastores](#persistent-datastores)
         - [Migrations](#migrations)
+    - [Forms](#forms)
+        - [Form validation](#form-validation)
     - [Debugging](#debugging)
-    - [Tests](#tests)
-- [Template engines](#template-engines)
+    - [Testing](#testing)
+    - [Misc](#misc)
+        - [Oauth, Job queues, etc](#oauth-job-queues-etc)
+- [Templating engines](#templating-engines)
     - [HTML-based](#html-based)
     - [Lisp-based](#lisp-based)
 - [Javascript](#javascript)
-    - [The case Weblbocks - Reblocks, 2017](#the-case-weblbocks---reblocks-2017)
+    - [Parenscript](#parenscript)
+    - [JSCL](#jscl)
+    - [Ajax](#ajax)
+    - [The case Webblocks - Reblocks, 2017](#the-case-webblocks---reblocks-2017)
 - [Shipping](#shipping)
     - [Building](#building)
     - [Multiplatform delivery with Electron (Ceramic)](#multiplatform-delivery-with-electron-ceramic)
@@ -52,17 +70,44 @@ self-contained executables, shipping a multiplatform web app.
 
 <!-- markdown-toc end -->
 
+
+# Web application environments
+
+## Clack, Lack
+
 # Web frameworks
+
+## Hunchentoot
+
+https://edicl.github.io/hunchentoot/
+
+## Caveman
+
+https://github.com/fukamachi/caveman
+
+## Lucerne
+
+https://github.com/eudoxia0/lucerne
+
+(staling as of writing)
+
+## Snooze
+
+https://github.com/joaotavora/snooze
+
+## Radiance
 
 [Radiance](https://github.com/Shirakumo/radiance), with extensive tutorial and existing apps.
 
-## Servers - Hunchentoot, Clack
+## Weblocks (solving the Javascript problem)
 
-## Websockets
+See our presentation below.
 
-## URL routing
+http://40ants.com/weblocks/quickstart.html
 
-### Accessing parameters
+# Tasks
+
+## Accessing url parameters
 
 [Lucerne](http://borretti.me/lucerne/docs/overview.html) has a nice
 `with-params` macro that makes accessing post or url query parameters a breeze:
@@ -126,10 +171,12 @@ Caveman:
 
 ## Data storage
 
-### SQL
+## SQL
 
 [Mito](https://github.com/fukamachi/mito) works for MySQL, Postgres
 and SQLite3 on SBCL and CCL.
+
+https://lispcookbook.github.io/cl-cookbook/databases.html
 
 We can define models with a regular class which has a `mito:dao-table-class` `:metaclass`:
 
@@ -227,9 +274,9 @@ browser. Can return a custom error page in production.
 > Are you tired of jumping to your web browser every time you need to test your work in Clack? Clack-pretend will capture and replay calls to your clack middleware stack. When developing a web application with clack, you will often find it inconvenient to run your code from the lisp REPL because it expects a clack environment, including perhaps, cookies or a logged-in user. With clack-pretend, you can run prior web requests from your REPL, moving development back where it belongs.
 
 
-## Tests
+## Testing
 
-Testing with a local DB: what's involved ?
+Testing with a local DB: example of a [testing macro](https://lispcookbook.github.io/cl-cookbook/databases.html#testing).
 
 We would use [envy](https://github.com/fukamachi/envy) to switch configurations.
 
@@ -238,7 +285,7 @@ We would use [envy](https://github.com/fukamachi/envy) to switch configurations.
 
 ###  Oauth, Job queues, etc
 
-# Template engines
+# Templating engines
 
 ## HTML-based
 
@@ -278,13 +325,121 @@ also has more features (like embeddable markdown, warns on malformed html, and m
 
 # Javascript
 
+## Parenscript
+
+> Parenscript is a translator from an extended subset of Common Lisp to JavaScript. Parenscript code can run almost identically on both the browser (as JavaScript) and server (as Common Lisp).
+> Parenscript code is treated the same way as Common Lisp code, making the full power of Lisp macros available for JavaScript. This provides a web development environment that is unmatched in its ability to reduce code duplication and provide advanced meta-programming facilities to web developers.
+
+https://common-lisp.net/project/parenscript/
+
+## JSCL
+
+> A Lisp-to-Javascript compiler bootstrapped from Common Lisp and executed from the browser.
+
+https://github.com/jscl-project/jscl
+
+https://t-cool.github.io/jscl-playground/
+
 ## Ajax
 
-## The case Weblbocks - Reblocks, 2017
 
-Backend and interactive client in Lisp. In development but simple new quickstart:
+## The case Webblocks - Reblocks, 2017
+
+Weblocks is an "isomorphic" web frameworks that solves the "Javascript
+problem". It allows to write the backend and an interactive client
+interface in Lisp, without a line of Javascript, in our usual Lisp
+development environment.
+
+The framework evolves around widgets, that are updated server-side
+and are automatically redisplayed with transparent ajax calls on the
+client.
+
+It is being massively refactored, simplified, rewritten and documented
+since 2017. See the new quickstart:
 
 http://40ants.com/weblocks/quickstart.html
+
+Writing a dynamic todo-app resolves in:
+
+- defining a widget class for a task:
+
+~~~lisp
+(defwidget task ()
+        ((title
+          :initarg :title
+          :accessor title)
+         (done
+          :initarg :done
+          :initform nil
+          :accessor done)))
+~~~
+
+- doing the same for a list of tasks:
+
+~~~lisp
+(defwidget task-list ()
+        ((tasks
+          :initarg :tasks
+          :accessor tasks)))
+~~~
+
+- saying how to render these widgets in html by extending the `render` method:
+
+~~~lisp
+(defmethod render ((task task))
+        "Render a task."
+        (with-html
+              (:span (if (done task)
+                         (with-html
+                               (:s (title task)))
+                       (title task)))))
+
+(defmethod render ((widget task-list))
+        "Render a list of tasks."
+        (with-html
+              (:h1 "Tasks")
+              (:ul
+                (loop for task in (tasks widget) do
+                      (:li (render task))))))
+~~~
+
+- telling how to initialize the Weblocks app:
+
+~~~lisp
+(defmethod weblocks/session:init ((app tasks))
+         (declare (ignorable app))
+         (let ((tasks (make-task-list "Make my first Weblocks app"
+                                      "Deploy it somewhere"
+                                      "Have a profit")))
+           (make-instance 'task-list :tasks tasks)))
+~~~
+
+- and then writing functions to interact with the widgets, for example adding a task:
+
+~~~lisp
+(defmethod add-task ((task-list task-list) title)
+        (push (make-task title)
+              (tasks task-list))
+        (update task-list))
+~~~
+
+Adding an html form and calling the new `add-task` function:
+
+~~~lisp
+(defmethod render ((task-list task-list))
+        (with-html
+          (:h1 "Tasks")
+          (loop for task in (tasks task-list) do
+            (render task))
+          (with-html-form (:POST (lambda (&key title &allow-other-keys)
+                                         (add-task task-list title)))
+            (:input :type "text"
+                    :name "title"
+                    :placeholder "Task's title")
+            (:input :type "submit"
+                    :value "Add"))))
+~~~
+
 
 # Shipping
 
@@ -476,7 +631,7 @@ Examples [search](https://lmddgtfy.net/?q=systemd%20daemonize%20application) res
 It is as simple as writing a configuration file:
 
 ```
-# /etc/systemd/system/my-app.service
+$ /etc/systemd/system/my-app.service
 [Unit]
 Description=stupid simple example
 
