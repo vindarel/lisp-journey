@@ -16,6 +16,7 @@ and
 
 Individual sites:
 
+* [sjl's road to Lisp](http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/)
 * https://www.darkchestnut.com/ - he encountered deployment obstacles, wrote a book and blogs about it.
 * http://lispmethods.com/
 * [Malisper's series on debugging](http://malisper.me//debugging-lisp-part-1-recompilation/)
