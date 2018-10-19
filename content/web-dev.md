@@ -463,22 +463,6 @@ we need a step more for web apps:
                               (bt:all-threads))))
 ~~~
 
-One more gotcha, illustrated with `lparallel`. The lisp doesn't want
-to see running threads while building the executable. So if you use
-`lparallel`, and thus need to instantiate its kernels, also do it
-inside the main function.
-
-So, I use the following pattern:
-
-~~~lisp
-(defun main ()
-  (setf lparallel:*kernel* (lparallel:make-kernel 2))
-  (start-app :port 9003)
-  (bt:join-thread (find-if (lambda (th)
-                                (search "hunchentoot" (bt:thread-name th)))
-                           (bt:all-threads))))
-~~~
-
 I can now build my web app, send it to my VPS and see it live.
 
 When I run it, Hunchentoot stays listening at the foreground:
@@ -489,7 +473,7 @@ Hunchentoot server is started.
 Listening on localhost:9003.
 ```
 
-On my VPS, I need to put it in the background (`C-z bg`), or use a `tmux` session
+I need to put it in the background (`C-z bg`), or use a `tmux` session
 (`tmux`, then `C-b d` to detach it).
 
 To be complete, you'll notice that we can not `C-c` our running app,
@@ -516,7 +500,7 @@ on how to build command-line applications.
            (clack:stop *server*)
            (uiop:quit 1)) ;; portable exit, included in ASDF, already loaded.
     ;; for others, unhandled errors (we might want to do the same).
-    (error (c) (format t "Woops, an unknown error occured:~&~a~&" c))))
+    (error (c) (format t "Woops, an unknown error occured:~&~a~&" c)))))
 ~~~
 
 
