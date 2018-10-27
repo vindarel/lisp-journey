@@ -30,7 +30,8 @@ self-contained executables, shipping a multiplatform web app.
     - [Lucerne](#lucerne)
     - [Snooze](#snooze)
     - [Radiance](#radiance)
-    - [Weblocks](#weblocks)
+    - [cl-rest-server](#cl-rest-server)
+    - [Weblocks (solving the Javascript problem)](#weblocks-solving-the-javascript-problem)
 - [Tasks](#tasks)
     - [Accessing url parameters](#accessing-url-parameters)
     - [Session an cookies](#session-an-cookies)
@@ -98,6 +99,17 @@ https://github.com/joaotavora/snooze
 ## Radiance
 
 [Radiance](https://github.com/Shirakumo/radiance), with extensive tutorial and existing apps.
+
+## cl-rest-server
+
+[cl-rest-server](https://github.com/mmontone/cl-rest-server)
+
+> a library for writing REST Web APIs in Common Lisp.
+
+Features: validation via schemas, Swagger support, authentication, logging, caching, permission checking…
+
+Seems complete. Didn't try.
+
 
 ## Weblocks (solving the Javascript problem)
 
