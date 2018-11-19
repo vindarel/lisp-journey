@@ -65,8 +65,10 @@ and it produces html into `docs/`.
 You may be familiar with Staple since it's used by Shinmera in all his projects.
 
 - https://github.com/Shinmera/staple
-- output: a single html. The documentation string is plain text (no markup, rendered in a `<pre>` tag).
+- output: html. The documentation string is plain text (no markup, rendered in a `<pre>` tag).
+- cross-references
 - can use a template.
+- more features than listed here.
 
 It doesn't support SBCL 1.2.4, so my tests fell short (upgrading isn't
 100% smooth here). If you're on SBCL >= 1.4.8 Staple is a good option.
