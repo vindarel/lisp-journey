@@ -60,7 +60,7 @@ It's straightforward:
 and it produces html into `docs/`.
 
 
-## Staple (doesn't work on SBCL 1.2.4)
+## Staple (doesn't work on Debian's SBCL 1.2.4)
 
 You may be familiar with Staple since it's used by Shinmera in all his projects.
 
@@ -106,7 +106,7 @@ I liked the output, but it didn't work (asdf-related error), and it's unmaintain
 
 ### cl-domain (Sphinx)
 
-Another excellent option is 40ants' cldomain, which builds on Python's improved Sphinx:
+Another excellent option is 40ants' cldomain, which builds on Python's proven Sphinx:
 
 > CLDomain is an extension for the Sphinx documentation generation tool that allow sphinx to generate documentation for Common Lisp libraries. Documentation is extracted from the various entity’s documentation strings, loaded from ASDF systems and associated internal packages.
 
