@@ -14,6 +14,18 @@ remove old ones (clod, qbook, manifest).
 I had two pure Lisp solutions working out of the box, two more are of
 interest, and there's another non-Lisp of interest.
 
+**update**: just found out that [qbook](http://quickdocs.org/qbook/)
+([github mirror](https://github.com/lisp-mirror/qbook))is used for the
+documentation of Fiveam, which is pretty nice:
+https://common-lisp.net/project/fiveam/docs/index.html It can produce
+html and latex. It uses docstrings and comments that start with 4
+commas to structure the page
+([exple in source](https://github.com/sionescu/fiveam/blob/master/src/suite.lisp)
+that gives
+[this](https://common-lisp.net/project/fiveam/docs/Test_0020Suites.html)). Running
+it has a lot of asdf deprecation warnings and it did not work out of
+the box for me ("The slot IT.BESE.QBOOK::GENERATOR is unbound in the object").
+
 
 ## Codex
 
