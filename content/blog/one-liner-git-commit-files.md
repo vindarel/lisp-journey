@@ -23,7 +23,12 @@ Git, and this one-liner:
 I guessed the `:paths` and `:files` arguments with Slime's command
 argument list which appears in the modline, I wanted a function to
 convert a `/full/path/file.cl` to a name `file.cl` and tried the
-completion for `file-…` and found the right thing without effort.
+completion for `file-…` and found the right thing without effort. I
+saw on the complete documentation that `legit:commit` wanted a
+repository object as first argument, which makes sense, but
+`legit:git-commit` doesn't and I just iterate on the current working
+directory (btw change it in Slime with the `,cd` command) so it was
+shorter for me.
 
 Just a one liner.
 
