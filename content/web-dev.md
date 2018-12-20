@@ -31,6 +31,7 @@ self-contained executables, shipping a multiplatform web app.
     - [Snooze](#snooze)
     - [Radiance](#radiance)
     - [cl-rest-server](#cl-rest-server)
+    - [Wookie](#wookie)
     - [Weblocks (solving the Javascript problem)](#weblocks-solving-the-javascript-problem)
 - [Tasks](#tasks)
     - [Accessing url parameters](#accessing-url-parameters)
@@ -80,19 +81,37 @@ self-contained executables, shipping a multiplatform web app.
 
 ## Hunchentoot
 
+The de-facto web framework, with the best documentation (cough cough),
+the most websites on production.
+
 https://edicl.github.io/hunchentoot/
 
 ## Caveman
 
+Written by a super-productive lisper, nice documentation for basic
+stuff but lacking for the rest, based on Clack (webserver interface,
+think Python's WSGI), uses Hunchentoot by default.
+
+I feel like basic functions are too cumbersome (accessing url parameters).
+
 https://github.com/fukamachi/caveman
 
 ## Lucerne
+
+By another great lisper who's busy in other areas.
 
 https://github.com/eudoxia0/lucerne
 
 (staling as of writing)
 
 ## Snooze
+
+By the maintainer of Sly, Emacs' Yasnippet,…
+
+Defining routes is like defining functions. Built-in features that are
+available as extensions in Clack-based frameworks (setting to get a
+stacktrace on the browser, to fire up the debugger or to return a
+404,…). Definitely worth exploring.
 
 https://github.com/joaotavora/snooze
 
@@ -109,6 +128,17 @@ https://github.com/joaotavora/snooze
 Features: validation via schemas, Swagger support, authentication, logging, caching, permission checking…
 
 Seems complete. Didn't try.
+
+## Wookie
+
+https://github.com/orthecreedence/wookie
+
+Asynchronous web server, by an impressive lisper, who built many async
+libraries. Used for the [Turtl](https://github.com/turtl/api/) api
+backend. Dealing with async brings its own set of problems (how will
+be debugging ?).
+
+Nice api to build routes, good documentation: http://wookie.lyonbros.com/
 
 
 ## Weblocks (solving the Javascript problem)
