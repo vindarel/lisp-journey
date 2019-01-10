@@ -722,8 +722,7 @@ It defines a simple function that prints forever:
 ;; a little common lisp swank demo
 ;; while this program is running, you can connect to it from another terminal or machine
 ;; and change the definition of doprint to print something else out!
-;; (ql:quickload :swank)
-;; (ql:quickload :bordeaux-threads)
+;; (ql:quickload '(:swank :bordeaux-threads))
 
 (require :swank)
 (require :bordeaux-threads)
@@ -740,8 +739,7 @@ It defines a simple function that prints forever:
   (loop while t do
        (sleep 5)
        (dostuff)
-       (incf *counter*)
-       ))
+       (incf *counter*)))
 
 (runner)
 ~~~
