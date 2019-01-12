@@ -1,7 +1,7 @@
 ---
 title: "Why Deftask Chose Common Lisp"
 date: 2019-01-11T12:21:30+01:00
-draft: true
+draft: false
 ---
 
 We heard about [Deftask](https://github.com/deftask/), a task
