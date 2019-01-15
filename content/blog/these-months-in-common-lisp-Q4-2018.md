@@ -41,7 +41,6 @@ Happy (re)discoveries !
 - [magrathea: chaotic-neutral web security for Hunchentoot](https://gitlab.com/Theemacsshibe/magrathea)
 - [schannel: Common Lisp Windows SChannel API](https://github.com/fjames86/schannel)
 - [qbase64: A fast and flexible base64 encoder/decoder in Lisp](https://www.reddit.com/r/Common_Lisp/comments/9qguq3/qbase64_a_fast_and_flexible_base64_encoderdecoder/)
-- [nodgui - yet another Tcl/Tk-based GUI package for Common Lisp](https://notabug.org/cage/nodgui)
 - [Beautify Practical Common Lisp, Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/beautify-practical-common-lisp/)
 - [static-dispatch: Static generic function dispatch. The purpose is to provide an optimization in cases where the usual dynamic dispatch is too slow, and the dynamic features are not required](https://github.com/alex-gutev/static-dispatch/)
 - [cl-http2-protocol: HTTP/2 interop library in Common Lisp](https://github.com/akamai/cl-http2-protocol)
@@ -55,6 +54,7 @@ Happy (re)discoveries !
 
 GUI:
 
+- [nodgui - yet another Tcl/Tk-based GUI package for Common Lisp](https://notabug.org/cage/nodgui)
 - [YstokWidgets Professional Edition](http://en.ystok.ru/products/ywidgets/)
 - [MIDGETS - A collection of CAPI widgets and utilities](https://common-lisp.net/~loliveira/ediware/midgets/doc/)
 - [subtext: A mostly-text-based UI bridges Common Lisp objects and runs of text. Minimal text-based user interface](https://github.com/stacksmith/subtext)
