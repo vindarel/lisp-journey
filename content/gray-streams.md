@@ -77,212 +77,212 @@ Proposal `stream-definition-by-user:generic-functions`
 
   `fundamental-output-stream`			[Class]
 
-    A subclass of FUNDAMENTAL-STREAM.  Its inclusion causes OUTPUT-STREAM-P
+    A subclass of `fundamental-stream`.  Its inclusion causes `output-stream-p`
     to return true.  Bi-direction streams may be formed by including both
-    FUNDAMENTAL-OUTPUT-STREAM and FUNDAMENTAL-INPUT-STREAM.
+    `fundamental-output-stream` and `fundamental-input-stream`.
 
-  FUNDAMENTAL-CHARACTER-STREAM			[Class]
+  `fundamental-character-stream`			[Class]
 
-    A subclass of FUNDAMENTAL-STREAM.  It provides a method for
-    STREAM-ELEMENT-TYPE which returns CHARACTER.
+    A subclass of `fundamental-stream`.  It provides a method for
+    `stream-element-type` which returns `character`.
 
-  FUNDAMENTAL-BINARY-STREAM			[Class]
+  `fundamental-binary-stream`			[Class]
 
-    A subclass of FUNDAMENTAL-STREAM.  Any instantiable class that
-    includes this needs to define a method for STREAM-ELEMENT-TYPE.
+    A subclass of `fundamental-stream`.  Any instantiable class that
+    includes this needs to define a method for `stream-element-type`.
 
-  FUNDAMENTAL-CHARACTER-INPUT-STREAM		[Class]
+  `fundamental-character-input-stream`		[Class]
 
-    Includes FUNDAMENTAL-INPUT-STREAM and FUNDAMENTAL-CHARACTER-STREAM.
+    Includes `fundamental-input-stream` and `fundamental-character-stream`.
     It provides default methods for several generic functions used for
     character input.
 
-  FUNDAMENTAL-CHARACTER-OUTPUT-STREAM		[Class]
+  `fundamental-character-output-stream`		[Class]
 
-    Includes FUNDAMENTAL-OUTPUT-STREAM and FUNDAMENTAL-CHARACTER-STREAM.
+    Includes `fundamental-output-stream` and `fundamental-character-stream`.
     It provides default methods for several generic functions used for
     character output.
 
-  FUNDAMENTAL-BINARY-INPUT-STREAM		[Class]
+  `fundamental-binary-input-stream`		[Class]
 
-    Includes FUNDAMENTAL-INPUT-STREAM and FUNDAMENTAL-BINARY-STREAM.
+    Includes `fundamental-input-stream` and `fundamental-binary-stream`.
 
-  FUNDAMENTAL-BINARY-OUTPUT-STREAM		[Class]
+  `fundamental-binary-output-stream`		[Class]
 
-    Includes FUNDAMENTAL-OUTPUT-STREAM and FUNDAMENTAL-BINARY-STREAM.
+    Includes `fundamental-output-stream` and `fundamental-binary-stream`.
 
 
  Character input:
 
   A character input stream can be created by defining a class that
-  includes FUNDAMENTAL-CHARACTER-INPUT-STREAM and defining methods for the
+  includes `fundamental-character-input-stream` and defining methods for the
   generic functions below.
 
-  STREAM-READ-CHAR  stream			[Generic Function]
+  `stream-read-char`  stream			[Generic Function]
 
     This reads one character from the stream.  It returns either a
     character object, or the symbol :EOF if the stream is at end-of-file.
-    Every subclass of FUNDAMENTAL-CHARACTER-INPUT-STREAM must define a
+    Every subclass of `fundamental-character-input-stream` must define a
     method for this function.
 
     Note that for all of these generic functions, the stream argument
     must be a stream object, not T or NIL.
 
-  STREAM-UNREAD-CHAR  stream  character		[Generic Function]
+  `stream-unread-char`  stream  character		[Generic Function]
 
-    Un-does the last call to STREAM-READ-CHAR, as in UNREAD-CHAR.  Returns
-    NIL.  Every subclass of FUNDAMENTAL-CHARACTER-INPUT-STREAM must define
+    Un-does the last call to `stream-read-char`, as in `unread-char`.  Returns
+    NIL.  Every subclass of `fundamental-character-input-stream` must define
     a method for this function.
 
-  STREAM-READ-CHAR-NO-HANG  stream		[Generic Function]
+  `stream-read-char-no-hang`  stream		[Generic Function]
 
-    This is used to implement READ-CHAR-NO-HANG.  It returns either a
+    This is used to implement `read-char-no-hang`.  It returns either a
     character, or NIL if no input is currently available, or :EOF if
     end-of-file is reached.  The default method provided by
-    FUNDAMENTAL-CHARACTER-INPUT-STREAM simply calls STREAM-READ-CHAR; this
+    `fundamental-character-input-stream` simply calls `stream-read-char`; this
     is sufficient for file streams, but interactive streams should define
     their own method.
 
-  STREAM-PEEK-CHAR  stream			[Generic Function]
+  `stream-peek-char`  stream			[Generic Function]
 
-    Used to implement PEEK-CHAR; this corresponds to peek-type of NIL.
+    Used to implement `peek-char`; this corresponds to peek-type of NIL.
     It returns either a character or :EOF.  The default method
-    calls STREAM-READ-CHAR and STREAM-UNREAD-CHAR.
+    calls `stream-read-char` and `stream-unread-char`.
 
-  STREAM-LISTEN  stream				[Generic Function]
+  `stream-listen`  stream				[Generic Function]
 
-    Used by LISTEN.  Returns true or false.  The default method uses
-    STREAM-READ-CHAR-NO-HANG and STREAM-UNREAD-CHAR.  Most streams should
+    Used by `listen`.  Returns true or false.  The default method uses
+    `stream-read-char-no-hang` and `stream-unread-char`.  Most streams should
     define their own method since it will usually be trivial and will
     always be more efficient than the default method.
 
-  STREAM-READ-LINE  stream			[Generic Function]
+  `stream-read-line`  stream			[Generic Function]
 
-    Used by READ-LINE.  A string is returned as the first value.  The
+    Used by `read-line`.  A string is returned as the first value.  The
     second value is true if the string was terminated by end-of-file
     instead of the end of a line.  The default method uses repeated
-    calls to STREAM-READ-CHAR.
+    calls to `stream-read-char`.
 
-  STREAM-CLEAR-INPUT  stream			[Generic Function]
+  `stream-clear-input`  stream			[Generic Function]
 
-    Implements CLEAR-INPUT for the stream, returning NIL.  The default
+    Implements `clear-input` for the stream, returning NIL.  The default
     method does nothing.
 
 
  Character output:
 
   A character output stream can be created by defining a class that
-  includes FUNDAMENTAL-CHARACTER-OUTPUT-STREAM and defining methods for the
+  includes `fundamental-character-output-stream` and defining methods for the
   generic functions below.
 
-  STREAM-WRITE-CHAR  stream character		[Generic Function]
+  `stream-write-char`  stream character		[Generic Function]
 
     Writes character to the stream and returns the character.  Every
-    subclass of FUNDAMENTAL-CHARACTER-OUTPUT-STREAM must have a method
+    subclass of `fundamental-character-output-stream` must have a method
     defined for this function.
 
-  STREAM-LINE-COLUMN  stream			[Generic Function]
+  `stream-line-column`  stream			[Generic Function]
 
     This function returns the column number where the next character
     will be written, or NIL if that is not meaningful for this stream.
     The first column on a line is numbered 0.  This function is used in
-    the implementation of PPRINT and the FORMAT ~T directive.  For every
+    the implementation of `pprint` and the FORMAT ~T directive.  For every
     character output stream class that is defined, a method must be
     defined for this function, although it is permissible for it to
     always return NIL.
 
-  STREAM-START-LINE-P  stream			[Generic Function]
+  `stream-start-line-p`  stream			[Generic Function]
 
     This is a predicate which returns T if the stream is positioned at the
     beginning of a line, else NIL.  It is permissible to always return
-    NIL.  This is used in the implementation of FRESH-LINE.  Note that
-    while a value of 0 from STREAM-LINE-COLUMN also indicates the
-    beginning of a line, there are cases where STREAM-START-LINE-P can be
-    meaningfully implemented although STREAM-LINE-COLUMN can't be.  For
+    NIL.  This is used in the implementation of `fresh-line`.  Note that
+    while a value of 0 from `stream-line-column` also indicates the
+    beginning of a line, there are cases where `stream-start-line-p` can be
+    meaningfully implemented although `stream-line-column` can't be.  For
     example, for a window using variable-width characters, the column
     number isn't very meaningful, but the beginning of the line does have
-    a clear meaning.  The default method for STREAM-START-LINE-P on class
-    FUNDAMENTAL-CHARACTER-OUTPUT-STREAM uses STREAM-LINE-COLUMN, so if
-    that is defined to return NIL, then a method should be provided for
-    either STREAM-START-LINE-P or STREAM-FRESH-LINE.
+    a clear meaning.  The default method for `stream-start-line-p` on class
+    `fundamental-character-output-stream` uses `stream-line-column`, so if
+    that is defined to return `nil`, then a method should be provided for
+    either `stream-start-line-p` or `stream-fresh-line`.
 
-  STREAM-WRITE-STRING stream string &optional start end [Generic Function]
+  `stream-write-string` stream string &optional start end [Generic Function]
 
-    This is used by WRITE-STRING.  It writes the string to the stream,
+    This is used by `write-string`.  It writes the string to the stream,
     optionally delimited by start and end, which default to 0 and NIL.
     The string argument is returned.  The default method provided by
-    FUNDAMENTAL-CHARACTER-OUTPUT-STREAM uses repeated calls to
-    STREAM-WRITE-CHAR.
+    `fundamental-character-output-stream` uses repeated calls to
+    `stream-write-char`.
 
-  STREAM-TERPRI  stream				[Generic Function]
+  `stream-terpri`  stream				[Generic Function]
 
-    Writes an end of line, as for TERPRI.  Returns NIL.  The default
-    method does (STREAM-WRITE-CHAR stream #\NEWLINE).
+    Writes an end of line, as for `terpri`.  Returns NIL.  The default
+    method does (`stream-write-char` stream #\NEWLINE).
 
-  STREAM-FRESH-LINE  stream			[Generic Function]
+  `stream-fresh-line`  stream			[Generic Function]
 
-    Used by FRESH-LINE.  The default method uses STREAM-START-LINE-P and
-    STREAM-TERPRI.
+    Used by `fresh-line`.  The default method uses `stream-start-line-p` and
+    `stream-terpri`.
 
-  STREAM-FINISH-OUTPUT  stream			[Generic Function]
+  `stream-finish-output`  stream			[Generic Function]
 
-    Implements FINISH-OUTPUT.  The default method does nothing.
+    Implements `finish-output`.  The default method does nothing.
 
-  STREAM-FORCE-OUTPUT  stream			[Generic Function]
+  `stream-force-output`  stream			[Generic Function]
 
-    Implements FORCE-OUTPUT.  The default method does nothing.
+    Implements `force-output`.  The default method does nothing.
 
-  STREAM-CLEAR-OUTPUT  stream			[Generic Function]
+  `stream-clear-output`  stream			[Generic Function]
 
-    Implements CLEAR-OUTPUT.  The default method does nothing.
+    Implements `clear-output`.  The default method does nothing.
 
-  STREAM-ADVANCE-TO-COLUMN  stream column	[Generic Function]
+  `stream-advance-to-column`  stream column	[Generic Function]
 
     Writes enough blank space so that the next character will be written
     at the specified column.  Returns true if the operation is
     successful, or NIL if it is not supported for this stream.
-    This is intended for use by by PPRINT and FORMAT ~T.  The default
-    method uses STREAM-LINE-COLUMN and repeated calls to
-    STREAM-WRITE-CHAR with a #\SPACE character; it returns NIL if
-    STREAM-LINE-COLUMN returns NIL.
+    This is intended for use by by `pprint` and FORMAT ~T.  The default
+    method uses `stream-line-column` and repeated calls to
+    `stream-write-char` with a #\SPACE character; it returns NIL if
+    `stream-line-column` returns NIL.
 
 
  Other functions:
 
-  CLOSE  stream &key abort			[Generic Function]
+  `close`  stream &key abort			[Generic Function]
 
-    The existing function CLOSE is redefined to be a generic function, but
+    The existing function `close` is redefined to be a generic function, but
     otherwise behaves the same.  The default method provided by class
-    FUNDAMENTAL-STREAM sets a flag for OPEN-STREAM-P.  The value returned
-    by CLOSE will be as specified by the issue CLOSED-STREAM-OPERATIONS.
+    `fundamental-stream` sets a flag for `open-stream-p`.  The value returned
+    by `close` will be as specified by the issue `closed-stream-operations`.
 
-  OPEN-STREAM-P stream				[Generic Function]
+  `open-stream-p` stream				[Generic Function]
 
-    This function [from proposal STREAM-ACCESS] is made generic.  A
-    default method is provided by class FUNDAMENTAL-STREAM which returns
-    true if CLOSE has not been called on the stream.
+    This function [from proposal `stream-access]` is made generic.  A
+    default method is provided by class `fundamental-stream` which returns
+    true if `close` has not been called on the stream.
 
-  STREAMP  object				[Generic Function]
-  INPUT-STREAM-P  stream			[Generic Function]
-  OUTPUT-STREAM-P  stream			[Generic Function]
+  `streamp`  object				[Generic Function]
+  `input-stream-p`  stream			[Generic Function]
+  `output-stream-p`  stream			[Generic Function]
 
     These three existing predicates may optionally be implemented as
     generic functions for implementations that want to permit users to
-    define streams that are not STANDARD-OBJECTs.  Normally, the default
-    methods provided by classes FUNDAMENTAL-INPUT-STREAM and
-    FUNDAMENTAL-OUTPUT-STREAM are sufficient.  Note that, for example,
+    define streams that are not `standard-object`s.  Normally, the default
+    methods provided by classes `fundamental-input-stream` and
+    `fundamental-output-stream` are sufficient.  Note that, for example,
     (INPUT-STREAM-P x) is not equivalent to (TYPEP x
     'FUNDAMENTAL-INPUT-STREAM) because implementations may have
     additional ways of defining their own streams even if they don't
     make that visible by making these predicates generic.
 
-  STREAM-ELEMENT-TYPE  stream			[Generic Function]
+  `stream-element-type`  stream			[Generic Function]
 
     This existing function is made generic, but otherwise behaves the
-    same.  Class FUNDAMENTAL-CHARACTER-STREAM provides a default method
-    which returns CHARACTER.
+    same.  Class `fundamental-character-stream` provides a default method
+    which returns `character`.
 
-  PATHNAME and TRUENAME are also permitted to be implemented as generic
+  `pathname` and `truename` are also permitted to be implemented as generic
   functions.  There is no default method since these are not valid for
   all streams.
 
@@ -290,18 +290,18 @@ Proposal `stream-definition-by-user:generic-functions`
  Binary streams:
 
     Binary streams can be created by defining a class that includes either
-    FUNDAMENTAL-BINARY-INPUT-STREAM or FUNDAMENTAL-BINARY-OUTPUT-STREAM
-    (or both) and defining a method for STREAM-ELEMENT-TYPE and for one or
+    `fundamental-binary-input-stream` or `fundamental-binary-output-stream`
+    (or both) and defining a method for `stream-element-type` and for one or
     both of the following generic functions.
 
-  STREAM-READ-BYTE  stream			[Generic Function]
+  `stream-read-byte`  stream			[Generic Function]
 
-    Used by READ-BYTE; returns either an integer, or the symbol :EOF if the
+    Used by `read-byte`; returns either an integer, or the symbol :EOF if the
     stream is at end-of-file.
 
-  STREAM-WRITE-BYTE stream integer		[Generic Function]
+  `stream-write-byte` stream integer		[Generic Function]
 
-    Implements WRITE-BYTE; writes the integer to the stream and returns
+    Implements `write-byte`; writes the integer to the stream and returns
     the integer as the result.
 
 
@@ -311,13 +311,13 @@ Rationale:
   every case, the stream argument is optional, and therefore cannot be
   specialized.  Therefore, it is necessary to define a lower-level
   generic function to be used by the existing function.  It also isn't
-  appropriate to specialize on the second argument of PRINT-OBJECT because
+  appropriate to specialize on the second argument of `print-object` because
   it is a higher-level function -- even when the first argument is a
   character or a string, it needs to format it in accordance with
   *PRINT-ESCAPE*.
 
   In order to make the meaning as obvious as possible, the names of the
-  generic functions have been formed by prefixing "STREAM-" to the
+  generic functions have been formed by prefixing "`stream-`" to the
   corresponding non-generic function.
 
   Having the generic input functions just return :EOF at end-of-file, with
@@ -327,18 +327,18 @@ Rationale:
   functions that use this convention can only return a character or
   integer as a stream element, so there is no possibility of ambiguity.
 
-  Functions STREAM-LINE-COLUMN, STREAM-START-LINE-P, and
-  STREAM-ADVANCE-TO-COLUMN may appear to be a reincarnation of the
-  defeated proposal STREAM-INFO, but the motivation here is different.
+  Functions `stream-line-column`, `stream-start-line-p`, and
+  `stream-advance-to-column` may appear to be a reincarnation of the
+  defeated proposal `stream-info`, but the motivation here is different.
   This interface needs to be defined if user-defined streams are to be
-  able to be used by PPRINT and FORMAT ~T, which could be viewed as a
+  able to be used by `pprint` and FORMAT ~T, which could be viewed as a
   separate question from whether the user can call then on
   system-defined streams.
 
 Current practice:
 
   No one currently supports exactly this proposal, but this is very
-  similar to the stream interface used in CLUE.
+  similar to the stream interface used in `clue`.
 
   On descendants of the MIT Lisp Machine, streams can be implemented
   by users as either flavors, with methods to accept the various
@@ -628,16 +628,16 @@ Discussion:
   response to an earlier outline.  So far, no one has expressed opposition
   to the concept.  There are some differences of opinion about whether
   certain operations should have default methods or required methods:
-  STREAM-LISTEN, STREAM-READ-CHAR-NO-HANG, STREAM-LINE-COLUMN,
-  and STREAM-START-LINE-P.
+  `stream-listen`, `stream-read-char-no-hang`, `stream-line-column`,
+  and `stream-start-line-p`.
 
   An experimental prototype of this has been successfully implemented on
   the Explorer.
 
   This proposal does not provide sufficient capability to implement
-  forwarding streams such as for MAKE-SYNONYM-STREAM,
-  MAKE-BROADCAST-STREAM, MAKE-CONCATENATED-STREAM, MAKE-TWO-WAY-STREAM, or
-  MAKE-ECHO-STREAM.  The generic function approach does not lend itself as
+  forwarding streams such as for `make-synonym-stream`,
+  `make-broadcast-stream`, `make-concatenated-stream`, `make-two-way-stream`, or
+  `make-echo-stream`.  The generic function approach does not lend itself as
   well to that as a message passing model where the intermediary does not
   need to know what all the possible messages are.  A possible way of
   extending it for that would be to define a class
@@ -655,18 +655,18 @@ Discussion:
   where stream-operation-not-handled is a generic function whose default
   method signals an error, but forwarding streams can define methods that
   will create a method to handle the unexpected operation.  (Perhaps
-  NO-APPLICABLE-METHOD should be changed to take two required arguments
+  `no-applicable-method` should be changed to take two required arguments
   since all generic functions need at least one required argument, and
   that would make it unnecessary to define a new generic function class
   just to be able to write this one method.)
 
   Another thing that is not addressed here is a way to cause an instance
-  of a user-defined stream class to be created from a call to the OPEN
+  of a user-defined stream class to be created from a call to the `open`
   function.  That should be part of a separate issue for generic functions
-  on pathnames.  If that capability were available, then PATHNAME and
-  TRUENAME should be required to be generic functions.
+  on pathnames.  If that capability were available, then `pathname` and
+  `truename` should be required to be generic functions.
 
-  An earlier draft defined just two classes, FUNDAMENTAL-INPUT-STREAM and
-  FUNDAMENTAL-OUTPUT-STREAM, that were used for both character and binary
+  An earlier draft defined just two classes, `fundamental-input-stream` and
+  `fundamental-output-stream`, that were used for both character and binary
   streams.  It isn't clear whether that simple approach is sufficient or
   whether the larger set of classes is really needed.
