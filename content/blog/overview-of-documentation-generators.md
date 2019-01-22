@@ -134,6 +134,51 @@ They use it for they new projects since around 3 years now.
 - requirements: Python, pip
 
 
+*udate* 2019-01-22: extended example.
+
+An example from [cl-hamcrest](https://github.com/40ants/cl-hamcrest/blob/master/docs/source/matchers.rst):
+
+- we reference Lisp functions/methods/macros with RST directives:
+
+```
+Object matchers
+===============
+
+This kind of matchers checks some sort of properties on an object, etc.
+
+.. cl:package:: hamcrest/matchers
+
+.. cl:macro:: has-plist-entries
+```
+
+- they have RST docstrings, also with RST directives to include code blocks:
+
+~~~lisp
+(def-has-macro
+    has-plist-entries
+    "Matches plist entries:
+
+.. code-block:: common-lisp-repl
+
+   TEST> (let ((obj '(:foo :bar)))
+           (assert-that obj
+                        (has-plist-entries :foo \"bar\"
+                                           :blah \"minor\")))
+     × Key :FOO has :BAR value, but \"bar\" was expected
+
+This way you can test any number of plist's entries."
+
+    :check-obj-type (check-if-list object)
+    :get-key-value (let ((key-value (getf object key 'absent)))
+                      (when (eql key-value 'absent)
+                          …
+~~~
+
+- this produces a nice output ([here](http://40ants.com/cl-hamcrest/matchers.html)):
+
+![](/cl-domain.png)
+
+
 ---
 
 I'll use and watch Coo !
