@@ -1,5 +1,10 @@
++++
+date = "2019-01-22T07:51:49+01:00"
+title = "Gray streams"
+draft = false
++++
 
-This is a copy of http://www.nhplace.com/kent/CL/Issues/stream-definition-by-user.html
+This is a copy of http://www.nhplace.com/kent/CL/Issues/stream-definition-by-user.html with syntax highlighting.
 
 
 FAILED Issue STREAM-DEFINITION-BY-USER ("Gray Streams")
@@ -32,7 +37,29 @@ Edit history:	Version 1, 22-Mar-89 by David N. Gray
 Status:		For discussion and evaluation; not proposed for
 		inclusion in the standard at this time.
 
-Problem description:
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+**Table of Contents**
+
+- [Problem description](#problem-description)
+- [Proposal `stream-definition-by-user:generic-functions`](#proposal-stream-definition-by-usergeneric-functions)
+    - [Overview](#overview)
+    - [Character input:](#character-input)
+    - [Character output](#character-output)
+- [Rationale](#rationale)
+- [Current practice](#current-practice)
+- [Examples](#examples)
+- [Cost to Implementors](#cost-to-implementors)
+- [Cost to Users](#cost-to-users)
+- [Cost of non-adoption](#cost-of-non-adoption)
+- [Performance impact](#performance-impact)
+- [Benefits](#benefits)
+- [Esthetics](#esthetics)
+- [Discussion](#discussion)
+
+<!-- markdown-toc end -->
+
+
+# Problem description
 
 Common Lisp does not provide a standard way for users to define their
   own streams for use by the standard I/O functions.  This impedes the
@@ -46,9 +73,9 @@ Common Lisp does not provide a standard way for users to define their
   report formatting, character code translation, or
   encryption/decryption.
 
-Proposal `stream-definition-by-user:generic-functions`
+# Proposal `stream-definition-by-user:generic-functions`
 
- Overview:
+## Overview
 
   Define a set of generic functions for performing I/O.  These functions
   will have methods that specialize on the stream argument; they would
@@ -58,7 +85,7 @@ Proposal `stream-definition-by-user:generic-functions`
   Define a set of classes to be used as the superclass of a stream class
   in order to provide some default methods.
 
- Classes:
+ ## Classes
 
   The following classes are to be used as super classes of user-defined
   stream classes.  They are not intended to be directly instantiated; they
@@ -112,7 +139,7 @@ Proposal `stream-definition-by-user:generic-functions`
     Includes `fundamental-output-stream` and `fundamental-binary-stream`.
 
 
- Character input:
+## Character input
 
   A character input stream can be created by defining a class that
   includes `fundamental-character-input-stream` and defining methods for the
@@ -169,7 +196,7 @@ Proposal `stream-definition-by-user:generic-functions`
     method does nothing.
 
 
- Character output:
+## Character output
 
   A character output stream can be created by defining a class that
   includes `fundamental-character-output-stream` and defining methods for the
@@ -247,7 +274,7 @@ Proposal `stream-definition-by-user:generic-functions`
     `stream-line-column` returns NIL.
 
 
- Other functions:
+ ## Other functions
 
   `close`  stream &key abort			[Generic Function]
 
@@ -263,7 +290,9 @@ Proposal `stream-definition-by-user:generic-functions`
     true if `close` has not been called on the stream.
 
   `streamp`  object				[Generic Function]
+
   `input-stream-p`  stream			[Generic Function]
+
   `output-stream-p`  stream			[Generic Function]
 
     These three existing predicates may optionally be implemented as
@@ -287,7 +316,7 @@ Proposal `stream-definition-by-user:generic-functions`
   all streams.
 
 
- Binary streams:
+ ## Binary streams:
 
     Binary streams can be created by defining a class that includes either
     `fundamental-binary-input-stream` or `fundamental-binary-output-stream`
@@ -305,7 +334,7 @@ Proposal `stream-definition-by-user:generic-functions`
     the integer as the result.
 
 
-Rationale:
+# Rationale
 
   The existing I/O functions cannot be made generic because, in nearly
   every case, the stream argument is optional, and therefore cannot be
@@ -314,7 +343,7 @@ Rationale:
   appropriate to specialize on the second argument of `print-object` because
   it is a higher-level function -- even when the first argument is a
   character or a string, it needs to format it in accordance with
-  *PRINT-ESCAPE*.
+  `*PRINT-ESCAPE*`.
 
   In order to make the meaning as obvious as possible, the names of the
   generic functions have been formed by prefixing "`stream-`" to the
@@ -335,7 +364,7 @@ Rationale:
   separate question from whether the user can call then on
   system-defined streams.
 
-Current practice:
+# Current practice
 
   No one currently supports exactly this proposal, but this is very
   similar to the stream interface used in `clue`.
@@ -345,8 +374,9 @@ Current practice:
   messages corresponding to the I/O operations, or as functions, which
   take a message keyword as their first argument.
 
-Examples:
+# Examples
 
+~~~lisp
   ;;;; Here is an example of how the default methods could be
   ;;;; implemented (omitting the most trivial ones):
 
@@ -588,8 +618,9 @@ Examples:
 	      (length string)
 	    (- (length string) nx 1))
 	  ))))
+~~~
 
-Cost to Implementors:
+# Cost to Implementors
 
   Given that CLOS is supported, adding the above generic functions and
   methods is easy, since most of the code is included in the examples
@@ -599,30 +630,30 @@ Cost to Implementors:
   old representation of streams.  For a new implementation, the cost could
   be zero since an approach similar to this would likely be used anyway.
 
-Cost to Users:
+# Cost to Users
 
   None; this is an upward-compatible addition.   Users won't even
   need to know anything about this unless they actually need this feature.
 
-Cost of non-adoption:
+# Cost of non-adoption
 
   Development of portable I/O extensions will be discouraged.
 
-Performance impact:
+# Performance impact
 
   This shouldn't affect performance of new implementations (assuming an
   efficient CLOS implementation), but it could slow down I/O if it were
   clumsily grafted on top of an existing implementation.
 
-Benefits:
+# Benefits
 
   A broader domain of programs that can be written portably.
 
-Esthetics:
+# Esthetics
 
   This seems to be a simple, straight-forward approach.
 
-Discussion:
+# Discussion
 
   This proposal incorporates suggestions made by several people in
   response to an earlier outline.  So far, no one has expressed opposition
@@ -642,15 +673,19 @@ Discussion:
   need to know what all the possible messages are.  A possible way of
   extending it for that would be to define a class
 
+~~~lisp
     (defclass stream-generic-function (standard-generic-function) ())
+~~~
 
   to be used as the :generic-function-class option for all of the I/O
   generic functions.  This would then permit doing something like
 
+~~~lisp
   (defmethod no-applicable-method ((gfun stream-generic-function) &rest args)
     (if (streamp (first args))
 	(apply #'stream-operation-not-handled (first args) gfun (rest args))
       (call-next-method)))
+~~~
 
   where stream-operation-not-handled is a generic function whose default
   method signals an error, but forwarding streams can define methods that
