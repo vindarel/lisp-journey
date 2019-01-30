@@ -12,6 +12,8 @@ for functional composition. Right ?
 
 **edit** see those [snippets](/blog/snippets-functional-style-more/).
 
+**edit january, 2019**: see this [SO answer](https://stackoverflow.com/questions/54375478/can-lisp-be-easily-used-in-an-immutable-functional-manner/54378903#54378903) and the [modf](https://github.com/smithzvk/modf) library.
+
 ### Map and filter
 
 Indeed, there are 8 or so `map` functions. The one we're used to is
