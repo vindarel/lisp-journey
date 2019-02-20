@@ -32,6 +32,12 @@ identifier             = "web-dev"
 url                    = "/web-dev/"
 
 [[menu.main]]
+name                   = "Python VS Lisp"
+weight                 = -107
+identifier             = "pythonVSlisp"
+url                    = "/pythonVSlisp/"
+
+[[menu.main]]
 name                   = "Good resources"
 weight                 = -105
 identifier             = "resources"
