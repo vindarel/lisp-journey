@@ -66,17 +66,20 @@ got tutorials on:
 along with many improvements on other pages, like on [getting started](https://lispcookbook.github.io/cl-cookbook/getting-started.html) and [editor support](https://lispcookbook.github.io/cl-cookbook/editor-support.html).
 
 Which brings me to it: the editors situation is much more open than
-you think. The editor of choice is still **Emacs** with Slime (or
-Sly), we can get started in 3 clicks with **Portacle**, a
-self-contained and portable Emacs tailored for CL, followed closely by
-**(Neo)Vim**. But we can have a very good experience with the
-self-contained **Lem** editor, written in Common Lisp (and which works
-for other languages: Python, Go, Rust, Nim, Scheme, HTML, JSX, along
-with a directory mode, an experimental LSP mode, calc-mode,…), a good
-experience in the **Eclipse IDE** with the Dandelion plugin; it's
-getting very good on **Atom** and we even have other options, like an
-**ipython-like REPL** (cl-repl), **Jupyter kernels** and yet another
-notebook (Darkmatter).
+you think:
+
+- The editor of choice is still **Emacs** with Slime (or
+Sly), 
+- However, we can get started with Emacs and Lisp in 3 clicks with **Portacle**, a *self-contained batteries-included sbcl-included portable* Emacs tailored for CL, <!-- followed closely by **(Neo)Vim** ; what does "followed closely" mean here? --> 
+- For **Vim** and **NeoVim** we have SLIMV, VLIME, and plugins can be written for NeoVim using [cl-neovim](https://github.com/adolenc/cl-neovim).
+- Or if we want an editor written in  cl, there's the self-contained **Lem** editor, which also works for Python, Go, Rust, Nim, Scheme, HTML, JSX, alongwith a directory mode, an experimental LSP mode, calc-mode, 
+- Not to forget that Mac Os X users can use the [Clozure Common Lisp IDE](https://ccl.clozure.com/docs/ccl.html#the-clozure-cl-ide)
+- All editions of LispWorks (including the free) include the [LW IDE](http://www.lispworks.com/products/ide.html)
+- For users of **Eclipse IDE**, there is the Dandelion plugin <!-- REALLY? i thought this was abandonware -->
+- For popular editors, the experience is very good on **Atom** and the popular **Visual Studio Code** can be made to work with CL using [cl-lsp](https://github.com/cxxxr/cl-lsp).
+
+- For interactive notebooks we have **ipython-like REPL** (cl-repl), **Jupyter kernels** and yet another
+notebook (Darkmatter). 
 
 A very welcome improvement is the Common Lisp fundation's website:
 https://common-lisp.net/ It got a massive update and is now
@@ -149,10 +152,9 @@ Furthermore, a maintainer:
 
 which isn't a good reason ;)
 
+We got a new release of Corman Lisp, a high performance Windows/32bit specific implementation with a built in IDE,
 
-We got a new release of Corman Lisp, for Windows 32 bits with a built-in editor,
-
-we have CLASP, targetting C++ through LLVM (see [“Lessons Learned Implementing Common Lisp with LLVM”](https://www.youtube.com/watch?v=mbdXeRBbgDM&app=desktop)), built with SICL, a very
+we have CLASP, targetting C++ through LLVM (see [“Lessons Learned Implementing Common Lisp with LLVM”](https://www.youtube.com/watch?v=mbdXeRBbgDM&app=desktop)), built with the Cleavir compiler, part of SICL, a very
 new implementation of Common Lisp with fresh ideas,
 
 we have ABCL targetting the JVM, Embedable Common Lisp, without
@@ -162,8 +164,8 @@ I'm at it, you might want to have a look at
 
 We got a nice talk by Clozure Common Lisp's maintainer:
 [this Old Lisp](http://thisoldlisp.com/) (this one may be the second
-most used implementation, a feature of it being its super fast
-compilation times (I heard it compiles itself in seconds)).
+most used implementation, particularly good for development -- super fast
+compilation times (I heard it compiles itself in seconds), [advising](https://ccl.clozure.com/manual/chapter4.3.html#Advising), [watched objects](https://ccl.clozure.com/manual/chapter4.12.html#watched-objects), [code coverage](https://ccl.clozure.com/manual/chapter4.13.html#code-coverage), and its own [IDE](https://ccl.clozure.com/docs/ccl.html#the-clozure-cl-ide)).
 
 So: welcome to this new world. It's bigger than I thought, for sure.
 
@@ -227,6 +229,7 @@ for web libraries: https://github.com/CodyReichert/awesome-cl#network-and-intern
 - [Cocoa interface code written in Lisp for use with Clozure Common Lisp](https://github.com/plkrueger/CocoaInterface)
 - [McCLIM 0.9.7 "Imbolc" release](https://common-lisp.net/project/mcclim/posts/McCLIM-097-Imbolc-release.html)
 - [Demo SBCL script using Gtk](https://www.reddit.com/r/lisp/comments/a31oxr/demo_sbcl_script_using_gtk/)
+- [Demo ABCL script using Java Swing](https://github.com/defunkydrummer/abcl-jazz)
 
 for GUI libraries: https://github.com/CodyReichert/awesome-cl#gui
 
@@ -353,6 +356,8 @@ On games:
 
 
 ## Common Lisp VS ...
+
+<!-- not sure if listing some of those is constructive, really; and the Clojure vs Common Lisp wars are getting really tiring...  and this coming from an active flamer (defunkydrummer) -->
 
 - [How did the Common Lisp community survived without the equivalent of clojure.spec ?](https://www.reddit.com/r/Common_Lisp/comments/ac9mm9/how_common_lisp_community_survived_without_the/)
 - [Is there a Lisp that is considered "excellent" about error handling ?](https://www.reddit.com/r/lisp/comments/8wdw2r/is_there_a_lisp_that_is_considered_excellent/)
