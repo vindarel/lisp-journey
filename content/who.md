@@ -40,10 +40,12 @@ DS1 spaceship by the NASA for several days)
   contracts.
 * [Grammarly](https://tech.grammarly.com/blog/posts/Running-Lisp-in-Production.html),
   an English language writing-enhancement platform.
-* [m-creations (Keepit.com)](https://www.keepit.com/), "custom software solutions for mid-size to big companies
-in finance/payment, health care, and media research.". "Missing pieces of infrastructure are written in Common Lisp (CL) and
-interact with existing software components of the cluster (DNS, load
-balancer etc.).". [lispjobs announce](https://lispjobs.wordpress.com/2017/05/02/linux-systems-engineer-with-common-lisp-experience-m-creations-mainz-germany/).
+* [m-creations](http://www.m-creations.com/), custom software
+  solutions for mid-size to big companies in finance/payment, health
+  care, and media. Using Common Lisp in different fields ranging from
+  dynamic web applications and Natural Language Processing to systems
+  engineering infrastructure in container clusters (DNS, dynamic load
+  balancer).
 * [Ravenpack](https://www.ravenpack.com/careers/junior-common-lisp-developer), "the leading big data analytics provider for financial services". [reddit announce](https://www.reddit.com/r/Common_Lisp/comments/7ldiyg/suggestion_for_common_lisp_internship/).
 * [Rigetti](http://rigetti.com/about), new quantum computing company. They already sponsored a Quicklisp development. They chose Common Lisp (SBCL). [Video](https://www.reddit.com/r/Common_Lisp/comments/7ifq92/lisp_at_the_frontier_of_computation_by_robert/). *Their* Lisp even runs 40% faster than *their* C code.
 * [Secure Outcomes](http://www.secureoutcomes.net/) "builds and provides digital livescan fingerprinting systems for use by law enforcement, military, airports, schools, Fortune 500s, etc.". "All of our systems are constructed in Common Lisp.". [lispjobs announce](https://lispjobs.wordpress.com/2016/06/03/secure-outcomes-contract-common-lisp-programmer/).
