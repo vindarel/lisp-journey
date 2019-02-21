@@ -28,12 +28,18 @@ Lisp.
     - [State of the libraries](#state-of-the-libraries)
 - [Web](#web)
     - [Templates](#templates)
+- [SQL composition](#sql-composition)
 - [Deployment](#deployment)
     - [Shipping](#shipping)
     - [Performance](#performance)
-- [Appendix: why not…](#appendix-why-not)
+- [Appendix A: why not…](#appendix-a-why-not)
     - [Clojure ?](#clojure-)
-- [Appendix B: so why is CL not more famous ?](#appendix-b-so-why-is-cl-not-more-famous-)
+- [Appendix B: FAQ](#appendix-b-faq)
+    - [Is there no iterators ?](#is-there-no-iterators-)
+    - [Can I define my own `+` operator like in an OO language ?](#can-i-define-my-own--operator-like-in-an-oo-language-)
+    - [To which extent can Lisp be compiled, with all its dynamic nature, garbage collection, macros and what else ?](#to-which-extent-can-lisp-be-compiled-with-all-its-dynamic-nature-garbage-collection-macros-and-what-else-)
+    - [But what is Common Lisp good for, really ?](#but-what-is-common-lisp-good-for-really-)
+    - [So why is CL not more popular ?](#so-why-is-cl-not-more-popular-)
 
 <!-- markdown-toc end -->
 
@@ -184,7 +190,7 @@ lisp macros). Manipulate code as you always do. It even warns on
 malformed html and has some neat features (it is clever about headers
 levels, it can embed markdown, etc).
 
-## SQL composition
+# SQL composition
 
 Python's ORMs (while solid, well established etc) all come with
 limitations, idiosyncracies, and build their own DSL to build
@@ -246,7 +252,7 @@ As a consequence, you may not need memcached yet in your Lisp project.
 For more insight, see the pgloader story below.
 
 
-# Appendix: why not…
+# Appendix A: why not…
 
 note: I want the best of all worlds: an excellent REPL, building
 binaries, GUI libraries, good type inference, a stable ecosystem,…
@@ -299,7 +305,44 @@ or https://lisp-univ-etc.blogspot.com/2011/11/clojure-complexity.html :]
 
 ---
 
-# Appendix B: so why is CL not more popular ?
+# Appendix B: FAQ
+
+## Is there no iterators ?
+
+In practice, we mostly rely on closures, but there are libraries to
+create iterators.
+
+See https://stackoverflow.com/questions/32956033/is-there-a-straightforward-lisp-equivalent-of-pythons-generators
+
+## Can I define my own `+` operator like in an OO language ?
+
+By default, no, because the CLOS came after the language specification
+and thus everything isn't object-based. However there are libraries
+like [generic-cl](https://github.com/alex-gutev/generic-cl/) and, in
+practice, we quickly forget about this. Different operators is also a
+means for performance, good type inference and error messages.
+
+## To which extent can Lisp be compiled, with all its dynamic nature, garbage collection, macros and what else ?
+
+Many Lisp compilers compile to machine code (SBCL, CCL, CMUCL,…).
+
+Full answer: https://stackoverflow.com/questions/913671/are-there-lisp-native-code-compilers/914383#914383
+
+
+## But what is Common Lisp good for, really ?
+
+ok:
+
+> Please don't assume Lisp is only useful for Animation and Graphics, AI, Bioinformatics, B2B and Ecommerce, Data Mining, EDA/Semiconductor applications, Expert Systems, Finance, Intelligent Agents, Knowledge Management, Mechanical CAD, Modeling and Simulation, Natural Language, Optimization, Research, Risk Analysis, Scheduling, Telecom, and Web Authoring just because these are the only things they happened to list. -- Kent Pitman
+
+Kent Pitman
+
+http://www.nhplace.com/kent/quoted.html
+
+See also https://common-lisp.net/features.
+
+
+## So why is CL not more popular ?
 
 First, some reminders:
 
@@ -321,4 +364,3 @@ That being said, my 2 cents since you ask:
 - other reasons: it may be hard (or harder than the concurrence) to grasp and getting started, lisp isn't for everyone, a lot of FUD, and a Lisp curse !
 
 but that's all debattable, I wouldn't focus much on this.
-
