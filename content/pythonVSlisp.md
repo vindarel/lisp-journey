@@ -15,6 +15,7 @@ Lisp.
 
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+
 **Table of Contents**
 
 - [Development process](#development-process)
@@ -32,9 +33,7 @@ Lisp.
 - [Deployment](#deployment)
     - [Shipping](#shipping)
     - [Performance](#performance)
-- [Appendix A: why not…](#appendix-a-why-not)
-    - [Clojure ?](#clojure-)
-- [Appendix B: FAQ](#appendix-b-faq)
+- [Appendix A: FAQ](#appendix-a-faq)
     - [Is there no iterators ?](#is-there-no-iterators-)
     - [Can I define my own `+` operator like in an OO language ?](#can-i-define-my-own--operator-like-in-an-oo-language-)
     - [To which extent can Lisp be compiled, with all its dynamic nature, garbage collection, macros and what else ?](#to-which-extent-can-lisp-be-compiled-with-all-its-dynamic-nature-garbage-collection-macros-and-what-else-)
@@ -252,60 +251,7 @@ As a consequence, you may not need memcached yet in your Lisp project.
 For more insight, see the pgloader story below.
 
 
-# Appendix A: why not…
-
-note: I want the best of all worlds: an excellent REPL, building
-binaries, GUI libraries, good type inference, a stable ecosystem,…
-
-## Clojure ?
-
-Getting started: installing or starting a Clojure project eats my CPU
-and my RAM :S sooo more than CL, which is very slick.
-
-disclaimer: I didn't get much past this point ! If you still want my opinion, read on !
-
-I don't come from the Java world, I would prefer not to deal with it,
-I don't pay my bills with Java.
-
-I dislike horrible stacktraces. This may be tackled, but still: the
-language isn't stable.
-
-Lots of peculiar things we can read here and there, for example
-
-> And, the  other thing that  makes CL  standout from every  system I've used except  Smalltalks, is that  Quicklisp loads third  party systems into the current image without restarting:  there are a bunch of tools I've  seen floating  around  that claim  to  be able  to  do this  for Clojure, but  I've never  really been  able to make  any of  them work consistently.
-
-[source](https://lisp-univ-etc.blogspot.com/2011/11/clojure-complexity.html)
-
-
-Web stuff seems cool in Clojure, but it sort of deals with the JS
-ecosystem under the hood, which I prefer to avoid. ClojureScript is
-actually a different language (heard that core.async isn't
-compatible). I'd prefer to use the same language everywhere (hence
-[Weblocks](http://40ants.com/weblocks/quickstart.html), which solves
-the javascript problem with a different architecture, which relies on
-[Parenscript](https://common-lisp.net/project/parenscript/) and ajax
-JQuery calls (or plain html reloads)). I do think there is a lot to
-explore with
-[trident-mode](https://github.com/johnmastro/trident-mode.el)
-(a Fighwheel equivalent ?).
-
-Who can the more can the least, hence CL, which has more features.
-
-I want to learn CL anyway to contribute to awesome projects like the
-[Next browser](https://github.com/atlas-engineer/next) :)
-
-How about building self-contained binaries (that don't need Java on
-the host) ? I'd like executables, not jars or Leinigen uberjars.
-
-The point of immutable data structures and concurrency: to be
-learned and compared to CLOS and CL's concurrency capabilities (want some [libraries ?](https://github.com/CodyReichert/awesome-cl#parallelism-and-concurrency)).
-
-There is some more good feedback on https://news.ycombinator.com/item?id=18834945#18842004
-or https://lisp-univ-etc.blogspot.com/2011/11/clojure-complexity.html :]
-
----
-
-# Appendix B: FAQ
+# Appendix A: FAQ
 
 ## Is there no iterators ?
 
