@@ -214,8 +214,6 @@ I only list some projects that can be of interest to anybody. For the full stuff
 
 ## Web
 
-For web libraries, see https://github.com/CodyReichert/awesome-cl#network-and-internet
-
 - [Weblocks' new quickstart](http://40ants.com/weblocks/quickstart.html) -
 Weblocks is an isomorphic web frameworks that allows to write
 interactive web apps without writing Javascript (nor writing code that
@@ -227,10 +225,12 @@ the server, run it and see it from the outside.
 - [Interactive Common Lisp code snippets in any web page](http://blog.klipse.tech/lisp/2018/05/07/blog-common-lisp.html)
 - [arboreta-wasm - Common Lisp tooling for WebAssembly](https://github.com/Arboreta/arboreta-wasm)
 
+For web libraries, see https://github.com/CodyReichert/awesome-cl#network-and-internet
 
 ## GUI
 
 - [nodgui - yet another Tcl/Tk-based GUI package for Common Lisp](https://notabug.org/cage/nodgui) (based on Ltk, with syntax sugar and more meta-widgets)
+- [IUP bindings GUI stuff](https://www.reddit.com/r/Common_Lisp/comments/au0dmv/more_iup_gui_stuff/) (in the works)
 - [YstokWidgets Professional Edition](http://en.ystok.ru/products/ywidgets/)
 - [MIDGETS - A collection of CAPI widgets and utilities](https://common-lisp.net/~loliveira/ediware/midgets/doc/)
 - [subtext: A mostly-text-based UI bridges Common Lisp objects and runs of text. Minimal text-based user interface](https://github.com/stacksmith/subtext)
@@ -263,6 +263,7 @@ Python's virtualenv) and [Roswell](https://github.com/roswell/roswell/).
 - [Kubernetes Client Library for Common Lisp](https://github.com/xh4/cube)
 - [Heroku buildpack for Common Lisp](https://gitlab.com/duncan-bayne/heroku-buildpack-common-lisp)
 - [cl-aws-custom-runtime](https://github.com/y2q-actionman/cl-aws-custom-runtime-test) - An example of using Common Lisp (SBCL) as a custom runtime on AWS lambda.
+- [prometheus.cl](https://github.com/deadtrickster/prometheus.cl) - Prometheus.io client. Grafana dashboard for SBCL and Hunchentoot metrics (memory, threads, requests per second,…).
 
 ## Music
 
