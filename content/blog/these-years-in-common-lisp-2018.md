@@ -1,7 +1,7 @@
 ---
 title: "These Years in Common Lisp 2018"
 date: 2019-02-28T14:42:46+01:00
-draft: true
+draft: false
 ---
 
 It's been already a little more than a year that I began my Lisp
