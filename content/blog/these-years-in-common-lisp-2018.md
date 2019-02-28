@@ -402,3 +402,9 @@ On games:
 ---
 
 Enjoy the material, and see you soon !
+
+---
+
+thanks to `/u/defunkydrummer` for proofreading.
+
+fix or improve this article [on Gitlab](https://gitlab.com/lisp-journey/lisp-journey.gitlab.io/issues).
