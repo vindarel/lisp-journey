@@ -63,6 +63,7 @@ got tutorials on:
 - [Error and condition handling](https://lispcookbook.github.io/cl-cookbook/error_handling.html)
 - [Numbers](https://lispcookbook.github.io/cl-cookbook/numbers.html) and [multidimensional arrays](https://lispcookbook.github.io/cl-cookbook/arrays.html)
 - [Scripting and building self-contained executables](https://lispcookbook.github.io/cl-cookbook/scripting.html)
+- [Working with types](https://lispcookbook.github.io/cl-cookbook/type.html)
 
 along with many improvements on other pages, like on [getting started](https://lispcookbook.github.io/cl-cookbook/getting-started.html) and [editor support](https://lispcookbook.github.io/cl-cookbook/editor-support.html).
 
@@ -265,6 +266,14 @@ Python's virtualenv) and [Roswell](https://github.com/roswell/roswell/).
 - [cl-aws-custom-runtime](https://github.com/y2q-actionman/cl-aws-custom-runtime-test) - An example of using Common Lisp (SBCL) as a custom runtime on AWS lambda.
 - [prometheus.cl](https://github.com/deadtrickster/prometheus.cl) - Prometheus.io client. Grafana dashboard for SBCL and Hunchentoot metrics (memory, threads, requests per second,…).
 
+We can also deploy apps on Digital Ocean, and no need to say that
+deploying a
+[self-contained executable](https://lispcookbook.github.io/cl-cookbook/scripting.html#building-a-self-contained-executable)
+is easy,
+[connecting to a remote instance](https://lispcookbook.github.io/cl-cookbook/debugging.html#remote-debugging)
+too.
+
+
 ## Music
 
 - [Music: Music framework for musical expression in Common Lisp with a focus on music theory (built from scratch, on development)](https://github.com/MegaLoler/Music)
@@ -291,7 +300,7 @@ see also [audio and music composition software](https://github.com/CodyReichert/
 
 # Articles
 
-- [A Road to Common Lisp](http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/) ([hacker news comments](https://news.ycombinator.com/item?id=17852194))
+- [A Road to Common Lisp](http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/) ([hacker news comments](https://news.ycombinator.com/item?id=17852194)). You should read this one.
 - [How the strengths of Lisp-family languages facilitate building complex and flexible bioinformatics applications](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5952920/)
 - [Writing a natural language date and time parser - internals of the Common Lisp library Chronicity](https://lisper.in/nlp-date-parser)
 - [Implementing Hunchentoot custom sessions](https://www.darkchestnut.com/2018/hunchentoot_custom_sessions/)
