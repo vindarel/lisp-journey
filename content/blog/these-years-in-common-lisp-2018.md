@@ -35,6 +35,7 @@ Happy discoveries.
     - [New projects](#new-projects)
     - [Web](#web)
     - [GUI](#gui)
+    - [Package management](#package-management)
     - [Deployment](#deployment)
     - [Music](#music)
     - [(re)Discoveries](#rediscoveries)
