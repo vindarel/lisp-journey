@@ -1,6 +1,6 @@
 ---
 title: "These Years in Common Lisp 2018"
-date: 2019-02-16T14:42:46+01:00
+date: 2019-02-28T14:42:46+01:00
 draft: true
 ---
 
@@ -69,17 +69,17 @@ Which brings me to it: the editors situation is much more open than
 you think:
 
 - The editor of choice is still **Emacs** with Slime (or
-Sly), 
-- However, we can get started with Emacs and Lisp in 3 clicks with **Portacle**, a *self-contained batteries-included sbcl-included portable* Emacs tailored for CL, <!-- followed closely by **(Neo)Vim** ; what does "followed closely" mean here? --> 
+Sly),
+- However, we can get started with Emacs and Lisp in 3 clicks with **Portacle**, a *self-contained batteries-included sbcl-included portable* Emacs tailored for CL,
 - For **Vim** and **NeoVim** we have SLIMV, VLIME, and plugins can be written for NeoVim using [cl-neovim](https://github.com/adolenc/cl-neovim).
-- Or if we want an editor written in  cl, there's the self-contained **Lem** editor, which also works for Python, Go, Rust, Nim, Scheme, HTML, JSX, alongwith a directory mode, an experimental LSP mode, calc-mode, 
+- Or if we want an editor written in  cl, there's the self-contained **Lem** editor, which also works for Python, Go, Rust, Nim, Scheme, HTML, JSX, along with a directory mode, an experimental LSP mode, calc-mode, and more,
 - Not to forget that Mac Os X users can use the [Clozure Common Lisp IDE](https://ccl.clozure.com/docs/ccl.html#the-clozure-cl-ide)
 - All editions of LispWorks (including the free) include the [LW IDE](http://www.lispworks.com/products/ide.html)
-- For users of **Eclipse IDE**, there is the Dandelion plugin <!-- REALLY? i thought this was abandonware -->
-- For popular editors, the experience is very good on **Atom** and the popular **Visual Studio Code** can be made to work with CL using [cl-lsp](https://github.com/cxxxr/cl-lsp).
-
-- For interactive notebooks we have **ipython-like REPL** (cl-repl), **Jupyter kernels** and yet another
-notebook (Darkmatter). 
+- For users of **Eclipse IDE**, there is the Dandelion plugin
+- For popular editors, the experience is getting very good on **Atom** and the popular **Visual Studio Code** can be made to work with CL using [cl-lsp](https://github.com/cxxxr/cl-lsp).
+- We have an **ipython-like REPL** (cl-repl),
+- and for interactive notebooks, we have **Jupyter kernels** and yet another
+notebook (Darkmatter).
 
 A very welcome improvement is the Common Lisp fundation's website:
 https://common-lisp.net/ It got a massive update and is now
@@ -88,6 +88,7 @@ stories section), but common-lisp.net was a googlers' honey pot.
 
 This website uses two "awesome" lists that were created or massively
 furnished last year:
+
 - the [Awesome-CL](https://github.com/CodyReichert/awesome-cl) list,
   updated with hundreds of commits, which hopefully makes for a more
   discoverable and appealing ecosystem, and
@@ -104,8 +105,10 @@ Other places to learn Common Lisp include:
 - coding schools, like [Kattis](https://open.kattis.com/help)
 - and competitive Programming websites like CodeForces,
    HackerEarth, HackerRank, and CodeChef.
+- lastly, [Peter Norvig's book Paradigms of Artificial Intelligence Programming is available on Github](https://github.com/norvig/paip-lisp)
 
 We also regularly have new screencasts to enjoy:
+
 - a lot being from [Baggers](https://github.com/cbaggers/): he does the following and he streams live nearly weekly
   * [little bits of Lisp](https://www.youtube.com/playlist?list=PL2VAYZE_4wRJi_vgpjsH75kMhN4KsuzR_): short videos to learn Lisp basics
   * [lots of bits of Lisp](https://www.youtube.com/results?search_query=lots+of+bits+of+lisp+): long videos to dive deep in advanced subjects (macros, CFFI,…)
@@ -165,39 +168,38 @@ I'm at it, you might want to have a look at
 We got a nice talk by Clozure Common Lisp's maintainer:
 [this Old Lisp](http://thisoldlisp.com/) (this one may be the second
 most used implementation, particularly good for development -- super fast
-compilation times (I heard it compiles itself in seconds), [advising](https://ccl.clozure.com/manual/chapter4.3.html#Advising), [watched objects](https://ccl.clozure.com/manual/chapter4.12.html#watched-objects), [code coverage](https://ccl.clozure.com/manual/chapter4.13.html#code-coverage), and its own [IDE](https://ccl.clozure.com/docs/ccl.html#the-clozure-cl-ide)).
+compilation times (I heard it compiles itself in seconds), [advising](https://ccl.clozure.com/manual/chapter4.3.html#Advising), [watched objects](https://ccl.clozure.com/manual/chapter4.12.html#watched-objects), its own [IDE](https://ccl.clozure.com/docs/ccl.html#the-clozure-cl-ide)).
+
+Last note, a SBCL maintainer started a RISC-V port: [First RISCy Steps -- Porting SBCL to the RISC-V](http://christophe.rhodes.io/notes/blog/posts/2018/first_riscy_steps/)
+
 
 So: welcome to this new world. It's bigger than I thought, for sure.
 
 
 # Projects
 
-I only list some projects that can be of interest to anybody.
+I only list some projects that can be of interest to anybody. For the full stuff see the quaterly posts !
 
 <!-- I fear that it would be seen as representative of the CL new tools and libraries.  -->
 
 ## New projects
 
-- [Next browser 1.2.0 is out!](https://www.reddit.com/r/lisp/comments/a954yf/next_browser_120_is_out/): a browser exposing all its internals to CL
+- [Next browser 1.2.0 is out!](https://www.reddit.com/r/lisp/comments/a954yf/next_browser_120_is_out/): a browser exposing all its internals to CL. Be productive.
 - [CANDO - A Computational Chemistry programming environment integrating Common Lisp and C++ based on the Jupyter notebook](https://hub.docker.com/r/drmeister/cando/)
 - [Coalton, a dialect of ML embedded in Common Lisp (alpha)](https://github.com/tarballs-are-good/coalton)
 - [Voxel game engine (Minecraft)](https://github.com/terminal625/sucle) - a Minecraft engine. Allows for interactive changes.
-- [JSCL 0.7.0 now supports CLOS thanks to the work of vlad-km](https://jscl-project.github.io/)
 - [Emotiq - blockchain in Common Lisp](https://github.com/emotiq/emotiq)
 - [Temperance - logic programming (in development, reached v1.0.0)](https://sjl.bitbucket.io/temperance/)
 - [MAGICL: Matrix Algebra proGrams In Common Lisp - Rigetti Computing](https://github.com/rigetticomputing/magicl) (quantum computing)
 - [SHCL: An Unholy Union of POSIX Shell and Common Lisp](https://github.com/bradleyjensen/shcl) ([reddit](https://www.reddit.com/r/lisp/comments/8kpbcz/shcl_an_unholy_union_of_posix_shell_and_common/))
-- [cl-torrents 0.9 - readline interface and 1337x.to scraper](cl-torrents 0.9 - readline interface and 1337x.to scraper) - a simple tool to search for torrents on popular trackers. A web interface coming soon. My first CL app.
+- [JSCL 0.7.0 now supports CLOS thanks to the work of vlad-km](https://jscl-project.github.io/)
+- [cl-torrents 0.9 - readline interface and 1337x.to scraper](cl-torrents 0.9 - readline interface and 1337x.to scraper) - a simple tool to search for torrents on popular trackers. My first CL app. Web and GUI interfaces in the making.
 - [Introducing Seed: An Interactive Software Environment in Common Lisp](https://vimeo.com/237947324)
-- [Peter Norvig's Paradigms of Artificial Intelligence Programming - book as pdf and lisp code on Github](https://github.com/norvig/paip-lisp)
-- [Apache Thrift gains CL support](https://github.com/apache/thrift/commits/master)
 - [Tovero is a 3D modeling system for Common Lisp](https://common-lisp.net/project/tovero/)
 - [RMSBolt: See what your compiler is going inside of Emacs (has minimal support for Common Lisp)](https://gitlab.com/jgkamat/rmsbolt)
 - [pngload: A PNG (Portable Network Graphics) image format decoder](https://www.michaelfiano.com/projects/pngload/)
 - [cl-vep: a video effects processor](https://www.reddit.com/r/lisp/comments/9brkej/clvep_a_video_effects_processor/)
-- [Interactive Common Lisp code snippets in any web page](http://blog.klipse.tech/lisp/2018/05/07/blog-common-lisp.html)
 - [algebraic-data-library](https://github.com/tarballs-are-good/algebraic-data-library/)
-- [reddit1.0 source code](https://github.com/reddit-archive/reddit1.0) ([comments](https://www.reddit.com/r/Common_Lisp/comments/886yeu/reddit10/)), then [Reddit's code runs on SBCL](https://www.reddit.com/r/Common_Lisp/comments/8ata3c/reddit_code_runs_on_sbcl/). See also [reddit](https://www.reddit.com/r/programming/comments/883vzs/old_reddit_source_code/).
 - [Petalisp](https://www.reddit.com/r/Common_Lisp/comments/8f6wez/petalisp_elegant_high_performance_computing/): Elegant High Performance Computing
 - [wiki-lang-detect](https://github.com/vseloved/wiki-lang-detect): Text language identification using Wikipedia data
 - [Dufy, a color library](https://github.com/privet-kitty/dufy)
@@ -207,17 +209,23 @@ I only list some projects that can be of interest to anybody.
 - [json-mop](https://github.com/gschjetne/json-mop): A metaclass for bridging CLOS and JSON objects
 - [clsh](https://github.com/obicons/clsh): a set of Lispy bindings for running and composing *nix processes
 - [filtered-functions](https://github.com/pcostanza/filtered-functions) - enables the use of arbitrary predicates for selecting and applying methods.
-- [three email libraries](https://github.com/CodyReichert/awesome-cl#email)
 
 
 ## Web
 
+For web libraries, see https://github.com/CodyReichert/awesome-cl#network-and-internet
+
 - [Weblocks' new quickstart](http://40ants.com/weblocks/quickstart.html) -
 Weblocks is an isomorphic web frameworks that allows to write
 interactive web apps without writing Javascript (nor writing code that
-transpiles to JS). It's seeing a massive update right now.
+transpiles to JS). It is seeing a massive update right now. Being Lisp,
+we can build a self-contained executable of our web app, send it to
+the server, run it and see it from the outside.
+- [three email libraries](https://github.com/CodyReichert/awesome-cl#email)
+- [reddit1.0 source code](https://github.com/reddit-archive/reddit1.0) ([comments](https://www.reddit.com/r/Common_Lisp/comments/886yeu/reddit10/)), then [Reddit's code runs on SBCL](https://www.reddit.com/r/Common_Lisp/comments/8ata3c/reddit_code_runs_on_sbcl/). See also [reddit](https://www.reddit.com/r/programming/comments/883vzs/old_reddit_source_code/).
+- [Interactive Common Lisp code snippets in any web page](http://blog.klipse.tech/lisp/2018/05/07/blog-common-lisp.html)
+- [arboreta-wasm - Common Lisp tooling for WebAssembly](https://github.com/Arboreta/arboreta-wasm)
 
-for web libraries: https://github.com/CodyReichert/awesome-cl#network-and-internet
 
 ## GUI
 
@@ -233,14 +241,27 @@ for web libraries: https://github.com/CodyReichert/awesome-cl#network-and-intern
 
 for GUI libraries: https://github.com/CodyReichert/awesome-cl#gui
 
+## Package management
+
+Quicklisp is the de facto package manager, but new projects come to
+complement it and bypass its limitations:
+
+- [the second version of Ultralisp is available](http://40ants.com/posts/Second-version-of-Ultralisporg-is-available-now.html) - Ultralisp is an important project that fills a gap. It is a quicklisp distribution which updates every 5 minutes. It is also a Weblocks application!
+- [quicksys](https://lisp.com.br/quicksys/) - installs systems from multiple Quicklisp distributions.
+
+For more options, see [Qlot](https://github.com/fukamachi/qlot) (install and pin libraries locally, like
+Python's virtualenv) and [Roswell](https://github.com/roswell/roswell/).
+
+
 ## Deployment
 
-- [the second version of Ultralisp is available](http://40ants.com/posts/Second-version-of-Ultralisporg-is-available-now.html) - a quicklisp distribution which updates every 5 minutes.
+- [Apache Thrift gains CL support](https://github.com/apache/thrift/commits/master)
 - [s2i-lisp: Common Lisp + Quicklisp OpenShift Build Image](https://github.com/hjudt/s2i-lisp)
 - [lisp-images: Docker images for common lisp development](https://github.com/fisxoj/lisp-images) (with some others, see the awesome-list)
 - [A docker container for CL development](https://hub.docker.com/r/eshamster/cl-devel2/) (also [lisp-devel](https://hub.docker.com/r/daewok/lisp-devel/), [CI on CL Cookbook](https://lispcookbook.github.io/cl-cookbook/testing.html#gitlab-ci))
 - [Kubernetes Client Library for Common Lisp](https://github.com/xh4/cube)
 - [Heroku buildpack for Common Lisp](https://gitlab.com/duncan-bayne/heroku-buildpack-common-lisp)
+- [cl-aws-custom-runtime](https://github.com/y2q-actionman/cl-aws-custom-runtime-test) - An example of using Common Lisp (SBCL) as a custom runtime on AWS lambda.
 
 ## Music
 
@@ -254,7 +275,6 @@ see also [audio and music composition software](https://github.com/CodyReichert/
 
 - [lfarm - a library for distributing work across machines (on top of lparallel and usocket)](https://github.com/lmj/lfarm)
 - [Screamer - nondeterministic programming. Augment Common Lisp with practically all of the functionality of both Prolog and constraint logic programming languages (10 yo, Nikodemus)](https://github.com/nikodemus/screamer)
-- [arboreta-wasm - Common Lisp tooling for WebAssembly](https://github.com/Arboreta/arboreta-wasm)
 - [quid-pro-quo: a contract programming library in the style of Eiffel’s Design by Contract](https://github.com/sellout/quid-pro-quo)
 - [Cells, spreadsheet-like expressiveness for CLOS](https://www.reddit.com/r/lisp/comments/7mji50/cells_spreadsheetlike_expressiveness_for_clos/)
 - [cl-bibtex: A compatible re-implementation of the BibTeX program in Common Lisp, with a BST-to-CL compiler](https://github.com/mkoeppe/cl-bibtex)
@@ -274,7 +294,7 @@ see also [audio and music composition software](https://github.com/CodyReichert/
 - [Writing a natural language date and time parser - internals of the Common Lisp library Chronicity](https://lisper.in/nlp-date-parser)
 - [Implementing Hunchentoot custom sessions](https://www.darkchestnut.com/2018/hunchentoot_custom_sessions/)
 - [Overview of Documentation Generators (codex, coo, declt, staple, cldomain)](https://lisp-journey.gitlab.io/blog/overview-of-documentation-generators/)
-- [Challenging myself to learn Common Lisp in one month](https://github.com/TomLisankie/Learning-Lisp)
+<!-- - [Challenging myself to learn Common Lisp in one month](https://github.com/TomLisankie/Learning-Lisp) -->
 - [Converter of maps from Reflex Arena to QuakeWorld. cl-yacc, 3d-matrices](https://fourier.github.io/lisp/2019/01/02/reflex-map.html)
 - [Debugging Common Lisp in Slime](https://two-wrongs.com/debugging-common-lisp-in-slime.html)
 - [Packages in Common Lisp, a tutorial (pdf)](https://www-fourier.ujf-grenoble.fr/~sergerar/Papers/Packaging.pdf)
@@ -283,7 +303,6 @@ see also [audio and music composition software](https://github.com/CodyReichert/
 - [Compiler basics: lisp to assembly](http://notes.eatonphil.com/compiler-basics-lisp-to-assembly.html)
 - [Marvin Minsky - Scientist - The beauty of the Lisp language](https://www.webofstories.com/play/marvin.minsky/44)
 - [Excavating a Common Treasure: Common Lisp](http://www.newresalhaider.com/post/common-treasure/)
-- [First RISCy Steps -- Porting SBCL to the RISC-V](http://christophe.rhodes.io/notes/blog/posts/2018/first_riscy_steps/)
 - [Fun with Macros: If-Let and When-Let / Steve Losh](http://stevelosh.com/blog/2018/07/fun-with-macros-if-let/)
 - [Extempore - The design, implementation and application of a cyber-physical programming language, Andrew Sorensen, Thesis, 2018 (PDF)](https://openresearch-repository.anu.edu.au/bitstream/1885/144603/1/Sorensen%20Thesis%202018.pdf)
 - [Uniform Structured Syntax, Metaprogramming and Run-time Compilation](https://m00natic.github.io/lisp/manual-jit.html)
@@ -308,7 +327,7 @@ and also
 On games:
 
 - [About Making Games in Lisp - Gamedev](https://reader.tymoon.eu/article/370)
-- [Creating a (Non-Trivial) Lisp Game in 2018](https://defungames.com/2018/12/creating-a-non-trivial-lisp-game-in-2018/) (they're launching a Crowdfunding very soon)
+- [Creating a (Non-Trivial) Lisp Game in 2018](https://defungames.com/2018/12/creating-a-non-trivial-lisp-game-in-2018/) (they just launched a [Crowdfunding](https://www.kickstarter.com/projects/defungames/spycursion-hacking-espionage-edutainment-mmo))
 - [A Story of (defun games ())](https://old.reddit.com/r/Common_Lisp/comments/93g3p2/a_story_of_defun_games/)
 - [Getting Started With trivial-gamekit](https://lthms.xyz/blog/lisp-journey-getting-started)
 
