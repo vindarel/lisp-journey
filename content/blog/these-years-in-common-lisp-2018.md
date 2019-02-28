@@ -86,7 +86,7 @@ notebook (Darkmatter).
 A very welcome improvement is the Common Lisp fundation's website:
 https://common-lisp.net/ It got a massive update and is now
 attractive. We had http://lisp-lang.org/ (don't miss its success
-stories section), but common-lisp.net was a googlers' honey pot.
+stories section (did you know that pgloader was re-written from Python to CL ? :) )), but common-lisp.net was a googlers' honey pot.
 
 This website uses two "awesome" lists that were created or massively
 furnished last year:
