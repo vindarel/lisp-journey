@@ -10,9 +10,11 @@ draft = false
 I learned Java and C at school, I learned Python by myself and it was
 a relief. After 5-6 years working and doing side projects in Python
 and JS (mostly web dev, Django/Flask/AngularJS/Vuejs), I find the
-experience so dumb and unsatisfactory that I'm switching to Common
+experience so unsatisfactory that I'm switching to Common
 Lisp.
 
+I am not here to compare languages themselves, but their inherent
+workflow and their ecosystem.
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 
