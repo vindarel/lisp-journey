@@ -28,7 +28,8 @@ few official job announces, some are posted on reddit, and some jobs
 just won't have a public announce. You'd better be ready.
 
 For the curious, our web app is rather classic, it uses the Caveman
-web framework and is deployed on DigitalOcean. I'll post its name in
-the comments if/when I know I can.
+web framework and is deployed on DigitalOcean. We do deploy with zero
+downtime, as CL permits, for trivial updates (we are more cautious
+otherwise). I'll post its name in the comments if/when I know I can.
 
 Happy lisping.
