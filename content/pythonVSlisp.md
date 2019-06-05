@@ -1,8 +1,10 @@
 +++
-date = "2017-02-05T07:51:49+01:00"
+date = "2019-05-25T07:51:49+01:00"
 title = "Python VS Common Lisp"
 draft = false
 +++
+
+<!-- date = "2017-02-05T07:51:49+01:00" -->
 
 ¡ THIS IS A WORK IN PROGRESS !
 
@@ -49,14 +51,14 @@ workflow and their ecosystem.
 
 ## Interactivity
 
-Python: restart everything at each code change, use breakpoints: this
+**Python**: restart everything at each code change, use breakpoints: this
  takes some time, is boring, requires to re-manipulate data to
  re-reach the state we were at to analyze and debug our program. We
  might figure out a non-standard, more interactive way, but still: a
  web server needs to restart, object instances don't get updated after
  a class definition.
 
-Common Lisp: everything is so more interactive in the REPL. Even
+**Common Lisp**: everything is so more interactive in the REPL. Even
 developping web apps. On an error, we get an interactive debugger with
 the stacktrace in our editor, we press `v` and voilà we are at the
 problematic line. (for those who wonder, there are of course
