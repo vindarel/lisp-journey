@@ -81,14 +81,15 @@ self-contained executables, shipping a multiplatform web app.
 
 ## Hunchentoot
 
-The de-facto web framework, with the best documentation (cough cough),
-the most websites on production.
+The de-facto web server, with the best documentation (cough cough),
+the most websites on production. Lower level than a web framework
+(defining routes seems weird at first). I think worth knowing.
 
 https://edicl.github.io/hunchentoot/
 
 ## Caveman
 
-Written by a super-productive lisper, nice documentation for basic
+A popular web framework, written by a super-productive lisper, nice documentation for basic
 stuff but lacking for the rest, based on Clack (webserver interface,
 think Python's WSGI), uses Hunchentoot by default.
 
