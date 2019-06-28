@@ -798,14 +798,3 @@ local swank server, loads the new code, stops and starts the app in a
 row.
 
 
-# Appendice I: Example websites built with Lisp:
-
-* [Quickdocs-server](https://github.com/quickdocs/quickdocs-server) - Caveman, Djula templates, Datafly and Sxql, Envy configuration switcher, Qlot, a simple fabfile for deployment.
-* [Quickutil](https://github.com/tarballs-are-good/quickutil/blob/master/quickutil-server/) -
-  ningle, closure-template, jquery and pjax, hot deploy with
-  connection to a swank server, a fabfile, nginx, supervisor, watchdog
-  autoreload.
-
-# Appendice II: Example software
-
-See also Potato, Turtl and others in the Software section.
