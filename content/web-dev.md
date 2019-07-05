@@ -6,6 +6,8 @@ draft = false
 
 ¡ THIS IS A DRAFT !
 
+**update july, 5th 2019**: we put this content into the Cookbook: https://lispcookbook.github.io/cl-cookbook/web.html
+
 First, see the
 [Awesome CL list](https://github.com/CodyReichert/awesome-cl#network-and-internet).
 
@@ -796,5 +798,3 @@ through ssh). Beforehand, a `fab update` has run `git pull` on the
 server, so new code is present but not running. It connects to the
 local swank server, loads the new code, stops and starts the app in a
 row.
-
-
