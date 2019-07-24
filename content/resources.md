@@ -9,14 +9,14 @@ draft = false
 * [awesome-cl](https://github.com/CodyReichert/awesome-cl)
 * [Common Lisp Cookbook](https://lispcookbook.github.io/cl-cookbook/)
 
-and
+search libraries on
 
 * http://quickdocs.org/
-* http://articulate-lisp.com
 
 Individual sites:
 
 * [sjl's road to Lisp](http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/)
+* [Martin Cracauer's Gentle Introduction to compile-time computing](https://medium.com/@MartinCracauer/a-gentle-introduction-to-compile-time-computing-part-3-scientific-units-8e41d8a727ca) - excellent article series
 * https://www.darkchestnut.com/ - he encountered deployment obstacles, wrote a book and blogs about it.
 * http://lispmethods.com/
 * [Malisper's series on debugging](http://malisper.me//debugging-lisp-part-1-recompilation/)
@@ -28,6 +28,7 @@ Screencasts:
   lisp's evaluation model,…
 * [Common Lisp Tutorials](https://www.youtube.com/playlist?list=PL2VAYZE_4wRIoHsU5cEBIxCYcbHzy4Ypj), of which [Emacs and Slime - useful keyboard shortcuts](https://www.youtube.com/watch?v=sBcPNr1CKKw&index=4&list=PL2VAYZE_4wRIoHsU5cEBIxCYcbHzy4Ypj)
 * [Common Lisp Study Group](https://www.youtube.com/channel/UCYg6qFXDE5SGT_YXhuJPU0A/videos) (long videos)
+* [Programming a message bus in Common Lisp](https://www.youtube.com/watch?v=CNFr7zIfyeM) - shows the interactive nature of lisp, good use of the debugger, test-driven development to shape the api, bordeaux-threads.
 * [Web development in Emacs with Common Lisp and ClojureSCript](https://www.youtube.com/watch?v=bl8jQ2wRh6k) -
   building [Potato](https://github.com/cicakhq/potato), a Slack-like app.
 * [Programming a MessageBus in Common Lisp](https://www.youtube.com/watch?v=CNFr7zIfyeM)
@@ -43,15 +44,6 @@ Screencasts:
 
 * [McClim interactive GUI demos](https://www.youtube.com/watch?v=XGmo0E_S46I). [Code examples](https://github.com/robert-strandh/McCLIM/blob/master/Examples/demodemo.lisp). Presentation of [Clim listener, Clim debugger, drawing objects into the GUI repl](https://www.youtube.com/watch?v=kfBmRsPRdGg).
 * [Interactively fixing failing tests](https://peertube.video/videos/watch/c0c82209-feaa-444d-962f-afa25745bfc0)
+* [videos of the European Lisp Symposium](https://www.youtube.com/channel/UC55S8D_44ge2cV10aQmxNVQ)
 
 and more on [Cliki](http://www.cliki.net/Lisp%20Videos).
-
-Example websites built with Lisp:
-
-* [Quickdocs-server](https://github.com/quickdocs/quickdocs-server) - Caveman, Djula templates, Datafly and Sxql, Envy configuration switcher, Qlot, a simple fabfile for deployment.
-* [Quickutil](https://github.com/tarballs-are-good/quickutil/blob/master/quickutil-server/) -
-  ningle, closure-template, jquery and pjax, hot deploy with
-  connection to a swank server, a fabfile, nginx, supervisor, watchdog
-  autoreload.
-
-See also Potato, Turtl and others in the Software section.
