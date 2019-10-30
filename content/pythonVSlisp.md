@@ -332,10 +332,22 @@ Python has a Global Interpreter Lock.
 
 SBCL compiles to machine code.
 
+We can fine-tune the types in our Lisp programs for the compiler to
+make the consequent optimizations. We can run in "debugging first" or
+in "speed first" modes. We can inline code to gain in the cost of
+function calls.
 
 As a consequence, you may not need memcached yet in your Lisp project.
 
-For more insight, see the pgloader story below.
+- https://lispcookbook.github.io/cl-cookbook/performance.html
+- [CL can be tuned to be faster than C](https://www.reddit.com/r/lisp/comments/1udu69/how_to_make_lisp_go_faster_than_cpdf/)
+- interesting stuff:
+  [Petalisp](https://github.com/marcoheisig/Petalisp) - an attempt to
+  generate high performance code for parallel computers by
+  JIT-compiling array definitions. It works on a more fundamental
+  level than NumPy, by providing even more powerful N-dimensional
+  arrays, but just a few building blocks for working on them.
+- see the pgloader story below.
 
 # Conclusion
 
