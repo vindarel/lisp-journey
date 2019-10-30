@@ -404,7 +404,9 @@ See also https://common-lisp.net/features.
 
 First, some reminders:
 
-- success stories: http://lisp-lang.org/success/ Aircraft analysis suits, Missile defense, ICAD, music composition, algebra systems, bulk importer for PostgreSQL, grammar checking, 3D editor, knowledge graphs,…
+- popularity doesn't equal quality, and popularity is hard to
+  mesure.
+- some success stories: http://lisp-lang.org/success/ Aircraft analysis suits, Missile defense, ICAD, music composition, algebra systems, bulk importer for PostgreSQL, grammar checking, 3D editor, knowledge graphs,…
 - did you know that [pgloader](https://tapoueh.org/blog/2014/05/why-is-pgloader-so-much-faster/) was re-written from Python to Common Lisp ?
 - CL was [used in a spacecraft](https://www.youtube.com/watch?v=_gZK0tW8EhQ&feature=youtu.be&t=4175) (and the repl was used to debug the system live from the earth)
 - some companies still use and pick CL: https://github.com/azzamsa/awesome-lisp-companies
@@ -414,6 +416,7 @@ First, some reminders:
 That being said, my 2 cents since you ask:
 
 - I think the CL world missed the web bandwagon for some time ([common-lisp.net](http://common-lisp.net/) was horrible for some years), but that's being fixed.
+- an enormous codebase existed before Github.
 - we missed visually nice, practical content on the web, even though
   there are many books (fixed or at least better)
 - CL missed a package manager for some time behind other languages, that's now fixed.
@@ -421,8 +424,8 @@ That being said, my 2 cents since you ask:
 - CL seems to be used for big, non-trivial projects, hence it gets no easy hype.
 - we have no entity doing marketing. We are seeing the Common Lisp fundation pairing with sponsors now.
 - other reasons: it may be hard (or harder than the concurrence) to
-  grasp and getting started, lisp isn't for everyone, it gets a lot of
-  FUD, and a so-called Lisp curse!
+  grasp and getting started with, lisp isn't for everyone, it gets a lot of
+  FUD, and has a so-called Lisp curse!
 
 but that's all debattable, I wouldn't focus much on this. [Times are
 good for
