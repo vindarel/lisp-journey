@@ -30,6 +30,7 @@ Screencasts:
 * [Common Lisp Study Group](https://www.youtube.com/channel/UCYg6qFXDE5SGT_YXhuJPU0A/videos) (long videos)
 * [Web development in Emacs with Common Lisp and ClojureSCript](https://www.youtube.com/watch?v=bl8jQ2wRh6k) -
   building [Potato](https://github.com/cicakhq/potato), a Slack-like app.
+* [Programming a MessageBus in Common Lisp](https://www.youtube.com/watch?v=CNFr7zIfyeM)
 * Shinmera playlists:
   [Treehouse](https://www.youtube.com/playlist?list=PLkDl6Irujx9MtJPRRP5KBH40SGCenztPW)
   (game dev),
@@ -41,6 +42,7 @@ Screencasts:
  * [Cando: computational chemistry with Common Lisp on LLVM with Jupyter notebooks](https://www.youtube.com/playlist?list=PLbl4KVdl9U3I3MhFWgauT0cz-x7SymZmn&disable_polymer=true)
 
 * [McClim interactive GUI demos](https://www.youtube.com/watch?v=XGmo0E_S46I). [Code examples](https://github.com/robert-strandh/McCLIM/blob/master/Examples/demodemo.lisp). Presentation of [Clim listener, Clim debugger, drawing objects into the GUI repl](https://www.youtube.com/watch?v=kfBmRsPRdGg).
+* [Interactively fixing failing tests](https://peertube.video/videos/watch/c0c82209-feaa-444d-962f-afa25745bfc0)
 
 and more on [Cliki](http://www.cliki.net/Lisp%20Videos).
 
