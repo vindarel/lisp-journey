@@ -20,8 +20,7 @@ think, and Common Lisp not as bad as you were convinced after a quick look.
 
 Let's dive in.
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
-
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
 - [Development process](#development-process)
@@ -35,11 +34,11 @@ Let's dive in.
     - [State of the libraries](#state-of-the-libraries)
 - [Templates](#templates)
 - [SQL composition](#sql-composition)
-- [Deployment](#deployment)
-    - [Shipping](#shipping)
-    - [Performance](#performance)
+- [Deployment, Shipping](#deployment-shipping)
+- [Performance](#performance)
+- [Conclusion](#conclusion)
 - [Appendix A: FAQ](#appendix-a-faq)
-    - [Is there no iterators ?](#is-there-no-iterators-)
+    - [Are there no iterators ?](#are-there-no-iterators-)
     - [Can I define my own `+` operator like in an OO language ?](#can-i-define-my-own--operator-like-in-an-oo-language-)
     - [To which extent can Lisp be compiled, with all its dynamic nature, garbage collection, macros and what else ?](#to-which-extent-can-lisp-be-compiled-with-all-its-dynamic-nature-garbage-collection-macros-and-what-else-)
     - [But what is Common Lisp good for, really ?](#but-what-is-common-lisp-good-for-really-)
@@ -287,9 +286,7 @@ A Mito query looks like this:
     (where (:like :status "%Japan%")))
 ```
 
-# Deployment
-
-## Shipping
+# Deployment, Shipping
 
 Shipping an app, even more a web app, in Python (and JS) is extremely
 tedious. We are far from shipping a self-contained executable. Current
@@ -323,7 +320,7 @@ WSGI webserver (gunicorn),…
 
 *Deployment in CL*: build your binary, send it to the server, run it.
 
-## Performance
+# Performance
 
 Python is notoriously slow, and passed the hobby project you quickly
 realize that.
