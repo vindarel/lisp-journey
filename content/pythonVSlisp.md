@@ -55,7 +55,7 @@ Let's dive in.
 ## Interactivity
 
 *Python*: we typically restart everything at each code change, we use
- breakpoints: this takes some time, it is boring, it requires to
+ breakpoints: this takes some time, I find it too repetitive and boring, it requires to
  re-manipulate data to re-reach the state we were at to analyze and
  debug our program.  We might get a prompt on an exception (with
  Werkzeug, with `-m pdb`), we might figure out a non-standard,
