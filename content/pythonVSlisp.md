@@ -59,7 +59,7 @@ Let's dive in.
  a class definition.
 
 **Common Lisp**: everything is so more interactive in the REPL. Even
-developping web apps. On an error, we get an interactive debugger with
+developing web apps. On an error, we get an interactive debugger with
 the stacktrace in our editor, we press `v` and voilà, we are at the
 problematic line. We can of course catch errors to avoid the debugger, or disable it with global settings. We don't need to restart any process. The variables
 that we define on the REPL stay here. If we change a class definition
@@ -81,7 +81,7 @@ fail, develops it, and tests it, all quickly by interacting with the REPL.
 *Python*: we edit code line by line, paragraph by paragraph. We can
 try out half-backed editor plugins to edit code by semantic units. We
 must even pay attention to add a couple whitespace there, remove one
-there. We are from the immediate interactive feedbak of the hacker's
+there. We are from the immediate interactive feedback of the hacker's
 vision "Inventing on Principles".
 
 *Common Lisp*: we edit code by semantic units. I love emacs' [lispy
@@ -91,21 +91,24 @@ can delete a whole "if" statement with a keypress, indentation is
 automatic, etc.
 
 Actually, we edit code by parenthesis units, which doesn't carry as
-much meaning as an AST. For a real AST, we'd need a code walker. But
+much meaning as an Abstract Syntax Tree. For a real AST, we'd need a code walker. But
 since Lisp's syntax is based on parenthesis, in practice the
 experience is similar.
 
 I wrote a little plugin to help editing python code by manipulating
 the AST ([red4e](https://github.com/vindarel/redbaron4emacs)).  We
-first need an AST parser. There was one for Python 2, another one for
-Python 3 without annotations, eventually one emerged a couple years
-later, signs of an unstable language and ecosystem, more work required
-by the developer. I went the simple way by calling each function into
-a new python process, which is of course too
+first need an AST parser. There was a couple for Python 2, another one
+for Python 3 without annotations, eventually one emerged a couple
+years later, signs of an unstable language and ecosystem, more work
+required by the developer. I went the simple way by calling each
+function into a new python process, which is of course too
 slow. [traad](https://github.com/abingham/traad) is a better project,
 it can do much more but still, it's difficult to answer questions like
-cross-referencing: "who calls this function" or "who does
-this function call", which are built-in in Slime.
+cross-referencing: "who calls this function" or "who does this
+function call", which are built-in in
+SLIME. [SLIME](https://en.wikipedia.org/wiki/SLIME) is like Language
+Server Protocol for Common Lisp in Emacs, its backend Swank being
+editor-agnostic.
 
 Maybe other editors and proprietary ones come with a better
 experience, at the cost of freedom, money, configuration time and
@@ -113,15 +116,15 @@ memory and CPU resources. If I have the choice, I'd prefer to not go
 this route, and choose a better platform from the start.
 
 Traad is built around a client-http server approach…  that reminds me
-of Lisp's Swank server, the backend of Slime! A sign that Swank/Slime
+of Lisp's Swank server, the backend of SLIME! A sign that Swank/SLIME
 has the right architecture for modern times since its inception. It is
 based on a stable language whose syntax can not rot and has decades of
 development behind it.
 
-Slime itself is tied to Emacs, and thus a newcomer can find the UI
+SLIME itself is tied to Emacs, and thus a newcomer can find the UI
 unpractical. Swank though can be used outside of Emacs, and it is for
-example for Atom's [Slima](https://github.com/neil-lindquist/SLIMA/),
-which now has all the most important Slime features: REPL, integrated
+example for Atom's [SLIMA](https://github.com/neil-lindquist/SLIMA/),
+which now has all the most important SLIME features: REPL, integrated
 debugger, jump to definition, autocompletion, interactive object
 inspection, and more.
 
@@ -191,13 +194,13 @@ want. We can have the decorator syntax (and any other) if we want
 only macros though. The polymorphism of the object system (CLOS)
 (commonly referred to as generic dispatch) helps, and Lisp's
 "moldability" in a whole allows us to refactor code exactly how we
-want, to build a "DSL" to express what we want.
+want, to build a "Domain Specific Language" to express what we want.
 
 # Libraries
 
 ## Library management
 
-*pip*: use virtual envs (virtualenv, virtualenvwrapper, tox, anaconda,…
+*pip*: use virtual environments (virtualenv, virtualenvwrapper, tox, anaconda,…
 ?), pin dependencies (pip-tools, pipenv, poetry, pyupdate,… ?). Debug
 problems due to a third party library that didn't pin its dependencies
 strictly enough.
@@ -212,7 +215,7 @@ We are not even limited to Quicklisp any more (it can be limiting
 because it release cycle is of one month). The
 [Ultralisp](http://ultralisp.org/) distribution builds every 5
 minutes. [clpm](https://gitlab.common-lisp.net/clpm/clpm) is a package
-manager with a traditionnal approach.
+manager with a traditional approach.
 
 
 ## State of the libraries
@@ -236,7 +239,7 @@ An important remark, is that Common Lisp is a stable language, and
 that the libraries play this game (I saw a deprecation feature staying
 for 12 years).
 
-I believe Lisp's simpler, non-roting syntax plays a good role on
+I believe Lisp's simpler, non-rotting syntax plays a good role on
 stability. Caution: that doesn't mean the implementations don't
 evolve, quite the contrary.
 
@@ -272,23 +275,23 @@ levels, it can embed markdown, etc).
 
 Shipping an app, even more a web app, in Python (and JS) is extremely
 tedious. We are far from shipping a self-contained executable. Current
-projects aiming at fixing that are piles of hacks. Ok, I can install
-it once and build on it. But several times ? And delevering an app to
+projects aiming at fixing that are piles of hacks. OK, I can install
+it once and build on it. But several times ? And delivering an app to
 end users ?
 
-So we must turn to containers: ok, they're the Big Thing, but we still
-need to spend hours on reading resources, building the Dockerfile, the
+So we must turn to containers: OK, they're the Big Thing, but we still
+need to spend hours on reading resources, building the Docker file, the
 deployment pipeline, fixing upstream bugs, updating the stack,
 accepting security holes, etc. Hours we could put on our app. And
 still, *users can't download a binary*.
 
-In *Common Lisp*: compile your program to machine code, embed the runtime, the
+In *Common Lisp*: compile your program to machine code, embed the run-time, the
 debugger, the web server, the JS dependencies, and ship it. Run it in
 your server and access it from the outside straight away.
 
 An SBCL image of a non-trivial web project will weight ± 20 to 30MB
 (with core compression). For a lighter binary (not that I care
-personnally), we could try ECL (that compiles to C), or use
+personally), we could try ECL (that compiles to C), or use
 tree-shakers of proprietary implementations (LispWorks, Allegro).
 
 We can still use and benefit from Docker if needed, of course !
@@ -298,7 +301,7 @@ dependencies and their system requirements and be prepared for errors (or try no
 like Platter), install npm or yarn, install npm dependencies, build
 the static files (or find a better, non-standard way to ship static
 files), configure a server for static files (whitenoise, nginx), run a
-WSGI webserver (gunicorn),…
+WSGI web server (gunicorn),…
 
 *Deployment in CL*: build your binary, send it to the server, run it.
 
@@ -345,7 +348,7 @@ You can reach the community here:
 
 # Appendix A: FAQ
 
-Some info every Python programmer will come accross eventually. Saves you some googling.
+Some info every Python programmer will come across eventually. Saves you some googling.
 
 ## Are there no iterators ?
 
@@ -371,9 +374,9 @@ Full answer: https://stackoverflow.com/questions/913671/are-there-lisp-native-co
 
 ## But what is Common Lisp good for, really ?
 
-ok:
+OK:
 
-> Please don't assume Lisp is only useful for Animation and Graphics, AI, Bioinformatics, B2B and Ecommerce, Data Mining, EDA/Semiconductor applications, Expert Systems, Finance, Intelligent Agents, Knowledge Management, Mechanical CAD, Modeling and Simulation, Natural Language, Optimization, Research, Risk Analysis, Scheduling, Telecom, and Web Authoring just because these are the only things they happened to list. -- Kent Pitman
+> Please don't assume Lisp is only useful for Animation and Graphics, AI, Bio-informatics, B2B and Ecommerce, Data Mining, EDA/Semiconductor applications, Expert Systems, Finance, Intelligent Agents, Knowledge Management, Mechanical CAD, Modeling and Simulation, Natural Language, Optimization, Research, Risk Analysis, Scheduling, Telecom, and Web Authoring just because these are the only things they happened to list. -- Kent Pitman
 
 Kent Pitman
 
@@ -387,10 +390,10 @@ See also https://common-lisp.net/features.
 First, some reminders:
 
 - popularity doesn't equal quality, and popularity is hard to
-  mesure.
+  measure.
 - some success stories: http://lisp-lang.org/success/ Aircraft analysis suits, Missile defense, ICAD, music composition, algebra systems, bulk importer for PostgreSQL, grammar checking, 3D editor, knowledge graphs,…
 - did you know that [pgloader](https://tapoueh.org/blog/2014/05/why-is-pgloader-so-much-faster/) was re-written from Python to Common Lisp ?
-- CL was [used in a spacecraft](https://www.youtube.com/watch?v=_gZK0tW8EhQ&feature=youtu.be&t=4175) (and the repl was used to debug the system live from the earth)
+- CL was [used in a spacecraft](https://www.youtube.com/watch?v=_gZK0tW8EhQ&feature=youtu.be&t=4175) (and the REPL was used to debug the system live from the earth)
 - some companies still use and pick CL: https://github.com/azzamsa/awesome-lisp-companies
 - reddit v1 was written in CL ! JavaScript was written in CL !
 - CL was number 2 on the Tiobe index for years in the 80s !
@@ -398,17 +401,17 @@ First, some reminders:
 That being said, my 2 cents since you ask:
 
 - I think the CL world missed the web bandwagon for some time ([common-lisp.net](http://common-lisp.net/) was horrible for some years), but that's being fixed.
-- an enormous codebase existed before Github.
+- an enormous code-base existed before Github.
 - we missed visually nice, practical content on the web, even though
   there are many books (fixed or at least better)
 - CL missed a package manager for some time behind other languages, that's now fixed.
 - I reckon CL is still quite hard for the web, it doesn't have a killer web framework (though maybe Weblocks soon©), hence no hype.
 - CL seems to be used for big, non-trivial projects, hence it gets no easy hype.
-- we have no entity doing marketing. We are seeing the Common Lisp fundation pairing with sponsors now.
+- we have no entity doing marketing. We are seeing the Common Lisp foundation pairing with sponsors now.
 - other reasons: it may be hard (or harder than the concurrence) to
   grasp and getting started with, lisp isn't for everyone, it gets a lot of
   FUD, and has a so-called Lisp curse!
 
-but that's all debattable, I wouldn't focus much on this. [Times are
+but that's all debatable, I wouldn't focus much on this. [Times are
 good for
 implementations](https://lisp-journey.gitlab.io/blog/these-years-in-common-lisp-2018/#implementations), that's what counts.
