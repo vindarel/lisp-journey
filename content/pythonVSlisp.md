@@ -319,7 +319,9 @@ dependencies and their system requirements and be prepared for errors (or try no
 like Platter), configure a server for static files (whitenoise, nginx), run a
 WSGI web server (gunicorn),…
 
-*Deployment in CL*: build your binary, send it to the server, run it. Configure nginx eventually.
+*Deployment in CL*: build your binary, send it to the server, run
+it. Configure nginx eventually. We can even compile and include assets into
+the image (see [Rock](https://github.com/eudoxia0/rock)).
 
 # Performance
 
