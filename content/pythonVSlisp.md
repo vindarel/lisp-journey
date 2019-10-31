@@ -158,7 +158,7 @@ hit `C-c C-c` on a function and see changes on the remote image. CL
 has more hackerish capacities here, no doubt!
 
 - more information on (remote) debugging: https://lispcookbook.github.io/cl-cookbook/debugging.html
-
+- watch Baggers working with OpenGL: https://www.youtube.com/watch?v=a2tTpjGOhjw&index=20&list=RDxzTH_ZqaFKI
 
 ## No types
 
