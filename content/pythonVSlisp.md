@@ -268,24 +268,6 @@ malformed html and has some neat features (it is clever about headers
 levels, it can embed markdown, etc).
 
 
-# SQL composition
-
-Python's ORMs (while solid, well established etc) all come with
-limitations, idiosyncracies, and build their own DSL to build
-non-trivial SQL queries. See the `Q` and `F` objects of the Django
-ORM. Strange, isn't it ?
-
-Why not use s-expressions and stay closer to SQL ? See for example
-[sxql](https://github.com/fukamachi/sxql) from the
-[Mito](https://github.com/fukamachi/mito) ORM.
-
-A Mito query looks like this:
-
-```lisp
-(select-dao 'tweet
-    (where (:like :status "%Japan%")))
-```
-
 # Deployment, Shipping
 
 Shipping an app, even more a web app, in Python (and JS) is extremely
