@@ -95,7 +95,7 @@ vision "Inventing on Principles".
 *Common Lisp*: we edit code by semantic units. I love emacs' [lispy
 mode](http://oremacs.com/lispy/), which is weird at first of course,
 but so convenient. We can navigate to expressions back and forth, we
-can delete a whole "if" statement with a keypress, indentation is
+can delete a whole "if" expression with a keypress, indentation is
 automatic, etc.
 
 Actually, we edit code by parenthesis units, which doesn't carry as
@@ -173,20 +173,24 @@ has more hackerish capacities here, no doubt, and I find it attractive :)
 - more information on (remote) debugging: https://lispcookbook.github.io/cl-cookbook/debugging.html
 - watch Baggers working with OpenGL: https://www.youtube.com/watch?v=a2tTpjGOhjw&index=20&list=RDxzTH_ZqaFKI
 
-## No types
+## Typing
 
 *Python*: we catch a lot of type errors in production, and/or we have
-to write a lot more unit tests. It's a fact, do we agree?
+to write a lot more unit tests. Hope we agree on this.
 
 Now we can improve the situation somehow with type annotations,
-however: the feature is not stable (do you want mypy, the new typing
-module, pyre?), it's a different pipeline, it is not interactive by
-default, we need to configure our IDE.
+however it has the cons of being an after-thought: it has differences
+for different Python versions, the feature is not stable (do you want
+mypy, the new typing module, pyre?), it's a different pipeline, it is
+not interactive by default, we need to configure our IDE, it adds a
+start-up penalty (which might or might not be important).
 
 In *Common Lisp*, particularly with SBCL, we get a lot of type errors
-or warnings at compile time (`C-c C-c` on a *function*).
-We're closer (not there, just closer) to the "if it
-compiles, it works" situation.
+or warnings at compile time (`C-c C-c` on a *function*).  We're closer
+(not there, just closer) to the "if it compiles, it works"
+situation. We can also create our compound types and add type
+declarations to variables and functions. It's great, though it doesn't
+do as much static checks as a real typed language.
 
 - https://lispcookbook.github.io/cl-cookbook/type.html
 - [Compile-time type checking in the programmable programming language Lisp](https://medium.com/@MartinCracauer/static-type-checking-in-the-programmable-programming-language-lisp-79bb79eb068a)
@@ -195,16 +199,24 @@ help even more ?
 
 ## Refactoring
 
-*Python*: we just can't refactor code as we want. Decorators, context
-managers: they have an interface and they are limited to what they offer.
+*Python*: we can't refactor code as we want. Decorators, context
+managers: they have an interface and they are limited to what they
+offer. You can't do things a bit differently, you must comply to the
+interface. That might be a feature, but I prefer not being restricted,
+most of all on a personal project.
 
-*Common Lisp*: we can use macros, be concise and do what we
-want. We can have the decorator syntax (and any other) if we want
-(with the cl-annot library, or by writing our reader macros). It's not
-only macros though. The polymorphism of the object system (CLOS)
-(commonly referred to as generic dispatch) helps, and Lisp's
-"moldability" in a whole allows us to refactor code exactly how we
-want, to build a "Domain Specific Language" to express what we want.
+*Common Lisp*: there are similar patterns than in Python, but we can
+escape them. We can use macros, be concise and do what we want. We can
+have the decorator syntax (and any other) if we want (with the
+cl-annot library, or by writing our reader macros). It's not only
+macros though. The polymorphism of the object system (CLOS) (commonly
+referred to as generic dispatch) helps, and Lisp's "moldability" in a
+whole allows us to refactor code exactly how we want, to build a
+"Domain Specific Language" to express what we want.
+
+I feel that other language features than macros help too, like
+[closures](https://lispcookbook.github.io/cl-cookbook/functions.html#closures) or [multiple values](https://lispcookbook.github.io/cl-cookbook/functions.html#multiple-return-values-values-multiple-value-bind-and-nth-value) (which are different than returning a
+tuple).
 
 Now, speaking about refactoring tools, they are better Python side. I
 don't know of a Lisp tool that allows to change all the code-base
@@ -237,7 +249,7 @@ manager with a traditional approach.
 
 ## State of the libraries
 
-CL might have more libraries than you think, see https://github.com/CodyReichert/awesome-cl and http://quickdocs.org/ or just search on Github :)
+CL might have more libraries than you think, see https://github.com/CodyReichert/awesome-cl and http://quickdocs.org/ (or do a quick search on the net).
 
 But sure, the Python ecosystem is huge. A few remarks:
 
@@ -245,10 +257,10 @@ But sure, the Python ecosystem is huge. A few remarks:
   all for? :D Even in CL have we dozens of test frameworks.
 - Quicklisp is a curated distribution, PyPI is not. That means that
   libraries that don't compile anymore are rejected (after a notice to
-  the maintainers), and that orphan projects' url can be updated to
+  the maintainers), and that orphan projects' URL can be updated to
   point to a community maintained one.
 - Anybody can easily publish a library to PyPI on its own. Less so
-  with Quicklisp, one must open an issue.
+  with Quicklisp, one must open an issue (Ultralisp doesn't have this limitation).
 - [numcl](https://github.com/numcl/numcl) is a Numpy clone.
 - if needed, you can use [py4cl and more](https://github.com/CodyReichert/awesome-cl#python) to interface with Python.
 
@@ -278,8 +290,8 @@ more cross-files macros. You edit blocks of code whitespace by
 whitespace. And in the end, your html may still not be valid…
 
 In CL, we can also use a Django-like templating engine, [Djula](https://github.com/mmontone/djula)
-templates. FYI, despite its modest number
-of stars, it is one of the most downloaded projects on Quicklisp. We
+templates (despite its modest number
+of stars, it is one of the most downloaded projects on Quicklisp). We
 can alternatively just use plain old Lisp, for example with
 [Spinneret](https://github.com/ruricolist/spinneret/). As a
 consequence, we can factorize code as we always do (with spinneret functions or
@@ -287,32 +299,34 @@ lisp macros). We manipulate code as we always do. It even warns on
 malformed html and has some neat features (it is clever about headers
 levels, it can embed markdown, etc).
 
-Now, templates are has been, we agree, place to components :)
+Stuff like this is less possible with Python, because the language is
+less flexible.
+
+Now, let's rather use components than templates :)
 
 # Deployment, Shipping
 
-Shipping an app, even more a web app, in Python (and JS) is extremely
-tedious. We are far from shipping a self-contained executable. Current
-projects aiming at fixing that are piles of hacks. OK, I can install
-it once and build on it. But several times ? And delivering an app to
-end users ?
+Shipping an app, even more a web app, in Python (and JS) is
+tedious. There are no default way to ship a self-contained
+executable. Current projects aiming at fixing that can work… and may not.
 
-So we must turn to containers: OK, they're the Big Thing, but we still
-need to spend hours on reading resources, building the Docker file, the
-deployment pipeline, fixing upstream bugs, updating the stack,
-accepting security holes, etc. Hours we could put on our app. And
-still, *users can't download a binary*.
+So the current solution is to turn to containers. They're the Big
+Thing, but we still need to spend hours on reading resources, building
+the Docker file, the deployment pipeline, fixing bugs, updating the
+stack, accepting security holes, etc. Hours we could put on our
+app. With Docker though, users still can't download a binary.
 
-In *Common Lisp*: compile your program to machine code, embed the run-time, the
-debugger, the web server, the JS dependencies, and ship it. Run it in
-your server and access it from the outside straight away.
+In *Common Lisp*: we (re)discover the joy of a compiled language. We
+compile our program to machine code, the binary embeds the run-time, the
+debugger, the web server, the JS dependencies, and we ship it. We run it on
+the server and we can access it from the outside straight away.
 
 An SBCL image of a non-trivial web project will weight ± 20 to 30MB
 (with core compression). For a lighter binary (not that I care
 personally), we could try ECL (that compiles to C), or use
 tree-shakers of proprietary implementations (LispWorks, Allegro).
 
-We can still use and benefit from Docker if needed, of course !
+We can still benefit from Docker if needed, of course.
 
 *Deployment process in Python*: install Python and pip, install pip
 dependencies and their system requirements and be prepared for errors (or try non-standard tools,
@@ -320,7 +334,7 @@ like Platter), configure a server for static files (whitenoise, nginx), run a
 WSGI web server (gunicorn),…
 
 *Deployment in CL*: build your binary, send it to the server, run
-it. Configure nginx eventually. We can even compile and include assets into
+it. Configure nginx eventually. We can compile and include assets into
 the image (see [Rock](https://github.com/eudoxia0/rock)).
 
 # Performance
@@ -383,7 +397,7 @@ Full answer: https://stackoverflow.com/questions/913671/are-there-lisp-native-co
 
 ## But what is Common Lisp good for, really ?
 
-OK:
+We have a ready-to-use citation :)
 
 > Please don't assume Lisp is only useful for Animation and Graphics, AI, Bio-informatics, B2B and Ecommerce, Data Mining, EDA/Semiconductor applications, Expert Systems, Finance, Intelligent Agents, Knowledge Management, Mechanical CAD, Modeling and Simulation, Natural Language, Optimization, Research, Risk Analysis, Scheduling, Telecom, and Web Authoring just because these are the only things they happened to list. -- Kent Pitman
 
@@ -401,7 +415,7 @@ First, some reminders:
 - popularity doesn't equal quality, and popularity is hard to
   measure.
 - some success stories: http://lisp-lang.org/success/ Aircraft analysis suits, Missile defense, ICAD, music composition, algebra systems, bulk importer for PostgreSQL, grammar checking, 3D editor, knowledge graphs,…
-- did you know that [pgloader](https://tapoueh.org/blog/2014/05/why-is-pgloader-so-much-faster/) was re-written from Python to Common Lisp ?
+- did you know that [pgloader](https://tapoueh.org/blog/2014/05/why-is-pgloader-so-much-faster/) was re-written from Python to Common Lisp? (for a x30 speed gain, among other benefits)
 - CL was [used in a spacecraft](https://www.youtube.com/watch?v=_gZK0tW8EhQ&feature=youtu.be&t=4175) (and the REPL was used to debug the system live from the earth)
 - some companies still use and pick CL: https://github.com/azzamsa/awesome-lisp-companies
 - reddit v1 was written in CL! JavaScript was written in CL!
@@ -410,9 +424,9 @@ First, some reminders:
 That being said, my 2 cents since you ask:
 
 - I think the CL world missed the web bandwagon for some time ([common-lisp.net](http://common-lisp.net/) was horrible for some years), but that's being fixed.
-- an enormous code-base existed before Github.
+- an enormous code-base existed before GitHub.
 - we missed visually nice, practical content on the web, even though
-  there are many books (fixed or at least better)
+  there are many books (that's fixed or at least better)
 - CL missed a package manager for some time behind other languages, that's now fixed.
 - I reckon CL is still quite hard for the web, it doesn't have a killer web framework (though maybe [Weblocks](http://40ants.com/weblocks/quickstart.html) soon©, an isomorphic web framework), hence no hype.
 - CL seems to be used for big, non-trivial projects, hence it gets no easy hype.
