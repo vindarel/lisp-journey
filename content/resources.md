@@ -13,7 +13,7 @@ search libraries on
 
 * http://quickdocs.org/
 
-Individual sites:
+## Individual sites:
 
 * [sjl's road to Lisp](http://stevelosh.com/blog/2018/08/a-road-to-common-lisp/)
 * [Martin Cracauer's Gentle Introduction to compile-time computing](https://medium.com/@MartinCracauer/a-gentle-introduction-to-compile-time-computing-part-3-scientific-units-8e41d8a727ca) - excellent article series
@@ -21,7 +21,7 @@ Individual sites:
 * http://lispmethods.com/
 * [Malisper's series on debugging](http://malisper.me//debugging-lisp-part-1-recompilation/)
 
-Screencasts:
+## Screencasts:
 
 * [Little Bits of Lisp](https://www.youtube.com/playlist?list=PL2VAYZE_4wRJi_vgpjsH75kMhN4KsuzR_) -
   short videos on various topics: inspecting a condition, basics of
@@ -47,3 +47,30 @@ Screencasts:
 * [videos of the European Lisp Symposium](https://www.youtube.com/channel/UC55S8D_44ge2cV10aQmxNVQ)
 
 and more on [Cliki](http://www.cliki.net/Lisp%20Videos).
+
+## Some games:
+
+* [Spycursion](https://defungames.com/) - "a sandbox "edutainment" MMO centered around hacking and espionage which takes place in a near-future world".
+
+
+<img src="https://defungames.com/wp-content/uploads/2019/01/eavesdropping.png" alt="spycursion" width="450"/>
+
+* [Orb](https://baggers.itch.io/orb)
+
+![](https://img.itch.zone/aW1hZ2UvMjUyMTE3LzEyMDYxNDUucG5n/347x500/YEFnGW.png)
+
+* [Notalone](https://github.com/borodust/notalone)
+
+![](https://img.itch.zone/aW1hZ2UvMTg2MzQ1Lzg3MjI2NC5wbmc=/347x500/6WLhIo.png)
+
+* [Moppu](https://sarge.itch.io/moppu)
+
+![](https://img.itch.zone/aW1hZ2UvNTAyMzQ2LzI2MDA1NjUucG5n/347x500/hdXQvV.png)
+
+* [The price of a cup of coffee](https://goofist.itch.io/the-price-of-a-cup-of-coffee)
+
+![](https://img.itch.zone/aW1hZ2UvNTAyNzk3LzI2MDMzNDQucG5n/347x500/0svE3f.png)
+
+* http://www.sebity.com/projects.php (Snake, the Invaders,… with OpenGL)
+
+* [cl-snake](https://github.com/SahilKang/cl-snake) snake in the terminal
