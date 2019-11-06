@@ -43,7 +43,7 @@ and thanks to the proofreaders.
 - [Deployment, Shipping](#deployment-shipping)
 - [Performance](#performance)
 - [Conclusion](#conclusion)
-- [Appendix A: FAQ](#appendix-a-faq)
+- [Appendix: FAQ](#appendix-faq)
     - [Are there no iterators ?](#are-there-no-iterators-)
     - [Can I define my own `+` operator like in an OO language ?](#can-i-define-my-own--operator-like-in-an-oo-language-)
     - [To which extent can Lisp be compiled, with all its dynamic nature, garbage collection, macros and what else ?](#to-which-extent-can-lisp-be-compiled-with-all-its-dynamic-nature-garbage-collection-macros-and-what-else-)
@@ -391,7 +391,7 @@ I hope I killed some FUD and showed you new ways to make stuff. May
 that inspire you!
 
 
-# Appendix A: FAQ
+# Appendix: FAQ
 
 Some info every Python programmer will come across eventually. Saves you some googling.
 
