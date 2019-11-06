@@ -1,7 +1,7 @@
 +++
 date = "2019-10-30T07:51:49+01:00"
 title = "Python VS Common Lisp, workflow and ecosystem"
-draft = true
+draft = false
 +++
 
 <!-- started = "2017-02-05T07:51:49+01:00" -->
