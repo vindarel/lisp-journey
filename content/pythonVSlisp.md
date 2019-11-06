@@ -34,7 +34,7 @@ and thanks to the proofreaders.
     - [Interactivity](#interactivity)
     - [Editing code](#editing-code)
     - [Running, testing programs](#running-testing-programs)
-    - [No types](#no-types)
+    - [Typing](#typing)
     - [Refactoring](#refactoring)
 - [Libraries](#libraries)
     - [Library management](#library-management)
