@@ -254,6 +254,8 @@ want. If needed, we can still clone projects into
 `~/quicklisp/local-projects/` for a system-wide installation, or have
 project-local dependencies with
 [Qlot](https://github.com/fukamachi/qlot).
+Quicklisp is very slick. Libraries are installed at runtime, during
+ our REPL session. We don't have to reload the Lisp process.
 
 We are not even limited to Quicklisp any more (it can be limiting
 because of its one month release cycle). The
