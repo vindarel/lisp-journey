@@ -443,7 +443,7 @@ First, some reminders:
 - CL was [used in a spacecraft](https://www.youtube.com/watch?v=_gZK0tW8EhQ&feature=youtu.be&t=4175) (and the REPL was used to debug the system live from the earth)
 - some companies still use and pick CL: https://github.com/azzamsa/awesome-lisp-companies, companies provide professional support ([Platform.sh](https://platform.sh/)).
 - Google's [ITA Software](https://en.wikipedia.org/wiki/ITA_Software) still powers airfare search on Orbitz or Kaya.com,
-- reddit v1 was written in CL! JavaScript was written in CL!
+- reddit v1 was written in CL! JavaScript was ~~written~~ sketched in CL! ([see here](https://jorgetavares.com/2010/05/19/original-implementation-of-javascript-in-cl/), with lisp code still visible in the repository: [here](https://dxr.mozilla.org/mozilla/source/js2/semantics/))
 - CL was number 2 on the Tiobe index for years in the 80s!
 
 That being said, my 2 cents since you ask:
