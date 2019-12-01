@@ -101,9 +101,11 @@ can delete a whole "if" expression with a keypress, indentation is
 automatic, etc. There are [other emacs plugins](http://wikemacs.org/wiki/Lisp_editing). [Parinfer](https://shaunlebron.github.io/parinfer/) is appreciated in other editors too.
 
 Actually, we edit code by parenthesis units, which doesn't carry as
-much meaning as an Abstract Syntax Tree. For a real AST, we'd need a code walker. But
-since Lisp's syntax is based on parenthesis, in practice the
-experience is similar.
+much meaning as an Abstract Syntax Tree. For a real AST, we'd need a
+code walker (like [Concrete-Syntax-Tree](https://github.com/s-expressionists/Concrete-Syntax-Tree)). But since Lisp's syntax is based on parenthesis, in
+practice the experience is similar.
+
+<!-- Some libraries are being built on the code walker: https://github.com/FiV0/cl-navigate-sc -->
 
 I had a try on writing a little plugin to help editing Python code by manipulating
 the AST ([red4e](https://github.com/vindarel/redbaron4emacs)).  We
@@ -237,6 +239,8 @@ according to the AST, maybe in a proprietary editor. There are
 utilities to make local transformations, like "extract this expression
 into a `let` variable at the top of the function", "transform a
 function to a lambda equivalent" or the contrary, etc.
+
+(edit 12/01: the language-agnostic tool [Comby](https://github.com/comby-tools/comby) my prove useful.)
 
 # Libraries
 
