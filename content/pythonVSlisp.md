@@ -81,7 +81,7 @@ Now, the cost is that one must learn to play with this live data. We
 might come to a state that doesn't reflect the code anymore, so we'll
 write our own "reset" functions or just restart the lisp image.
 
-Here's a video where the developer defines a dummy interface, makes it
+Here's [a video](https://www.youtube.com/embed/CNFr7zIfyeM) where the developer defines a dummy interface, makes it
 fail, develops it, and tests it, all quickly by interacting with the REPL.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CNFr7zIfyeM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -166,7 +166,7 @@ while to run global tests or build the system) and that's a good
 thing. There is an interactive debugger. We can interactively fix and re-run code and
 tests.
 
-Here's a quick demo on how to interactively fix failing tests:
+Here's [a quick demo](https://peertube.video/videos/embed/c0c82209-feaa-444d-962f-afa25745bfc0) on how to interactively fix failing tests:
 
 <iframe width="560" height="315" sandbox="allow-same-origin allow-scripts" src="https://peertube.video/videos/embed/c0c82209-feaa-444d-962f-afa25745bfc0" frameborder="0" allowfullscreen></iframe>
 
