@@ -66,7 +66,7 @@ Why a month ?
 > The most labor-intensive part of making releases is monitoring daily failures and reporting bugs to the right people. The daily failure report is automated, but reporting bugs (and following up) can be a slog.
 
 Then the discussion began. When voices support more frequent releases,
-Xach advertises again
+Zach advertises again
 [quicklisp-controller](https://github.com/quicklisp/quicklisp-controller);
 I read one (and only one) small but direct criticism towards the
 maintainer:
@@ -77,7 +77,7 @@ A one month update has its supporters, of course:
 
 > I have benefited multiple times from the 1 month release cycle and the due diligence that Xach and others put in every month. Even if they had a team of 50 I'd still vote to keep it as it is now. Making a separate dist is far more sensible if you need extra control over delivery times and it will still play well with quicklisp and your other projects.
 
-I asked wether it would be possible to specify a git version, and I had an explanation:
+I asked whether it would be possible to specify a git version, and I had an explanation:
 
 > Regarding pulling from git in the client, Quicklisp doesn't work like that. I did not want to rely on external processes in order to be portable to all Common Lisp implementations and platforms. This was a real issue in clbuild and asdf-install.
 
@@ -88,7 +88,7 @@ which allows exactly that (and to set dependencies locally).
 
 > Qlot will not help if you are writing a library and want to push fixes to its users quickly. It only helps for end-user application development. It works similar to virtualenv + pip (requirements.txt) from Python's world, for example.
 
-Phoe sumed up the situation:
+Phoe summed up the situation:
 
 > This thread is turning into a discussion about "why X approach is better than Quicklisp approach" which leads to a fruitful, but dead point.
 
@@ -104,13 +104,13 @@ Phoe sumed up the situation:
 
 >Talk is cheap - @xach has at least built something that works and can act as a foundation.
 
-And now, after only 17 messages to the thread, Xach Bean closes the thread:
+And now, after only 17 messages to the thread, Zach Bean closes the thread:
 
 > I can appreciate there are other approaches that have advantages over how Quicklisp works. I hope this thread has helped shed some light on why it works the way it does, and my hopes for the future. I'm not against requests for changes, but not all of them can or will be accommodated. I'm also fully in favor of people doing their own thing if they have other priorities, experiences, and preferences - I think it would be great if there were even more options for Common Lisp project management.
 
 > Closing this for now - thanks for the discussion.
 
-Hextream had just the time to disagree
+Hexstream had just the time to disagree
 
 > Generally agree with your last comment, but I just wanted to express my discontent at the premature closing of this thread, it seemed pretty fruitful to me and I don't think it had yet reached a point of serious diminishing returns.
 
@@ -128,7 +128,7 @@ presentation of means to the resolution (in no doc), we had the
 presentation of how to fix the mentioned problem for library
 developers (Qlot, comprehensibly not referenced in Quicklisp doc, and little talked
 about over here), we had questions regarding the lack of documentation
-that could be tracked from this thread (Xach too said he wanted to
+that could be tracked from this thread (Zach too said he wanted to
 write more doc). And I think the discussion was professional, with no
 animosity. So we could have tracked some progress, maybe we would have
 received more tips, but more importantly we'd have been done with this
@@ -138,7 +138,7 @@ But the thread is closed O_o Preventing people from communicating
 means preventing people from learning from each
 other, and thus makes the CL world evolving slower. Or people
 quitting, or simply be very surprised and not staying here. Indeed,
-it's a negative feeling to see that. Why did Xach close the thread ?
+it's a negative feeling to see that. Why did Zach close the thread ?
 Is he bored of this discussion ? He can ignore it. Bored of being
 asked that ? It's a recurrent question in reddit and in blogs. But
 this issue is the only mention of the subject on Quicklisp's website and
@@ -151,7 +151,7 @@ thing that makes the CL world impenetrable (or with great effort) and
 subject to rants. It doesn't need more reasons, seriously.
 
 I wouldn't bother if this subject was documentet, but it is not. The
-issue about documenting Quicklisp, which Xach wanted to fix "soon",
+issue about documenting Quicklisp, which Zach wanted to fix "soon",
 stalls since 2014. It's still open, at least.
 
 ---
