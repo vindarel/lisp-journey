@@ -9,7 +9,7 @@ updates once a month (see
 [Quicklisp's blog](http://blog.quicklisp.org/)). I didn't know why, it
 isn't explained on its website, so I asked
 ([issue #148](https://github.com/quicklisp/quicklisp-client/issues/148)). I
-found the discussion very insightfull, everybody being constructive,
+found the discussion very insightful, everybody being constructive,
 existing solutions being discussed and architectural choices
 explained. But it ended up brutally with one more Common Lisp oddity.
 
@@ -38,7 +38,7 @@ The situation and shortcomings is well described by axity on
 
 >   Also the fact that the official dists are rolled out so far apart (a month or longer in the software world is an eternity), means developers cannot push hot-fixes or address user-reported bugs in a timely manner, without pushing maintenance onto the users by having them checkout upstream sources.
 
->   Modern languages such as Julia and Racket offer central repositories where a developer can register their software projects, and will be automatically indexed periodically, so that users can continue to install and update software without any maintenance, and still receive updates quickly when needed. Additionally, they push managing version dependencies onto the developer, which I do not believe to be a bad thing. In constrast, Common Lisp libraries are rarely versioned, and all of that maintenance is forced upon the Quicklisp dist curator.
+>   Modern languages such as Julia and Racket offer central repositories where a developer can register their software projects, and will be automatically indexed periodically, so that users can continue to install and update software without any maintenance, and still receive updates quickly when needed. Additionally, they push managing version dependencies onto the developer, which I do not believe to be a bad thing. In contrast, Common Lisp libraries are rarely versioned, and all of that maintenance is forced upon the Quicklisp dist curator.
 
 I also like /u/ruricolist's explanations
 ([on reddit](https://www.reddit.com/r/lisp/comments/6snw5d/questions_for_2017_common_lisp_experts/dljcuz9/)):
@@ -106,7 +106,7 @@ Phoe summed up the situation:
 
 And now, after only 17 messages to the thread, Zach Bean closes the thread:
 
-> I can appreciate there are other approaches that have advantages over how Quicklisp works. I hope this thread has helped shed some light on why it works the way it does, and my hopes for the future. I'm not against requests for changes, but not all of them can or will be accommodated. I'm also fully in favor of people doing their own thing if they have other priorities, experiences, and preferences - I think it would be great if there were even more options for Common Lisp project management.
+> I can appreciate there are other approaches that have advantages over how Quicklisp works. I hope this thread has helped shed some light on why it works the way it does, and my hopes for the future. I'm not against requests for changes, but not all of them can or will be accommodated. I'm also fully in favour of people doing their own thing if they have other priorities, experiences, and preferences - I think it would be great if there were even more options for Common Lisp project management.
 
 > Closing this for now - thanks for the discussion.
 
@@ -150,7 +150,7 @@ light in that issue (and below in reddit). What happened is again a
 thing that makes the CL world impenetrable (or with great effort) and
 subject to rants. It doesn't need more reasons, seriously.
 
-I wouldn't bother if this subject was documentet, but it is not. The
+I wouldn't bother if this subject was documented, but it is not. The
 issue about documenting Quicklisp, which Zach wanted to fix "soon",
 stalls since 2014. It's still open, at least.
 
@@ -162,4 +162,4 @@ Final links, with a glimpse of light:
 * [the reddit thread](https://www.reddit.com/r/Common_Lisp/comments/6x7c85/why_do_we_have_to_wait_one_month_before_quicklisp/)
 
 * [Qi](https://github.com/CodyReichert/qi), a Common Lisp package
-  manager in the making - more traditionnal, no surprises - didn't try.
+  manager in the making - more traditional, no surprises - didn't try.
