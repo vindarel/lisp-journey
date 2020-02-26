@@ -1,4 +1,4 @@
-image: monachus/hugo
+image: monachus/hugo:v0.40.1
 
 before_script:
   - git submodule init
