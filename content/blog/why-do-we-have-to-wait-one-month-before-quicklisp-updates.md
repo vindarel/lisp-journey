@@ -104,7 +104,7 @@ Phoe summed up the situation:
 
 >Talk is cheap - @xach has at least built something that works and can act as a foundation.
 
-And now, after only 17 messages to the thread, Zach Bean closes the thread:
+And now, after only 17 messages to the thread, Zach Beane closes the thread:
 
 > I can appreciate there are other approaches that have advantages over how Quicklisp works. I hope this thread has helped shed some light on why it works the way it does, and my hopes for the future. I'm not against requests for changes, but not all of them can or will be accommodated. I'm also fully in favour of people doing their own thing if they have other priorities, experiences, and preferences - I think it would be great if there were even more options for Common Lisp project management.
 
