@@ -49,6 +49,8 @@ I also contributed to awesome projects, such as the Next browser (+200 commits i
 
 You can thank me and support me financially [on Patreon](https://www.patreon.com/vindarel) and [on Liberapay](https://liberapay.com/vindarel/).
 
+<a href="https://www.patreon.com/bePatron?u=35783903" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+
 
 Discuss (and share tips ?) on
 https://gitlab.com/lisp-journey/lisp-journey.gitlab.io/issues

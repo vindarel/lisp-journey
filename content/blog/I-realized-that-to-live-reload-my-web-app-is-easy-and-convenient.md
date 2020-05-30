@@ -89,3 +89,7 @@ Bonus points:
   data doesn't go away. You can try both cases with the `*config*`
   variable.
 - the app started a Swank server on port 4006, if you want to try on your VPS.
+
+---
+
+<a href="https://www.patreon.com/bePatron?u=35783903" data-patreon-widget-type="become-patron-button">become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>

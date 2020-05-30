@@ -164,3 +164,18 @@ The Big Plan is to Rewrite It (the other software) In Lisp, and the
 project just moved from R&D to POW… stay tuned, particularly if you
 don't know what to do in june and july, I might have a small budget
 for a helping hand.
+
+---
+
+<table>
+    <tr>
+      <td>
+<a href="https://www.patreon.com/bePatron?u=35783903" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+      </td>
+
+      <td style="padding-left: 1em">
+<script src="https://liberapay.com/vindarel/widgets/button.js"></script>
+<noscript><a href="https://liberapay.com/vindarel/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+      </td>
+   </tr>
+</table>
