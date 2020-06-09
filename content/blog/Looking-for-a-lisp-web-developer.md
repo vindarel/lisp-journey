@@ -19,7 +19,7 @@ feedback gathered from clients. The challenge is to build a
 maintainable, fast, bug-free, easily-deployable application with an
 user interface that answers the clients' needs.
 
-I demand that you have some experience in:
+I ask you to have some experience in:
 
 * Common Lisp
 * the web: HTML, CSS, web browser API
