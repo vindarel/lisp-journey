@@ -8,6 +8,8 @@ draft = false
 
 **update july, 5th 2019**: we put this content into the Cookbook: https://lispcookbook.github.io/cl-cookbook/web.html
 
+**new post: why and how to live-reload one's running web application**: https://lisp-journey.gitlab.io/blog/i-realized-that-to-live-reload-my-web-app-is-easy-and-convenient/
+
 First, see the
 [Awesome CL list](https://github.com/CodyReichert/awesome-cl#network-and-internet).
 
@@ -647,17 +649,9 @@ https://lispcookbook.github.io/cl-cookbook/testing.html#gitlab-ci
 See [heroku-buildpack-common-lisp](https://gitlab.com/duncan-bayne/heroku-buildpack-common-lisp) and the [Awesome CL#deploy](https://github.com/CodyReichert/awesome-cl#deployment) section.
 
 
-### Daemonizing, restarting in case of crashes, handling logs
+### Daemonizing, restarting in case of crashes, handling logs (Systemd)
 
-See how to do that on your system.
-
-Most GNU/Linux distros now come with Systemd.
-
-Examples [search](https://lmddgtfy.net/?q=systemd%20daemonize%20application) result:
-
-- https://seanmcgary.com/posts/deploying-nodejs-applications-with-systemd/
-
-It is as simple as writing a configuration file:
+Generally, this depends on your system. But most GNU/Linux distros now come with Systemd. Write a service file like this:
 
 ```
 $ /etc/systemd/system/my-app.service
@@ -666,13 +660,13 @@ Description=stupid simple example
 
 [Service]
 WorkingDirectory=/path/to/your/app
-ExecStart=/usr/local/bin/sthg sthg
+ExecStart=sbcl --load run.lisp  # your command
 Type=simple
 Restart=always
 RestartSec=10
 ```
 
-running a command to start it:
+run a command to start it:
 
     sudo systemctl start my-app.service
 
@@ -681,7 +675,7 @@ a command to check its status:
     systemctl status my-app.service
 
 
-and Systemd can handle **logging** (we write to stdout or stderr, it writes logs):
+Systemd handles **logging**. We write to stdout or stderr, it writes logs:
 
     journalctl -f -u my-app.service
 
