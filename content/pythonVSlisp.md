@@ -241,7 +241,7 @@ utilities to make local transformations, like "extract this expression
 into a `let` variable at the top of the function", "transform a
 function to a lambda equivalent" or the contrary, etc.
 
-(edit 12/01: the language-agnostic tool [Comby](https://github.com/comby-tools/comby) my prove useful.)
+(edit January, 2020: the language-agnostic tool [Comby](https://github.com/comby-tools/comby) will be useful here. I used it for syntactic manipulation, for example to replace a `(if (…) (progn …))` by a `(when (…) …)`).
 
 # Libraries
 
