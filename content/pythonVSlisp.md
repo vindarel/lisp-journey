@@ -372,14 +372,14 @@ realize that.
 
 Python has a Global Interpreter Lock.
 
-SBCL compiles to machine code.
+SBCL compiles to machine code and is garbage collected [1].
 
 We can fine-tune the types in our Lisp programs for the compiler to
 make the consequent optimizations. We can run in "debugging first" or
 in "speed first" modes. We can inline code to gain in the cost of
 function calls.
 
-As a consequence, you may not need memcached yet in your Lisp project.
+As a consequence, you may not need memcached in your Lisp project yet.
 
 - https://lispcookbook.github.io/cl-cookbook/performance.html
 - [CL can be tuned to be faster than C](https://www.reddit.com/r/lisp/comments/1udu69/how_to_make_lisp_go_faster_than_cpdf/)
@@ -390,6 +390,8 @@ As a consequence, you may not need memcached yet in your Lisp project.
   level than NumPy, by providing even more powerful N-dimensional
   arrays, but just a few building blocks for working on them.
 - [pgloader](https://tapoueh.org/blog/2014/05/why-is-pgloader-so-much-faster/) was re-written from Python to Common Lisp for a 30x speed gain.
+
+[1]: and rest assured, [Google improves the GC](https://lisp-journey.gitlab.io/blog/yes-google-develops-common-lisp/)
 
 
 # Conclusion
@@ -467,7 +469,7 @@ That being said, my 2 cents since you ask:
 - CL worked well with Emacs, Vim, CCL's built-in editor on macOs,
   LispWorks' editor (which has a free version), but this doesn't
   satisfy the masses. We now have more options, including Atom (very
-  good support) and Eclipse (basic support).
+  good support), VSCode (okay support) and Eclipse (basic support).
 - other reasons: it may be hard (or harder than the concurrence) to
   grasp and getting started with, Lisp isn't for everyone, it gets a lot of
   FUD, and has a so-called Lisp curse!
