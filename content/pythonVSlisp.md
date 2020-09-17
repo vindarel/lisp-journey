@@ -179,6 +179,7 @@ and see changes on the remote image. CL has more hackerish capacities
 here, no doubt, and I find it attractive :)
 
 - more information on (remote) debugging: https://lispcookbook.github.io/cl-cookbook/debugging.html
+- a demo with a web app: https://lisp-journey.gitlab.io/blog/i-realized-that-to-live-reload-my-web-app-is-easy-and-convenient/
 - watch Baggers working with OpenGL: https://www.youtube.com/watch?v=a2tTpjGOhjw&index=20&list=RDxzTH_ZqaFKI
 - a Minecraft game engine that you can change while playing: https://github.com/gmasching/sucle
 
