@@ -166,9 +166,9 @@ while to run global tests or build the system) and that's a good
 thing. There is an interactive debugger. We can interactively fix and re-run code and
 tests.
 
-Here's [a quick demo](https://peertube.video/videos/embed/c0c82209-feaa-444d-962f-afa25745bfc0) on how to interactively fix failing tests:
+Here's [a quick demo](https://www.youtube.com/embed/KsHxgP3SRTs) on how to interactively fix failing tests:
 
-<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts" src="https://peertube.video/videos/embed/c0c82209-feaa-444d-962f-afa25745bfc0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KsHxgP3SRTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Running and debugging on a remote server: in Python, we usually rsync
 sources and run tests manually, or start vim/emacs under tmux on the
