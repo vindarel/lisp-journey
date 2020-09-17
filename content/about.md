@@ -27,8 +27,22 @@ in CL for web apps, specially with the [awesome update of Weblocks going on](htt
 
 I am **vindarel** on Github and Gitlab: https://github.com/vindarel/ (and "dzecniv" on reddit).
 
+You can thank me and support me financially [on Patreon](https://www.patreon.com/vindarel) and [on Liberapay](https://liberapay.com/vindarel/). I currently don't have a fixed, nor big, income, so it helps. I would like to write more about CL, specially about web development.
+
+If I were backed I would:
+
+- enhance the Cookbook further, with more recipes, a better theme, and generate a PDF.
+- write a proper Cookbook for web development
+- create web starter kits
+- create videos
+- interview lispers and companies using CL
+- spend (even) more time on libraries, and software, and share my experience.
+
+<a href="https://www.patreon.com/bePatron?u=35783903" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+
 My CL projects you could use are:
 
+- the Cookbook. I put it in its useful shape and I wrote a lot.
 - [str](https://github.com/vindarel/cl-str) - a simple and consistent string manipulation library
 - [replic](https://github.com/vindarel/replic) - helps build readline
   applications from an existing library in no time. It brings the
@@ -39,17 +53,9 @@ My CL projects you could use are:
   terminal and (very simple) GUI tool to search for torrents on
   popular trackers. With a proof-of-concept Weblocks web client.
 - a [hot reload example for web apps](https://github.com/vindarel/lisp-web-live-reload-example/issues) as well as a [web project skeleton](https://github.com/vindarel/lisp-web-template-productlist).
-
-I now (2020) run a web application in production. It's an online
-catalogue for bookshops, that helps real bookshops survive, and that
-is actually a bit generic so than you can advertise any product. The
-repository is already published, but I'll blog about it soon©.
+- [abstock](https://gitlab.com/vindarel/abstock), an online catalogue for books (and other products). I run it in production© and it helps real bookshops.
 
 I also contributed to awesome projects, such as the Next browser (+200 commits in 2019) or the Weblocks web framework. I fix bugs when I see them.
-
-You can thank me and support me financially [on Patreon](https://www.patreon.com/vindarel) and [on Liberapay](https://liberapay.com/vindarel/).
-
-<a href="https://www.patreon.com/bePatron?u=35783903" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 
 
 Discuss (and share tips ?) on
