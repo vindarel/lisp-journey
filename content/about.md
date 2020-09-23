@@ -67,7 +67,7 @@ I contribute to awesome projects such as:
 - [Weblocks](https://github.com/40ants/weblocks/), an [isomorphic web framework](https://github.com/vindarel/awesome-no-js-web-frameworks). I helped write the quickstart, fixed HTML generation in tables, wrote more documentation, raised issues.
 - the [Nyxt browser](https://github.com/atlas-engineer/nyxt/): I was part of the team in 2019, I am the second contributor of that year.
 
-and I fix bugs when I see them (Mito, Djula…).
+and I fix bugs when I see them (Mito (I am already [the second commiter in terms of changes to the code!](https://github.com/fukamachi/mito/graphs/contributors)), Djula…).
 
 You can reach me by email at vindarel, mailz dot org. I am [/u/(reverse (str:concat "vince" "zd"))](https://www.reddit.com/user/dzecniv/) on reddit.
 
