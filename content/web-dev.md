@@ -6,14 +6,16 @@ draft = false
 
 ¡ THIS IS A DRAFT !
 
-**update july, 5th 2019**: we put this content into the Cookbook: https://lispcookbook.github.io/cl-cookbook/web.html
+**update july, 5th 2019**: I put this content into the Cookbook: https://lispcookbook.github.io/cl-cookbook/web.html, fixing a long-standing request.
 
 **new post: why and how to live-reload one's running web application**: https://lisp-journey.gitlab.io/blog/i-realized-that-to-live-reload-my-web-app-is-easy-and-convenient/
 
-First, see the
+**new project skeleton**: [lisp-web-template-productlist](https://github.com/vindarel/lisp-web-template-productlist): Hunchentoot + easy-routes + Djula templates + Bulma CSS + a Makefile to build the project
+
+
+See also the
 [Awesome CL list](https://github.com/CodyReichert/awesome-cl#network-and-internet).
 
-See also the [Cookbook's issue](https://github.com/LispCookbook/cl-cookbook/issues/105).
 
 Information is at the moment scarce and spread appart, Lisp web
 frameworks and libraries evolve and take different approaches.
