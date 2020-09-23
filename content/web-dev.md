@@ -25,6 +25,12 @@ quickstart everything, see code snippets and, most of all, see how to
 do things that I couldn't do before such as hot reloading, building
 self-contained executables, shipping a multiplatform web app.
 
+If you want to thank me or encourage me, you can buy me a coffee!
+
+<div>
+<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee! (thanks!)', '#29abe0', 'K3K828W0V');kofiwidget2.draw();</script>
+</div>
+
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
