@@ -1,6 +1,7 @@
 +++
 date = "2018-01-23T07:51:49+01:00"
 title = "(bookmark) Get a list of all the dependencies of a lisp system"
+tags = ["tip",]
 draft = false
 +++
 

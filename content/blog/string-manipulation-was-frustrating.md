@@ -2,7 +2,7 @@
 title: "String manipulation is frustrating [fixed]"
 date: 2017-05-02T11:07:01+02:00
 draft: false
-tags: ["libraries", "beginner"]
+tags: ["libraries",]
 ---
 
 One of the first things I wanted to do in the REPL was some string

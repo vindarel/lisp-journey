@@ -1,6 +1,7 @@
 ---
 title: "Common Lisp Async Web Scraping"
 date: 2017-06-29T17:47:41+01:00
+tags: ["web-scraping",]
 draft: false
 ---
 

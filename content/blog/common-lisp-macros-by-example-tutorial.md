@@ -1,6 +1,7 @@
 ---
 title: "Common Lisp Macros By Example Tutorial"
 date: 2020-03-02T21:12:53+01:00
+tags: ["tutorial",]
 draft: false
 ---
 

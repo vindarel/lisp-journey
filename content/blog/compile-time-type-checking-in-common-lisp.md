@@ -1,6 +1,7 @@
 ---
 title: "Compile Time Type Checking in Common Lisp"
 date: 2019-10-29T17:12:33+01:00
+tags: ["tutorial",]
 draft: false
 ---
 

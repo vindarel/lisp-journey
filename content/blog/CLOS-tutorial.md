@@ -1,6 +1,7 @@
 ---
 title: "CLOS Tutorial"
 date: 2018-10-05T19:37:35+02:00
+tags: ["tutorial",]
 draft: false
 ---
 

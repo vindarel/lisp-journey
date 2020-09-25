@@ -1,6 +1,7 @@
 ---
 title: "Reddit: ABCL Common Lisp vs Clojure"
 date: 2019-09-23T01:47:10+02:00
+tags: ["clojure", "abcl"]
 draft: false
 ---
 

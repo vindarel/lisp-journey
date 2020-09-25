@@ -1,6 +1,7 @@
 ---
 title: "Introducing Replic: an executable and a library to build a readline app in no time"
 date: 2019-01-09T14:41:57+01:00
+tags: ["libraries", "product",]
 draft: false
 ---
 

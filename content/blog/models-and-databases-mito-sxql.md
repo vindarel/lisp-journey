@@ -2,6 +2,7 @@
 date = "2018-05-29T07:51:49+01:00"
 title = "Models and databases with the Mito ORM and SxQL"
 draft = false
+tags = ["libraries", "database",]
 +++
 
 Following is a tutorial on how to use the Mito ORM.

@@ -1,6 +1,7 @@
 ---
 title: "Composing queries with Mito, or doing without Django lazy querysets and Q objects"
 date: 2020-09-24T18:15:44+02:00
+tags: ["database", "web", "libraries"]
 draft: false
 ---
 

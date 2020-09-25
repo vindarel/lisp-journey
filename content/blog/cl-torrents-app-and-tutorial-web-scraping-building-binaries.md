@@ -1,6 +1,7 @@
 ---
 title: "cl-torrents, app and (extensive) tutorial: web scraping and building executables"
 date: 2017-12-20T14:21:20+01:00
+tags: ["product", "web-scraping"]
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "A free software for bookshops to show their catalogue online"
 date: 2020-05-30T13:15:47+02:00
+tags: ["product", "web"]
 draft: false
 ---
 

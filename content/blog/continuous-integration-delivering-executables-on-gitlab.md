@@ -1,6 +1,7 @@
 ---
 title: "Continuous Integration and delivery on Gitlab CI, testing locally with Docker"
 date: 2017-12-01T14:21:20+01:00
+tags: ["tutorial", "testing",]
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Data Structures"
 date: 2017-07-27T16:48:42+02:00
+tags: ["tutorial",]
 draft: false
 ---
 

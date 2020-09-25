@@ -1,6 +1,7 @@
 ---
 title: "Debugging in Common Lisp"
 date: 2018-12-20T12:26:02+01:00
+tags: ["tutorial", "debugging",]
 draft: false
 ---
 
