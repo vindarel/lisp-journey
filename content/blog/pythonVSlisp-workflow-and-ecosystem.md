@@ -1,6 +1,7 @@
 ---
 title: "Python VS Common Lisp Workflow and Ecosystem"
 date: 2019-11-06T15:21:53+01:00
+tags: ["tutorial", "python", "libraries",]
 draft: false
 ---
 

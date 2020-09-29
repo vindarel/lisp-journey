@@ -1,6 +1,7 @@
 +++
 date = "2018-01-23T07:51:49+01:00"
 title = "snippets - functional style, sequences, debugging and more utilities"
+tags = ["tip",]
 draft = false
 +++
 

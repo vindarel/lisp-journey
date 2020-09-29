@@ -1,6 +1,7 @@
 ---
 title: "Literate Programming in Lisp With Erudite"
 date: 2020-03-21T11:01:57+01:00
+tags = ["libraries",]
 draft: false
 ---
 

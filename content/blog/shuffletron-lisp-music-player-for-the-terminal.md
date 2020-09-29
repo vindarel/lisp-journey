@@ -1,6 +1,7 @@
 ---
 title: "Shuffletron, a Common Lisp Music Player for the terminal"
 date: 2018-09-11T16:36:23+02:00
+tags: ["libraries",]
 draft: false
 ---
 

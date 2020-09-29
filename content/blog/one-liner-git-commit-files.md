@@ -1,6 +1,7 @@
 ---
 title: "One liner, Git from Lisp: commit every file of this repository"
 date: 2018-12-04T21:49:06+01:00
+tags: ["tip",]
 draft: false
 ---
 

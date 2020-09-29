@@ -1,6 +1,7 @@
 +++
 date = "2018-03-06T07:51:49+01:00"
 title = "Tip: capture standard and error output"
+tags = ["tip"]
 draft = false
 +++
 

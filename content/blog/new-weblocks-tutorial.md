@@ -2,7 +2,7 @@
 date = "2018-06-25T18:51:49+01:00"
 title = "New Weblocks tutorial: widgets"
 draft = false
-tags = ["web"]
+tags = ["web",]
 +++
 
 Weblocks is a web framework, created circa 2007, that allows to

@@ -1,6 +1,7 @@
 +++
 date = "2018-01-02T07:51:49+01:00"
 title = " Scripting. Parsing command line arguments, building self-contained executables."
+tags: ["libraries", "tutorial",]
 draft = false
 +++
 

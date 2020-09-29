@@ -1,6 +1,7 @@
 ---
 title: "I Worked Remotely in Common Lisp. Here's My Incredible Story."
 date: 2020-05-12T12:52:57+02:00
+tags = ["web",]
 draft: false
 ---
 

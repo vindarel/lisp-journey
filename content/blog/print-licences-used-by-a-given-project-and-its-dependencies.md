@@ -1,6 +1,7 @@
 +++
 date = "2018-01-22T07:51:49+01:00"
 title = "Print licences used by a given project and its dependencies"
+tags = ["libraries",]
 draft = false
 +++
 

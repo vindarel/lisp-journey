@@ -1,6 +1,7 @@
 +++
 date = "2018-04-01T07:51:49+01:00"
 title = "These months in Common Lisp: Q1 2018"
+tags: ["these-months",]
 draft = false
 +++
 

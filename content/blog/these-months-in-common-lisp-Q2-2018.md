@@ -1,6 +1,7 @@
 ---
 title: "These Months in Common Lisp: Q2 2018"
 date: 2018-07-02T14:59:46+02:00
+tags: ["these-months",]
 draft: false
 ---
 

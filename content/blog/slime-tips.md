@@ -1,6 +1,7 @@
 ---
 title: "Slime Tips"
 date: 2019-08-26T10:40:46+02:00
+tags: ["tutorial",]
 draft: false
 ---
 

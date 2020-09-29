@@ -2,6 +2,7 @@
 title: "Today I Realized that to live reload my Lisp web app is straightforward and so convenient"
 date: 2020-05-12T16:02:05+02:00
 draft: false
+tags: ["web",]
 ---
 
 We all know that we can start a web server in the REPL and develop a

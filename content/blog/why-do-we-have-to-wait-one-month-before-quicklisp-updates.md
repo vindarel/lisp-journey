@@ -1,6 +1,7 @@
 ---
 title: "Why do we have to wait one month for Quicklisp updates ?"
 date: 2017-08-31T18:14:37+02:00
+tags: ["libraries",]
 draft: false
 ---
 

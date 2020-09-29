@@ -1,6 +1,7 @@
 ---
 title: "Installing libraries, dependencies management"
 date: 2017-10-27T11:01:31+02:00
+tags: ["libraries", "tutorial",]
 draft: false
 ---
 
