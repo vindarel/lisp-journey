@@ -1,6 +1,7 @@
 ---
 title: "How are Lisp REPLs different from Python or Ruby REPLs ? (Hackernews, 2020)"
 date: 2020-07-14T16:11:43+02:00
+tags: ["python",]
 draft: false
 ---
 
