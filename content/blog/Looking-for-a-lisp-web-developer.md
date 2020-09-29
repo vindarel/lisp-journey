@@ -1,7 +1,7 @@
 ---
 title: "Looking for a Lisp Web Developer (not a real job, but nearly)"
 date: 2020-06-05T21:38:01+02:00
-tags = ["product",]
+tags: ["product",]
 draft: false
 ---
 
