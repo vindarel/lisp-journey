@@ -4,7 +4,7 @@ title = "State of Common Lisp Web Development - an overview"
 draft = false
 +++
 
-¡ THIS IS A DRAFT !
+Caution: this is a draft. I take notes and write more in other resources (the Cookbook, my blog).
 
 **update july, 5th 2019**: I put this content into the Cookbook: https://lispcookbook.github.io/cl-cookbook/web.html, fixing a long-standing request.
 
@@ -16,7 +16,6 @@ draft = false
 See also the
 [Awesome CL list](https://github.com/CodyReichert/awesome-cl#network-and-internet).
 
-
 Information is at the moment scarce and spread appart, Lisp web
 frameworks and libraries evolve and take different approaches.
 
@@ -25,11 +24,11 @@ quickstart everything, see code snippets and, most of all, see how to
 do things that I couldn't do before such as hot reloading, building
 self-contained executables, shipping a multiplatform web app.
 
-If you want to thank me or encourage me, you can buy me a coffee!
 
 <div>
 <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee! (thanks!)', '#29abe0', 'K3K828W0V');kofiwidget2.draw();</script>
 </div>
+(yes that currently helps, thanks!)
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
@@ -89,33 +88,35 @@ If you want to thank me or encourage me, you can buy me a coffee!
 
 ## Clack, Lack
 
+Clack is to Lisp what WSGI is to Python. However it is mostly undocumented and not as battle-proofed as Hunchentoot.
+
 # Web frameworks
 
 ## Hunchentoot
 
-The de-facto web server, with the best documentation (cough cough),
+The de-facto web server, with the best documentation (cough looking old cough),
 the most websites on production. Lower level than a web framework
 (defining routes seems weird at first). I think worth knowing.
 
+Its terminology is different from what we are used to ("routes" are
+not called routes but we create handlers), part I don't know why and
+part because the Lisp image-based development allows for more, and
+thus needs more terminology. For example, we can run two applications
+on different URLs on the same image.
+
 https://edicl.github.io/hunchentoot/
+
+**edit**: here's a modern looking page: https://digikar99.github.io/common-lisp.readthedocs/hunchentoot/
 
 ## Caveman
 
-A popular web framework, written by a super-productive lisper, nice documentation for basic
+A popular web framework, or so it seems by the github stars, written by a super-productive lisper, with nice documentation for basic
 stuff but lacking for the rest, based on Clack (webserver interface,
 think Python's WSGI), uses Hunchentoot by default.
 
 I feel like basic functions are too cumbersome (accessing url parameters).
 
 https://github.com/fukamachi/caveman
-
-## Lucerne
-
-By another great lisper who's busy in other areas.
-
-https://github.com/eudoxia0/lucerne
-
-(staling as of writing)
 
 ## Snooze
 
@@ -132,6 +133,14 @@ https://github.com/joaotavora/snooze
 
 [Radiance](https://github.com/Shirakumo/radiance), with extensive tutorial and existing apps.
 
+It doesn't look like a web framework to me. It has ready-to-use components:
+
+- admin page (but what does it do?)
+- auth system
+- user: provide user accounts and permissions
+- image hosting
+- there is an email marketing system in development…
+
 ## cl-rest-server
 
 [cl-rest-server](https://github.com/mmontone/cl-rest-server)
@@ -140,13 +149,13 @@ https://github.com/joaotavora/snooze
 
 Features: validation via schemas, Swagger support, authentication, logging, caching, permission checking…
 
-Seems complete. Didn't try.
+It seems complete, it is maintained, the author seems to be doing web development in CL for a living. Note to self: I want to interview him.
 
 ## Wookie
 
 https://github.com/orthecreedence/wookie
 
-Asynchronous web server, by an impressive lisper, who built many async
+An asynchronous web server, by an impressive lisper, who built many async
 libraries. Used for the [Turtl](https://github.com/turtl/api/) api
 backend. Dealing with async brings its own set of problems (how will
 be debugging ?).
@@ -156,6 +165,14 @@ Nice api to build routes, good documentation: http://wookie.lyonbros.com/
 
 ## Weblocks (solving the Javascript problem)
 
+Weblocks allows to create dynamic pages without a line of JavaScript,
+all in Lisp. It was started years ago and it saw a large update and
+refactoring lately.
+
+It isn't the easy path to web development in CL but there's great potential IMO.
+
+It doesn't do double data binding as in modern JS frameworks. But new projects are being developed…
+
 See our presentation below.
 
 http://40ants.com/weblocks/quickstart.html
@@ -163,6 +180,8 @@ http://40ants.com/weblocks/quickstart.html
 # Tasks
 
 ## Accessing url parameters
+
+It is easy and well explained with Hunchentoot or `easy-routes` in the Cookbook.
 
 [Lucerne](http://borretti.me/lucerne/docs/overview.html) has a nice
 `with-params` macro that makes accessing post or url query parameters a breeze:
@@ -300,7 +319,7 @@ Let's hope the author comes back to work on this in a near future.
 
 ## Forms
 
-### Form validation
+There are a few libraries, see the awesome-cl list. At least one is well active.
 
 ## Debugging
 
@@ -356,6 +375,9 @@ We wanted once to use structs and didn't find how to it directly in
 Djula, so we resorted in a quick helper function to transform the
 struct in an alist.
 
+Defining custom template filters is straightforward in Djula, really a
+breeze compared to Django.
+
 **[Eco](https://github.com/eudoxia0/eco)** - a mix of html with lisp expressions.
 
 Truncated example:
@@ -397,6 +419,7 @@ https://t-cool.github.io/jscl-playground/
 
 ## Ajax
 
+Is it possible to write Ajax-based pages only in CL?
 
 ## The case Webblocks - Reblocks, 2017
 
@@ -501,6 +524,11 @@ Adding an html form and calling the new `add-task` function:
 ## Building
 
 We can build an executable also for web apps. That makes for a simple deployment process.
+
+We can even get a Lisp REPL and interact with the running web app,
+including installing new Quicklisp dependencies. That's quite
+incredible, and it's very useful, if not to hot-reload a web app
+(which I do anyways), at least to reload a user configuration file.
 
 This is the general way:
 
@@ -614,6 +642,8 @@ Done!
 This last line was buggy for us.
 
 # Deployment
+
+When you build a self-contained binary, deployment gets easy.
 
 Radiance's tutorial talks about deployment. https://github.com/Shirakumo/radiance-tutorial/blob/master/Part%207.md
 
@@ -779,7 +809,11 @@ There are more pointers on CV Berry's page.
 
 ## Hot reload
 
-Example with [Quickutil](https://github.com/tarballs-are-good/quickutil/blob/master/quickutil-server/).
+When we run the app as a script we get a Lisp REPL, so we can
+hot-reload the running web app. Here we demonstrate a recipe to update
+it remotely.
+
+Example taken from [Quickutil](https://github.com/tarballs-are-good/quickutil/blob/master/quickutil-server/).
 
 It has a Makefile target:
 
@@ -800,3 +834,5 @@ through ssh). Beforehand, a `fab update` has run `git pull` on the
 server, so new code is present but not running. It connects to the
 local swank server, loads the new code, stops and starts the app in a
 row.
+
+<a href='https://ko-fi.com/K3K828W0V' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
