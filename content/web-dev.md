@@ -25,11 +25,6 @@ do things that I couldn't do before such as hot reloading, building
 self-contained executables, shipping a multiplatform web app.
 
 
-<div>
-<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee! (thanks!)', '#29abe0', 'K3K828W0V');kofiwidget2.draw();</script>
-</div>
-(yes that currently helps, thanks!)
-
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
@@ -836,3 +831,5 @@ local swank server, loads the new code, stops and starts the app in a
 row.
 
 <a href='https://ko-fi.com/K3K828W0V' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+(yes that currently helps, thanks!)
