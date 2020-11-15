@@ -49,7 +49,7 @@ But, that is currently not possible with the Quicklisp client, we must refer to 
 CLPM allows to use monthly-based releases, just as Quicklisp and from Quicklisp, but it also started **a new source registry** for Common Lisp libraries, which would:
 
 - allow to **precisely pin dependencies**. It is possible to do so in ASDF, but this propriety is not used in Quicklisp (or barely, or not by most of the library authors, because Quicklisp comes as monthly distributions anyways).
-- allow to get the library's home URL, which surprisingly isn't in Quicklisp's metada (last time I checked, I might be wrong). We have to look at the quicklisp-projects repository.
+- allow to get the library's home URL, which surprisingly isn't in Quicklisp's metadata (last time I checked, I might be wrong). We have to look at the quicklisp-projects repository.
 - it would enforce the libraries to be on version control. Currently Quicklisp also accepts source files (as archives).
 
 
@@ -101,7 +101,7 @@ Ha, we started using CL long before I joined the group. From what I hear, it was
 
 The biggest downside for us is that students rarely come into the group with CL experience and in rare cases some students refuse to really dive into our Lisp code and stick with something they're more familiar with (such as Python) and end up reinventing poor facsimiles of things that exist.
 
-Ignoring that particular issue, using CL does add a non-trivial amount of time to onboarding new students. Then beyond that, we had the aforementioned issues with not versioning correctly and not maintaining backward compatibility. While that's really, at it's core, a social issue that would exist regardless of language (and is hard to avoid given the natural turn-over rate of students), the lack of a package manager with features similar to those provided in the languages students come in knowing these days certainly didn't help.
+Ignoring that particular issue, using CL does add a non-trivial amount of time to on-boarding new students. Then beyond that, we had the aforementioned issues with not versioning correctly and not maintaining backward compatibility. While that's really, at it's core, a social issue that would exist regardless of language (and is hard to avoid given the natural turn-over rate of students), the lack of a package manager with features similar to those provided in the languages students come in knowing these days certainly didn't help.
 
 ### How did you personally start with CL?
 
