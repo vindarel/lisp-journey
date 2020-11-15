@@ -1,7 +1,7 @@
 ---
-title: "Lisp Interview: more questions to @daewok. Common Lisp at university for temporal reasoning and risk-bounded planning"
+title: "Lisp Interview: more questions to CLPM author. Common Lisp at university for temporal reasoning and risk-bounded planning"
 date: 2020-11-15T08:22:59+01:00
-draft: true
+draft: false
 ---
 
 Some days ago [on reddit/r/lisp](https://www.reddit.com/r/lisp/comments/jtla4m/common_lisp_package_manager_a_package_manager_for/),
@@ -40,41 +40,41 @@ Quicklisp, and then paste the interview.
 
 CLPM's [project page](https://gitlab.common-lisp.net/clpm/clpm) (here's a non-official [GitHub mirror](https://github.com/lisp-mirror/clpm), if that helps you browse the repository) lists the project goals. Here's my comment and comparison to Quicklisp.
 
-#### Support and encourage explicitly versioned systems
+#### *Support and encourage explicitly versioned systems*
 
 > When a package upgrade introduces regressions, we should be able to use an older version.
 
 But, that is currently not possible with the Quicklisp client, we must refer to other tools (Qlot) or manual workarounds.
 
-CLPM allows to use monthly-based releases, just as Quicklisp and from Quicklisp, but it also started **a new source registry** for Common Lisp libraries, which would:
+CLPM allows to use monthly-based releases, just as Quicklisp and from Quicklisp, but it also started *a new source registry* for Common Lisp libraries, which would:
 
-- allow to **precisely pin dependencies**. It is possible to do so in ASDF, but this propriety is not used in Quicklisp (or barely, or not by most of the library authors, because Quicklisp comes as monthly distributions anyways).
+- allow to *precisely pin dependencies*. It is possible to do so in ASDF, but this propriety is not used in Quicklisp (or barely, or not by most of the library authors, because Quicklisp comes as monthly distributions anyways).
 - allow to get the library's home URL, which surprisingly isn't in Quicklisp's metadata (last time I checked, I might be wrong). We have to look at the quicklisp-projects repository.
 - it would enforce the libraries to be on version control. Currently Quicklisp also accepts source files (as archives).
 
 
-#### Support installing multiple package versions, globally and locally
+#### *Support installing multiple package versions, globally and locally*
 
-CLPM allows to manage dependencies per project (per directory), and globally. With Quicklisp, it's only globally. Otherwise we must rely to Qlot, or load projects more manually.
+CLPM allows to *manage dependencies per project* (per directory), and globally. With Quicklisp, it's only globally. Otherwise we must rely to Qlot, or load projects more manually.
 
 While I personally find the Quicklisp approach great, simple to use,
-sufficient in most cases and a better default than *always* pinning
-dependencies *manually*, comes a point in a software life when we need
+sufficient in most cases and a better default than always pinning
+dependencies manually, comes a point in a software life when we need
 project-local dependencies.
 
-#### Support CI/CD workflows - ship pre-built binaries
+#### *Support CI/CD workflows - ship pre-built binaries*
 
-> CLPM is distributed in both binary and source form. Source for hackers or people who want to use a different feature set and binary for quick and easy installation in other cases.
+> *CLPM is distributed in both binary and source form*. Source for hackers or people who want to use a different feature set and binary for quick and easy installation in other cases.
 
 That's simpler to install, to use on CI systems, or to make you software's users install the dependencies.
 
 Currently we can use Roswell to install Quicklisp libraries (and software) from the command line, but its installation isn't crystal straightforward or super fast either.
 
-#### Minimize footprint in development images and deployments
+#### *Minimize footprint in development images and deployments*
 
 When you use CLPM and you build a binary of your program, the binary won't contain CLPM (or only if you choose to). When we use Quicklisp, the built image contains Quicklisp (which can be very useful, I use it to live-reload running web apps).
 
-#### Support HTTPS
+#### *Support HTTPS*
 
 Quicklisp currently doesn't download packages through HTTPS.
 
@@ -123,4 +123,10 @@ CL is awesome! Nothing else comes to mind right now.
 
 ---
 
-Thanks again @daework for your time!
+Thanks again Eric.
+
+---
+
+<div style='margin-top:80px'>
+<a href='https://ko-fi.com/K3K828W0V' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='ko-fi button' title='Yes, it helps (no fixed nor big income today) and money goes to Lisp development, for me or contributors. Thanks!'/></a>
+</div>
