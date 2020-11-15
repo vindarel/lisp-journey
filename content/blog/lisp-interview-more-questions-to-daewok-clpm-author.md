@@ -1,7 +1,7 @@
 ---
 title: "Lisp Interview: more questions to CLPM author. Common Lisp at university for temporal reasoning and risk-bounded planning"
 date: 2020-11-15T08:22:59+01:00
-draft: false
+draft: true
 ---
 
 Some days ago [on reddit/r/lisp](https://www.reddit.com/r/lisp/comments/jtla4m/common_lisp_package_manager_a_package_manager_for/),
