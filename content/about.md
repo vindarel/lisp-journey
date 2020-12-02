@@ -40,6 +40,7 @@ libraries:
 - [replic](https://github.com/vindarel/replic/), to help create a readline application in no time
 - [fuzzy-match](https://github.com/vindarel/fuzzy-match)
 - [cl-sendgrid](https://github.com/vindarel/cl-sendgrid), to send emails easily with the Sendgrid API.
+- [progressons](https://github.com/vindarel/progressons) - a progress bar.
 - [cl-readline](https://github.com/vindarel/cl-readline) (maintainer)
 - [cl-ansi-term](https://github.com/vindarel/cl-ansi-term) (maintainer)
 
