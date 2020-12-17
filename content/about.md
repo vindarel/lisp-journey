@@ -28,15 +28,12 @@ Now a newcomer has far more practical information for getting started than a few
 <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee!', '#29abe0', 'K3K828W0V');kofiwidget2.draw();</script>
 </div>
 
-I also write and maintain tools. Among others:
-
-- [colisper](https://github.com/vindarel/colisper), an interface to Comby, for syntactic code checking and refactoring of Lisp code.
-- [indent-tools](https://github.com/vindarel/indent-tools) (emacs package)
-- [print-licences](https://github.com/vindarel/print-licenses)
+I also write and maintain tools, libraries, software and project skeletons. Among others:
 
 libraries:
 
 - [cl-str](https://github.com/vindarel/cl-str/), that fixed my first frustration with CL
+- [CIEL](https://github.com/ciel-lang/CIEL) (in development)
 - [replic](https://github.com/vindarel/replic/), to help create a readline application in no time
 - [fuzzy-match](https://github.com/vindarel/fuzzy-match)
 - [cl-sendgrid](https://github.com/vindarel/cl-sendgrid), to send emails easily with the Sendgrid API.
@@ -46,10 +43,16 @@ libraries:
 
 software:
 
- - [cl-torrents](https://github.com/vindarel/cl-torrents), with an experimental [Weblocks front-end](https://github.com/vindarel/cl-torrents-web)
- - [Abelujo](https://gitlab.com/vindarel/abelujo/), a free software for bookshops
+ - [Abelujo](https://gitlab.com/vindarel/abelujo/), a free software for bookshops (Python)
  - [ABStock](https://github.com/vindarel/ABStock), a catalogue of books (and other products)
  - [OpenBookStore](https://github.com/OpenBookStore/openbookstore), a personal book manager, aiming to replace Abelujo
+ - [cl-torrents](https://github.com/vindarel/cl-torrents), with an experimental [Weblocks front-end](https://github.com/vindarel/cl-torrents-web)
+
+tools:
+
+- [colisper](https://github.com/vindarel/colisper), an interface to Comby, for syntactic code checking and refactoring of Lisp code.
+- [indent-tools](https://github.com/vindarel/indent-tools) (emacs package)
+- [print-licences](https://github.com/vindarel/print-licenses)
 
 project skeletons and demos:
 
