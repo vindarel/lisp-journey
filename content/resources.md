@@ -43,7 +43,7 @@ search libraries on
  * [Cando: computational chemistry with Common Lisp on LLVM with Jupyter notebooks](https://www.youtube.com/playlist?list=PLbl4KVdl9U3I3MhFWgauT0cz-x7SymZmn&disable_polymer=true)
 
 * [McClim interactive GUI demos](https://www.youtube.com/watch?v=XGmo0E_S46I). [Code examples](https://github.com/robert-strandh/McCLIM/blob/master/Examples/demodemo.lisp). Presentation of [Clim listener, Clim debugger, drawing objects into the GUI repl](https://www.youtube.com/watch?v=kfBmRsPRdGg).
-* [Interactively fixing failing tests](https://peertube.video/videos/watch/c0c82209-feaa-444d-962f-afa25745bfc0)
+* [Interactively fixing failing tests](https://www.youtube.com/watch?v=KsHxgP3SRTs)
 * [videos of the European Lisp Symposium](https://www.youtube.com/channel/UC55S8D_44ge2cV10aQmxNVQ)
 
 and more on [Cliki](http://www.cliki.net/Lisp%20Videos).
