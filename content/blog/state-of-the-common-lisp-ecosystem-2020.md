@@ -264,22 +264,24 @@ Built on top of UIOP, Ruricolist's [cmd](https://github.com/ruricolist/cmd) brin
 
 ### Backend
 
+Common Lisp's main web servers are Hunchentoot and Clack. Since 2015, Clack's state of the documentation barely improved and is still lacking.
+
 [Clack](https://github.com/fukamachi/clack), the equivalent of
 WSGI/Rack has existed since 2009. Web frameworks are built on top of
-it, for example [Caveman2](http://8arrow.org/caveman/).
+it, for example [Caveman2](http://8arrow.org/caveman/). It is an HTTP
+server abstraction, that allows the user to write web applications
+(or, more reasonably, web application frameworks) without depending on
+a particular server.
 
-It is an HTTP server abstraction, that allows the user to write web applications (or, more reasonably, web application frameworks) without depending on a particular server.
+Ferando wrote:
 
-The importance of using Clack cannot be understated: If you build an
-application directly on, say, Hunchentoot, you’re tied to Hunchentoot,
-and if a new, faster server – like
-[Woo](https://github.com/fukamachi/woo) – comes out, you have to
-rewrite the entire application to use it. If you write a plugin for
-Clack – like [clack-errors](https://github.com/eudoxia0/clack-errors) – it is automatically usable by all
-applications, regardless of framework, that are built on Clack,
-reducing useless duplication of code.
+> the importance of using Clack cannot be understated: If you build an application directly on, say, Hunchentoot, you’re tied to Hunchentoot, and if a new, faster server – like [Woo](https://github.com/fukamachi/woo) – comes out, you have to rewrite the entire application to use it. If you write a plugin for Clack – like [clack-errors](https://github.com/eudoxia0/clack-errors) – it is automatically usable by all applications, regardless of framework, that are built on Clack, reducing useless duplication of code.
 
-With Clack, switching from Hunchentoot to Woo, and enjoying the incredible speedup, is a simple matter of installing libev and changing a keyword argument.
+> With Clack, switching from Hunchentoot to Woo, and enjoying the incredible speedup, is a simple matter of installing libev and changing a keyword argument.
+
+This still holds true, but the situation didn't improve much. In comparison, Hunchentoot is very well documented (and you can read its documentation on [readthedocs here](https://common-lisp-libraries.readthedocs.io/hunchentoot/)), and it is "fast enough".
+
+About Hunchentoot: Mariano Montone wrote [easy-routes](https://github.com/mmontone/easy-routes), a little but handy route handling facility on top of Hunchentoot. It brings dispatch by HTTP method, arguments extraction from the URL path, and "decorators". It is also integrated with the Djula framework to generate URLs from the route name.
 
 **Achievement**
 
@@ -288,33 +290,50 @@ were written, such as a single-sign on middleware.
 
 **Consolidation**
 
-Write more documentation for Clack. While lipers know about Clack,
+Write more documentation for Clack. While lispers know about it,
 they don't necessarily adopt it because of the lack of
 documentation. We can expand this [getting started
 guide](https://jasom.github.io/clack-tutorial/posts/getting-started-with-clack/).
 
+
 ### Frontend
 
-This is bound by Common Lisp’s ability to compile to JavaScript.
+Many HTML generators and template libraries exist (see the list below). However, some new and good ones appeared lately:
 
-The two "historical" solutions are
-[Parenscript](https://github.com/vsedach/Parenscript), a DSL that
-compiles a subset of Common Lisp to idiomatic JavaScript, and
-[JSCL](https://github.com/davazp/jscl), a CL-to-JS compiler designed
-to be self-hosting from day one. JSCL is not complete (yet), it lacks CLOS, format and loop.
+* [TEN](https://github.com/mmontone/ten), by Djula's maintainer, brings the completness of Djula with the usability of Eco (by Fernando Borretti), aka: you write Django-like HTML templates but you can interleave any Lisp code.
+* [markup](https://github.com/moderninterpreters/markup) - a JSX-like templating engine, where HTML tags are Common Lisp code. Comes with an Emacs package.
+
+A very new web framework appeared:
+
+* [ISSR](https://github.com/interactive-ssr), for Interactive Server-Side rendering. It links a client to its server with a websocket connection, and it allows to **write interactive web pages without writing any JavaScript at all**. Yes, it competes in Weblocks' pace (and maybe, in CLOG's too). It is thus not unlike Phoenix's LiveView or [Hotwire](https://github.com/hotwired/turbo).
+
+Other HTML generators and templating engines include:
+
+* [spinneret](https://github.com/ruricolist/spinneret) - Common Lisp HTML5 generator.
+* [cl-who](http://weitz.de/cl-who/) - The venerable HTML generator.
+* [Djula](https://github.com/mmontone/djula) - A port of Django's template engine to Common Lisp.
+* [cl-closure-template](https://github.com/archimag/cl-closure-template) - Implementation of Google's Closure templates. [LLGPL][8].
+* [clip](https://shinmera.github.io/clip) - An HTML template processor where the templates are written in HTML.
+
+
+### JavaScript
+
+The two "historical" solutions are:
+
+* [Parenscript](https://github.com/vsedach/Parenscript), a DSL that compiles a subset of Common Lisp to idiomatic JavaScript, and
+* [JSCL](https://github.com/davazp/jscl), a CL-to-JS compiler designed to be self-hosting from day one. JSCL is not complete (yet), it lacks CLOS, format and loop.
 
 Two new are in development:
 
 * [Valtan](https://github.com/cxxxr/valtan), a CL to JS compiler.
-* [JACL](https://tailrecursion.com/JACL/), JavaScript Assisted Common
-  Lisp. It has a [recording from ELS
-  2020](https://www.youtube.com/watch?v=JYLlC_dgQ5w).
+* [JACL](https://tailrecursion.com/JACL/), JavaScript Assisted Common LispIt has a [recording from ELS 2020](https://www.youtube.com/watch?v=JYLlC_dgQ5w).
 
 **Consolidation**
 
-The best way to help consolidation is to drive one of the existing
-CL-to-JS implementations forward. Why not have a look at JSCL's
-[issues issues](https://github.com/jscl-project/jscl/issues)?
+Help develop one of the existing CL-to-JS implementations. Why not have a look at JSCL's [issues
+issues](https://github.com/jscl-project/jscl/issues)?
+
+Bring some new macros to ParenScript for new JavaScript, as in [Paren6](https://github.com/BnMcGn/paren6/). For example, allow to write `async` and `await`.
 
 
 # Development
