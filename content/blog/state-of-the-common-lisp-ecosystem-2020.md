@@ -154,6 +154,39 @@ Use the libraries in the wild and write about it.
 
 ## File formats
 
+There exist Common Lisp libraries for all the major file formats:
+
+- XML: [Plump](https://github.com/Shinmera/plump) (and [Lquery](https://github.com/Shinmera/lquery/))
+- JSON: [Jonathan](https://github.com/Rudolph-Miller/jonathan), [cl-json](https://common-lisp.net/project/cl-json/) or [more](https://sabracrolleton.github.io/json-review).
+- YAML: cl-yaml
+- CSV: [cl-csv](https://github.com/AccelerationNet/cl-csv)
+
+Jonathan was new in 2015. It was presented as "a very fast JSON encoder and decoder".
+
+To work with JSON, we now have:
+
+- [json-pointer](https://github.com/y2q-actionman/cl-json-pointer) - A JSON Pointer implementation.
+- [json-mop](https://github.com/gschjetne/json-mop) - A metaclass for bridging CLOS and JSON objects (remind that JSON libraries can already serialize your own objects).
+- [json-schema](https://github.com/fisxoj/json-schema)
+
+
+**Consolidation**
+
+There are still too many JSON libraries. This leads to choice paralysis.
+
+They all represent null values differently. We need a library that
+"does the right thing". See maybe the massive [web-toolkit](https://github.com/xh4/web-toolkit#json) for its JSON handling ?
+
+> It distinguishes null, false and [] from Lisp's NIL thus supports identical transformation between JSON values. It provides object constructor and accessor to build and access nesting JSON objects.
+
+Help maintain cl-csv.
+
+**Future Work**
+
+Still valid from 2015:
+
+> A YAML parser so that cl-yaml doesn’t depend on the libyaml library would make distribution far simpler.
+
 
 ## GUI
 
