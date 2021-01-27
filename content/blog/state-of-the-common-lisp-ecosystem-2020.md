@@ -350,6 +350,19 @@ Bring some new macros to ParenScript for new JavaScript, as in [Paren6](https://
 
 ## Type system
 
+Quoting Fernando:
+
+> There’s not much to say here, except that Common Lisp has a pretty great type system that is not exploited nearly enough.
+
+And to our greatest pleasure, SBCL's type system continues to improve. For example, SBCL 1.5.9 now gives type warnings when a class's declared type doesn't match its `initform`. It continued to improve on SBCL 2.0 and onwards.
+
+Moreover, the [Coalton](https://github.com/stylewarning/coalton/) library is bringing a dialect of ML on top of CL, in order to write **statically typed programs** similar in spirit to Standard ML, OCaml, and Haskell.
+
+**Consolidation**
+
+Help develop Coalton.
+
+
 ## Testing
 
 ## Debugging etc
