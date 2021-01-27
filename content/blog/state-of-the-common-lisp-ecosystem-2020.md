@@ -342,8 +342,6 @@ Bring some new macros to ParenScript for new JavaScript, as in [Paren6](https://
 
 ## Editors
 
-## Documentation
-
 ## Package Management
 
 ## Build System
@@ -373,15 +371,42 @@ flamegraph
 
 ## Online presence
 
-new cl-net
+Common Lisp is very well documented through its standard, the Common
+Lisp Hyper Spec and many books. However, we felt it was lacking good
+on-line material. Good news is, the situation improved tremendously in
+the last three or four years.
 
-cookbook
+### New common-lisp.net website
 
-awesome-cl
+[https://common-lisp.net](https://common-lisp.net) was written anew. It looked dated. This is now fixed. Well done!
 
-readthedocs
+### Cookbook
 
-new blogs
+The [Common Lisp Cookbook](https://lispcookbook.github.io/cl-cookbook/) on GitHub got revived by many new contributors. It got many new content and a new UI. It is also now available in ePub and PDF, for free or as a "pay what you want" option.
+
+**Consolidation**
+
+Write content on the Cookbook. Don't write tutorials on your blog. Everyone can help, even new lispers (and in fact: *mostly* new lispers can write content best suited to the Cookbook's target audience).
+
+Maybe help revive the [minispec](https://github.com/lamberta/minispec) ?
+
+**Future work**
+
+Make it look world-class with a real and modern theme.
+
+### awesome-cl
+
+The [awesome-cl](https://github.com/CodyReichert/awesome-cl) list saw continuous updates and is still now a great solution to choose your Lisp library.
+
+**Consolidation**
+
+Help choose the recommended libraries.
+
+### More
+
+Several popular libraries have been ported to readthedocs, so the reading experience is more pleasant: [https://common-lisp-libraries.readthedocs.io/](https://common-lisp-libraries.readthedocs.io/).
+
+On a sadder note, Quickdocs closed :(
 
 ## New books
 
