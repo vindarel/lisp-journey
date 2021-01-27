@@ -200,7 +200,7 @@ repositories, you know that a Qt5 wrapper is in the works).
 Matthew Kennedy wrote excellent FFI bindings to the IUP Portable User
 Interface library: [IUP](https://github.com/lispnik/iup/). IUP is
 cross-platform (Windows, macOS, GNU/Linux, with new Android, iOs,
-Cocoa and Web Assembly drivers), has many widgets, has a small api and
+Cocoa and Web Assembly drivers), has many widgets (but less than Qt), has a small api and
 is actively developed. IUP was created at the PUC university of Rio de Janeiro.
 
 Pavel Korolev develops bindings to the Nuklear immediate-mode library:
@@ -210,13 +210,20 @@ uses it in his games which you should check out too).
 Nicolas Hafner started [Alloy](https://github.com/Shirakumo/alloy), a
 new user interface protocol and toolkit implementation, which he uses in his Kandria game.
 
-There are more: https://github.com/CodyReichert/awesome-cl#Gui
+Very recently, David Botton released [CLOG](https://github.com/rabbibotton/clog), "the Common Lisp Omnificent GUI":
+
+> CLOG uses web technology to produce graphical user interfaces for applications locally or remotely. CLOG can take the place, or work alongside, most cross-platform GUI frameworks and website frameworks. The CLOG package starts up the connectivity to the browser or other websocket client (often a browser embedded in a native template application.)
+
+It is "complete enough for most uses". You might find a demo [here](http://office.botton.com:8080/).
+
+There are more GUI libraries and frameworks: https://github.com/CodyReichert/awesome-cl#Gui (and more under the works).
 
 **Consolidation**
 
 Since roughly October, 2020, Nicolas Hafner works full time on
 [Kandria](https://kandria.com/). Supporting his work, through [GitHub
-sponsors](https://github.com/sponsors/Shinmera) or [ko-fi](https://ko-fi.com/shinmera) is useful.
+sponsors](https://github.com/sponsors/Shinmera) or
+[ko-fi](https://ko-fi.com/shinmera) would be 1) a great sign of recognition and 2) useful for ecosystem, especially for Alloy.
 
 I wrote an introduction to these frameworks in the Cookbook:
 [Cookbook/gui](https://lispcookbook.github.io/cl-cookbook/gui.html). More
@@ -226,24 +233,32 @@ There are two actively maintained diverged forks of the Gtk bindings. A reunific
 
 **Future work**
 
-Write a desktop application with IUP for everydays' use and make it a Common Lisp flagship.
+Write a desktop application with IUP/your toolkit of choice for everydays' use and make it a Common Lisp flagship.
 
 Study other approaches to GUI bindings. What about
 [gtk-server](http://www.gtk-server.org/)? GObject introspection? An
 effort started for Qt: [giqt](https://github.com/mrosset/giqt/) (in
 which we recognize @ambrevar from the [Nyxt
 project](https://github.com/atlas-engineer/nyxt/): supporting them is
-helping the Lisp ecosystem).
+helping the Lisp ecosystem too).
 
 LispWorks' [CAPI](http://www.lispworks.com/products/capi.html) and Allegro's [Common Graphics](https://franz.com/products/allegro-common-lisp/acl_ide.lhtml)
 are proprietary, but have free trial versions and are the most
-advanced GUI toolkits for Common Lisp. CAPI even targets the Android platform. Examples and tutorials would be welcome.
+advanced GUI toolkits for Common Lisp. CAPI even targets the Android platform. More examples and tutorials are necessary.
 
 ## Machine Learning
 
+- [CLML](https://github.com/mmaul/clml), developed at Mathematical Systems Inc., a Japanese company.
+
 ## System
 
-uiop
+To quote Fernando again:
+
+> UIOP, ASDF’s portable compatibility layer, contains a large set of tools for portably doing everything from querying the hostname to running external programs to manipulating environment variables.
+
+We should not require cl-fad nor Osicat anymore.
+
+Built on top of UIOP, Ruricolist's [cmd](https://github.com/ruricolist/cmd) brings short and handy commands to run and pipe programs.
 
 ## Web Development
 
