@@ -1,12 +1,12 @@
 ---
 title: "State of the Common Lisp ecosystem, 2020"
-date: 2020-03-30T16:29:11+02:00
+date: 2021-01-27T16:29:11+02:00
 draft: true
 ---
 
 DRAFT
 
-This is a description of the Common Lisp ecosystem, as of November, 2020,
+This is a description of the Common Lisp ecosystem, as of January, 2021,
 from the perspective of a user and contributor.
 
 The purpose of this article is both to give an overview of the
@@ -15,18 +15,17 @@ ecosystem, and to help drive consolidation in each domain.
 Each application domain has recommendations for consolidating that
 part of the ecosystem, and pointers for interesting future work.
 
-Acknowledgement: this article is derived (and sometimes, copied) from
+This article is derived from
 Fernando Borretti's [State of the Common Lisp ecosystem from 2015](https://borretti.me/article/common-lisp-sotu-2015).
 This new one will be an opportunity to look at what was achieved -or what is
 still lacking.
 
 these years… 2018
 
-More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReichert/awesome-cl) list -and on GitHub.
+More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReichert/awesome-cl) list -and on GitHub. - cl-net libraries page
 
 
 # Application domains
-
 
 ## Command line
 
@@ -35,7 +34,6 @@ There used to be several options, but now
 and that's a good thing. Roswell is an implementation
 manager/installer and script runner. One neat feature is support for
 very easily compiling tiny scripts into executables.
-
 
 [cl-readline](https://github.com/vindarel/cl-readline) and
 [linedit](https://common-lisp.net/project/linedit) are still there.
@@ -56,13 +54,14 @@ cl-dbi (a uniform interface to the various database server-specific
 libraries such as cl-postgres and cl-mysql) and SxQL (a DSL for
 building safe, automatically parameterized SQL queries).
 
-I wrote about it in the Cookbook:
-[Cookbook/databases](https://lispcookbook.github.io/cl-cookbook/databases.html). On
-my blog, [an article](https://lisp-journey.gitlab.io/blog/composing-queries-with-mito-aka-replacing-lazy-querysets-and-q-objects/)
-on how to compose queries with Mito and SxQL, and on how we only need
-lisp knowledge to replace Django functionalities.
+It also has a tutorial in the Cookbook:
+[Cookbook/databases](https://lispcookbook.github.io/cl-cookbook/databases.html).
 
-There are of course many more libraries.
+<!-- On my blog, [an article](https://lisp-journey.gitlab.io/blog/composing-queries-with-mito-aka-replacing-lazy-querysets-and-q-objects/) -->
+<!-- on how to compose queries with Mito and SxQL, and on how we only need -->
+<!-- lisp knowledge to replace Django functionalities. -->
+
+There are of course many more libraries. Some new ones since 2015 are:
 
 [cl-yesql](https://github.com/ruricolist/cl-yesql) (by the author of
 Serapeum, Spinneret and other great libraries) is based on Clojure's
@@ -75,15 +74,15 @@ CouchDB, neo4j and AllegroGraph.
 Vsevolod Dyomkin, the author of Rutils, the Programming Algorithms
 book and other libraries, is writing
 [cl-agraph](https://github.com/vseloved/cl-agraph), a minimal client
-for Franz Inc's [AllegroGraph](https://allegrograph.com/). AllegroGraph is a
-horizontally distributed, multi-model (document and graph),
-entity-event **knowledge graph** technology. It is proprietary and has a
+to Franz Inc's [AllegroGraph](https://allegrograph.com/). AllegroGraph is a
+"horizontally distributed, multi-model (document and graph),
+entity-event **knowledge graph** technology". It is proprietary and has a
 free version with a limit of 5 million triples.
 
 A general migration tool was lacking. We now have
-[cl-migratum](https://github.com/dnaeon/cl-migratum), a system which
+[cl-migratum](https://github.com/dnaeon/cl-migratum), a "system which
 provides facilities for performing database schema migrations,
-designed to work with various databases.
+designed to work with various databases".
 
 And of course, [pgloader](https://github.com/dimitri/pgloader) is still a Common Lisp success story.
 
@@ -105,12 +104,14 @@ Bindings for the new databases coming out.
 
 ## Concurrency
 
-There is a lot in this area:
+Many libraries exist in this area:
 
 * [BordeauxThreads](https://common-lisp.net/project/bordeaux-threads/) - Portable, shared-state concurrency
   - the "de-facto" concurrency library.
 * [lparallel](https://github.com/lmj/lparallel) - A library for parallel programming.
   - also solid, battle-tested and popular, aka de-facto.
+* [calispel](https://github.com/hawkir/calispel) - [CSP](https://en.wikipedia.org/wiki/Communicating_sequential_processes)-like channels for common lisp. With blocking, optionally buffered channels and a "CSP select" statement. ISC-style.
+  - "It is complete, flexible and easy to use. I would recommend Calispel over Lparallel and ChanL." @Ambrevar. [discussion](https://github.com/CodyReichert/awesome-cl/issues/290)
 * [ChanL](https://github.com/zkat/chanl) - Portable, channel-based concurrency.
 * [cl-async](https://github.com/orthecreedence/cl-async) - A library for general-purpose, non-blocking programming.
   * works atop libuv
@@ -129,21 +130,27 @@ There is a lot in this area:
 
 (see [awesome-cl#parallelism-and-concurrency](https://github.com/CodyReichert/awesome-cl#parallelism-and-concurrency))
 
-[cl-gserver](https://github.com/mdbergmann/cl-gserver) is a new
-library. It provides an Erlang-inspired GenServer. It is meant to
-encapsulate state, but also to execute async operations. Also with
-actors. Functionality regarding state is not unsimilar to Clojure's
-Agent or cl-actors.
+In the last year, Manfred Bergmann developed
+[cl-gserver](https://github.com/mdbergmann/cl-gserver). It is a
+"message passing" library/framework with **actors** similar to
+**Erlang** or **Akka**. We think it is an important achievement.
 
-[CMTX](https://github.com/cosmos72/stmx) (high performance transactional memory for Common Lisp ) is still, IMO, not well known
-and under-appreciated.
+Its version 1 features:
+
+- actors can use a shared pool of message dispatchers which effectively allows to create millions of actors.
+- the possibility to create actor hierarchies. An actor can have child actors. An actor now can also "watch" another actor to get notified about it’s termination.
+
+Also, we (re)discovered [CMTX](https://github.com/cosmos72/stmx): high
+performance transactional memory for Common Lisp ). In our opinion, a
+library not well known and under-appreciated.
 
 **Consolidation**
 
-Blog posts, documentation, helping maintainers…
+There is some choice paralysis between Lparallel, Calispel and
+Bordeaux-Threads.
 
-Porting Erlangen (CCL only) or common-lisp-actors (LispWorks only) to
-other implementations.
+Use the libraries in the wild and write about it.
+
 
 ## File formats
 
