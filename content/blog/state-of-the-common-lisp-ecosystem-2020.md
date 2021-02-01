@@ -430,12 +430,29 @@ Moreover, the [Coalton](https://github.com/stylewarning/coalton/) library is bri
 
 Help develop Coalton.
 
-
 ## Testing
 
-## Debugging etc
+Fernando cited FiveAM and recommended it along with the much newer
+Prove. Prove has a couple issues and is now deprecated by its author,
+and its younger brother Rove is not in par yet.
 
-flamegraph
+So, use FiveAM.
+
+**Consolidation**
+
+Rove or [Parachute](https://github.com/Shinmera/parachute) would be great alternatives if developed a bit further.
+
+## Testing on CI/CD
+
+Common Lisp has good support for the CI/CD services out there.
+
+CL Foundation's Docker images have integrated best practices over the
+years and are recommended:
+https://common-lisp.net/project/cl-docker-images/
+
+**Further work**
+
+Integration with the CI services' advanced features such as Gitlab's auto DevOps.
 
 # Community
 
