@@ -396,7 +396,25 @@ Here too, great progress has been made. While a usual complain of non-lispers wa
 
 ## Package Management
 
+Quicklisp is the de-facto package manager. However, we now have:
+
+- [Ultralisp](https://ultralisp.org/), a Quicklisp distribution that builds every 5 minutes. We can add our project in two clicks.
+- [CLPM](https://gitlab.common-lisp.net/clpm/clpm), a new package manager that is compatible with Quicklisp, that allows to pin exact versions of dependencies, that is usable from the command line and that supports HTTPS.
+
+Not forgetting Qlot, to install Quicklisp libraries relative to a directory.
+
+Last but not least, many CL libraries where packaged for Guix (most notably by Pierre Neidhart of Nyxt). Guix features reproducible builds, rollbacks, the ability to install exact versions of any library (including system dependencies), and contained environments.
+
+
 ## Build System
+
+Same as 2015, ASDF is the de-facto build system.
+
+> Every project has an .asd file, called a system definition file, which defines project metadata (author, maintainer, homepage, etc.) and the components.
+
+> This, to me, is one of the major selling points of Common Lisp. With languages like Python, every file imports whatever it needs, and your project becomes a massive graph of interdependent files. In ASDF, you basically list the files in your project in the order in which they are defined. Or, you can specify the dependencies between the files, and let ASDF figure out a linear ordering. The point is that dependencies are explicit, and clearly spelled out.
+
+<!-- ## Documentation -->
 
 ## Type system
 
