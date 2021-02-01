@@ -24,6 +24,43 @@ these years… 2018
 
 More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReichert/awesome-cl) list, on GitHub and on [Cliki](https://www.cliki.net/).
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Application domains](#application-domains)
+    - [Command line](#command-line)
+    - [Databases](#databases)
+    - [Concurrency](#concurrency)
+    - [File formats](#file-formats)
+    - [GUI](#gui)
+    - [Machine Learning](#machine-learning)
+    - [System](#system)
+    - [Web Development](#web-development)
+        - [Backend](#backend)
+        - [Frontend](#frontend)
+        - [JavaScript](#javascript)
+- [Development](#development)
+    - [Implementations](#implementations)
+    - [Editors](#editors)
+    - [Package Management](#package-management)
+    - [Build System](#build-system)
+    - [Type system](#type-system)
+    - [Testing](#testing)
+    - [Testing on CI services](#testing-on-ci-services)
+- [Community](#community)
+    - [Online presence](#online-presence)
+        - [New common-lisp.net website](#new-common-lispnet-website)
+        - [Cookbook](#cookbook)
+        - [awesome-cl](#awesome-cl)
+        - [More](#more)
+    - [New books](#new-books)
+    - [Companies](#companies)
+    - [Developers to support](#developers-to-support)
+    - [Growth](#growth)
+- [Last words](#last-words)
+
+<!-- markdown-toc end -->
+
 
 # Application domains
 
