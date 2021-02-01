@@ -499,6 +499,18 @@ On a sadder note, Quickdocs closed :(
 
 ## New books
 
+We got 3 new books on Common Lisp in 2020:
+
+- [Programming Algorithms](http://vseloved.github.io/progalgs.html), originally published by TODO on his website, then self-published in paperback and then published by Apress.
+- [the Common Lisp Condition System](https://github.com/Apress/common-lisp-condition-system/), by Michal "phoe" Herda, was also published by himself and then by Apress.
+- The Cookbook that was made available in ePub and PDF :)
+
+and also:
+
+- the book [Calendrical calculations](https://www.cambridge.org/us/academic/subjects/computer-science/computing-general-interest/calendrical-calculations-ultimate-edition-4th-edition?format=HB#resources), 4th edition, by Edward M. Reingold, Nachum Dershowitz, Cambridge Press. It provides Lisp sources.
+- [Building Problem Solvers](https://www.qrg.northwestern.edu/bps/readme.html), by Kenneth Forbus and Johan de Kleer, MIT Press, was made available.
+
+
 ## Companies
 
 ## Developers to support
