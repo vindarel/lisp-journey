@@ -333,6 +333,23 @@ Other HTML generators and templating engines include:
 * [cl-closure-template](https://github.com/archimag/cl-closure-template) - Implementation of Google's Closure templates. [LLGPL][8].
 * [clip](https://shinmera.github.io/clip) - An HTML template processor where the templates are written in HTML.
 
+We have nice other building blocks, such as a nice form handling
+library ([cl-forms](https://github.com/mmontone/cl-forms)) and
+libraries to create Open-API interfaces. An integrated, opinionated
+all-in-one solution could be a productivity boom.
+
+**Achievement**
+
+A lot is going on in that field and ISSR and CLOG are great additions.
+
+**Consolidation**
+
+Djula is easy to work with. It could do with more built-in filters.
+
+As in 2015:
+
+> The foundation is finished, now it’s time to write higher-level layers. An extensible administration framework for Clack applications, like Django’s Admin, would be a good example.
+
 
 ### JavaScript
 
