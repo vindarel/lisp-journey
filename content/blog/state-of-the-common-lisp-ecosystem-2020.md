@@ -513,12 +513,48 @@ and also:
 
 ## Companies
 
+We now have a curated list of companies using CL: [awesome-cl-companies](https://github.com/azzamsa/awesome-lisp-companies). Before that list, the situation was embarassing:
+
+> Everyone says “Nobody uses Lisp” and Lispers say “Yes they do, there’s ITA, and, um, Autocad, and, uh, oh yeah, Paul Graham wrote Viaweb in Lisp!” Not very helpful for either side. It’s about time there was a better resource.
+
+[Peter Christensen in his first list](http://pchristensen.com/blog/lisp-companies/)
+
+And see also [lisp-lang.org's success stories](https://lisp-lang.org/success/).
+
+Some additions of this year are:
+
+- [GraphMetrix](https://graphmetrix.com/)
+  - automation of document extraction and publishing for construction, property and logistics.
+  - *Active as of September 2020*.
+> "We are using Lisp as the main engine for our RDF -> Sparql -> in-memory rdf db -> conceptual inference system at graphMetrix"
+- Doremir Music Research AB
+  - Developing [ScoreCloud](https://scorecloud.com/), a music notation software (a LispWorks product). Stockholm.
+- [Keepit](https://www.keepit.com/)
+  - a cloud-to-cloud backup service provider. Was hiring two Common Lisp developers in October, 2020.
+- [Mind AI](https://www.mind.ai)
+  - Founded in 2018, Mind AI is an artificial intelligence engine and an ecosystem that was created to offer an entirely new approach to AI.
+- Virtual Insurance Products Ltd
+  - Insurance MGA with a bespoke business to business web platform (with some customer facing parts) written in Common Lisp.
+  - *Active as of November 2020*
+  - http://insurevip.co.uk and [Github account](https://github.com/Virtual-Insurance-Products/)
+  - Currently (November 2020) looking to hire CL developer(s)
+- [The Mimix Company](https://mimix.io/)
+  - creators of MSL and Nebula, new tools for working with facts and documents.
+  - location: Houston, TX
+  - *Active as of December 2020*.
+
 ## Developers to support
 
-## Choice paralysis
+I created a list on GitHub to help spot lisp developers that accept donations:
 
-helped by awesome-cl stars and +1
+- https://github.com/vindarel/lisp-maintainers/
+
+You can add yourself to the list.
 
 ## Growth
 
+?
+
 # Last words
+
+A lot is happening. Thanks to the contributors!
