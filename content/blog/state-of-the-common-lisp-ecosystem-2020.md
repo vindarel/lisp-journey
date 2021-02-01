@@ -22,7 +22,7 @@ still lacking.
 
 these years… 2018
 
-More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReichert/awesome-cl) list -and on GitHub. - cl-net libraries page
+More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReichert/awesome-cl) list, on GitHub and on [Cliki](https://www.cliki.net/).
 
 
 # Application domains
@@ -61,7 +61,7 @@ It also has a tutorial in the Cookbook:
 <!-- on how to compose queries with Mito and SxQL, and on how we only need -->
 <!-- lisp knowledge to replace Django functionalities. -->
 
-There are of course many more libraries. Some new ones since 2015 are:
+There are of course more libraries on that field. Some new ones since 2015 are:
 
 [cl-yesql](https://github.com/ruricolist/cl-yesql) (by the author of
 Serapeum, Spinneret and other great libraries) is based on Clojure's
@@ -77,7 +77,7 @@ book and other libraries, is writing
 to Franz Inc's [AllegroGraph](https://allegrograph.com/). AllegroGraph is a
 "horizontally distributed, multi-model (document and graph),
 entity-event **knowledge graph** technology". It is proprietary and has a
-free version with a limit of 5 million triples.
+free version with a limit of 5 million triples. Surely one of those Lisp hidden gems we should know more about.
 
 A general migration tool was lacking. We now have
 [cl-migratum](https://github.com/dnaeon/cl-migratum), a "system which
@@ -88,9 +88,7 @@ And of course, [pgloader](https://github.com/dimitri/pgloader) is still a Common
 
 **Achievement**
 
-Among the emerging ORMs, Mito is the one actively maintained that lispers seem to have chosen. Good.
-
-CLSQL certainly still works, but we don't hear about it and it looks outdated. So, Mito it is.
+Among the emerging ORMs, Mito is the one actively maintained that lispers seem to have chosen. Good. CLSQL certainly still works, but we don't hear about it and it looks outdated. So, Mito it is.
 
 **Consolidation**
 
@@ -103,7 +101,18 @@ Bindings for the new databases coming out.
 
 ## Concurrency
 
-Many libraries exist in this area:
+In the last year, Manfred Bergmann developed
+[cl-gserver](https://github.com/mdbergmann/cl-gserver). It is a
+"message passing" library/framework with **actors** similar to
+**Erlang** or **Akka**. It is an important achievement.
+
+Its v1 features:
+
+- actors can use a shared pool of message dispatchers which effectively allows to create millions of actors.
+- the possibility to create actor hierarchies. An actor can have child actors. An actor now can also "watch" another actor to get notified about it’s termination.
+
+
+Many other libraries exist in this area:
 
 * [BordeauxThreads](https://common-lisp.net/project/bordeaux-threads/) - Portable, shared-state concurrency
   - the "de-facto" concurrency library.
@@ -126,30 +135,17 @@ Many libraries exist in this area:
     hosts can go down and return back later".
 * [swank-crew](https://github.com/brown/swank-crew) - distributed computation framework implemented using Swank Client.
 * [cl-coroutine](https://github.com/takagi/cl-coroutine) - a coroutine library. It uses the CL-CONT continuations library in its implementation.
+* [CMTX](https://github.com/cosmos72/stmx): high performance transactional memory for Common Lisp ).
+  - In our opinion, a library not well known and under-appreciated.
 
 (see [awesome-cl#parallelism-and-concurrency](https://github.com/CodyReichert/awesome-cl#parallelism-and-concurrency))
 
-In the last year, Manfred Bergmann developed
-[cl-gserver](https://github.com/mdbergmann/cl-gserver). It is a
-"message passing" library/framework with **actors** similar to
-**Erlang** or **Akka**. We think it is an important achievement.
-
-Its version 1 features:
-
-- actors can use a shared pool of message dispatchers which effectively allows to create millions of actors.
-- the possibility to create actor hierarchies. An actor can have child actors. An actor now can also "watch" another actor to get notified about it’s termination.
-
-Also, we (re)discovered [CMTX](https://github.com/cosmos72/stmx): high
-performance transactional memory for Common Lisp ). In our opinion, a
-library not well known and under-appreciated.
 
 **Consolidation**
 
 Bordeaux-Threads is *the* "de-facto" library, but there is some choice
 paralysis between Lparallel, Calispel, Bordeaux-Threads and SBCL's
-contribs.
-
-Use the libraries in the wild and write about them.
+contribs. Use the libraries in the wild and write about them.
 
 
 ## File formats
@@ -161,14 +157,15 @@ There exist Common Lisp libraries for all the major file formats:
 - YAML: cl-yaml
 - CSV: [cl-csv](https://github.com/AccelerationNet/cl-csv)
 
-Jonathan was new in 2015. It was presented as "a very fast JSON encoder and decoder".
-
 In additon, to work with JSON we now have:
 
 - [json-pointer](https://github.com/y2q-actionman/cl-json-pointer) - A JSON Pointer implementation.
 - [json-mop](https://github.com/gschjetne/json-mop) - A metaclass for bridging CLOS and JSON objects (remind that JSON libraries can already serialize your own objects).
 - [json-schema](https://github.com/fisxoj/json-schema)
 
+**Achievement**
+
+New in 2015, Jonathan is now a good first choice for an easy to use and fast JSON encoder and decoder.
 
 **Consolidation**
 
@@ -313,6 +310,10 @@ they don't necessarily adopt it because of the lack of
 documentation. We can expand this [getting started
 guide](https://jasom.github.io/clack-tutorial/posts/getting-started-with-clack/).
 
+**Future work**
+
+A more batteries-included framework would be nice (to save passwords securely, manage users and login out of the box, etc).
+
 
 ### Frontend
 
@@ -379,7 +380,7 @@ All implementations saw new releases, except CLisp, whose development however co
 
 Active implementations include: ABCL, CCL, CLASP, ECL, LispWorks, AllegroCL, SBCL. And to a certain extent, CLisp and SICL (which is the newest one).
 
-SBCL still ships monthly releases. SBCL turned 20. We can read a blog on the party [here](https://mstmetent.blogspot.com/2020/01/sbcl20-in-vienna-last-month-i-attended.html).
+SBCL still ships monthly releases. It turned 20 and keeps improving. We can read a blog on the party [here](https://mstmetent.blogspot.com/2020/01/sbcl20-in-vienna-last-month-i-attended.html).
 
 ABCL [jumped to v1.8.0](https://abcl-dev.blogspot.com/2020/10/abcl-180.html) to support openjdk15.
 
@@ -388,11 +389,16 @@ ABCL [jumped to v1.8.0](https://abcl-dev.blogspot.com/2020/10/abcl-180.html) to 
 Here too, great progress has been made. While a usual complain of non-lispers was the lack of editor support besides Emacs (and Vim), we now nearly reach choice paralysis:
 
 - [Portacle](https://portacle.github.io/) is the easiest way to get started with Emacs. It is portable and multi-platform, ready-to-use in three clicks. It ships Emacs, SBCL, Slime, Quicklisp and git.
-- [SLIMA](https://github.com/neil-lindquist/SLIMA/) is for Atom. It is nearly as good as Slime for Emacs.
+- [SLIMA](https://github.com/neil-lindquist/SLIMA/) is the Atom extension. It is nearly as good as Slime for Emacs.
 - VSCode has two extensions: [commonlisp-vscode](https://github.com/ailisp/commonlisp-vscode), using the Language Server Protocol, and [Alive](https://github.com/nobody-famous/alive), more recent, using a Lisp backend (Swank) as traditional extensions.
 - [Lem](https://github.com/cxxxr/lem/) is an editor written in Common Lisp. It allows to start developing in CL at once, and it supports other languages.
 - we have a [Jupyter kernel](https://github.com/yitzchak/common-lisp-jupyter) for CL.
 - the [Dandelion Eclipse plugin](https://github.com/Ragnaroek/dandelion/) was re-discovered. While it isn't as feature-rich as others (no interactive debugger for example), it has its users. It specifically targets beginners.
+
+**Consolidation**
+
+Defend more SLY. See its SLY stickers and the upcoming SLY stepper.
+
 
 ## Package Management
 
@@ -442,7 +448,7 @@ So, use FiveAM.
 
 Rove or [Parachute](https://github.com/Shinmera/parachute) would be great alternatives if developed a bit further.
 
-## Testing on CI/CD
+## Testing on CI services
 
 Common Lisp has good support for the CI/CD services out there.
 
@@ -525,7 +531,7 @@ Some additions of this year are:
 
 - [GraphMetrix](https://graphmetrix.com/)
   - automation of document extraction and publishing for construction, property and logistics.
-  - *Active as of September 2020*.
+  - Active as of September 2020.
 > "We are using Lisp as the main engine for our RDF -> Sparql -> in-memory rdf db -> conceptual inference system at graphMetrix"
 - Doremir Music Research AB
   - Developing [ScoreCloud](https://scorecloud.com/), a music notation software (a LispWorks product). Stockholm.
@@ -535,13 +541,13 @@ Some additions of this year are:
   - Founded in 2018, Mind AI is an artificial intelligence engine and an ecosystem that was created to offer an entirely new approach to AI.
 - Virtual Insurance Products Ltd
   - Insurance MGA with a bespoke business to business web platform (with some customer facing parts) written in Common Lisp.
-  - *Active as of November 2020*
+  - Active as of November 2020
   - http://insurevip.co.uk and [Github account](https://github.com/Virtual-Insurance-Products/)
   - Currently (November 2020) looking to hire CL developer(s)
 - [The Mimix Company](https://mimix.io/)
   - creators of MSL and Nebula, new tools for working with facts and documents.
   - location: Houston, TX
-  - *Active as of December 2020*.
+  - Active as of December 2020.
 
 ## Developers to support
 
