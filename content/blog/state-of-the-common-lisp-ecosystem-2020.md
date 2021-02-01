@@ -248,7 +248,19 @@ advanced GUI toolkits for Common Lisp. CAPI even targets the Android platform. M
 
 ## Machine Learning
 
+It seems that not much changed since 2015, but libraries are still being developed:
+
 - [CLML](https://github.com/mmaul/clml), developed at Mathematical Systems Inc., a Japanese company.
+- [MGL](https://github.com/melisgl/mgl)
+
+> used by [its author](http://quotenil.com/) to win the [Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson)
+
+- [mgl-mat](https://github.com/melisgl/mgl-mat) - a library for working with multi-dimensional arrays which supports efficient interfacing to foreign and CUDA code. BLAS and CUBLAS bindings are available.
+
+Others are less active:
+
+- [Antik](https://gitlab.common-lisp.net/antik/antik) - a foundation for scientific and engineering computation in Common Lisp. It is designed not only to facilitate numerical computations, but to permit the use of numerical computation libraries and the interchange of data and procedures, whether foreign (non-Lisp) or Lisp libraries.
+  - more than 2000 commits, last update 2 years ago.
 
 ## System
 
