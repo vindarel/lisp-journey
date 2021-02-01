@@ -100,7 +100,6 @@ Mito has 11 contributors and is actively watched, but it probably should have an
 
 Bindings for the new databases coming out.
 
-## Datastructures
 
 ## Concurrency
 
@@ -146,10 +145,11 @@ library not well known and under-appreciated.
 
 **Consolidation**
 
-There is some choice paralysis between Lparallel, Calispel and
-Bordeaux-Threads.
+Bordeaux-Threads is *the* "de-facto" library, but there is some choice
+paralysis between Lparallel, Calispel, Bordeaux-Threads and SBCL's
+contribs.
 
-Use the libraries in the wild and write about it.
+Use the libraries in the wild and write about them.
 
 
 ## File formats
@@ -163,7 +163,7 @@ There exist Common Lisp libraries for all the major file formats:
 
 Jonathan was new in 2015. It was presented as "a very fast JSON encoder and decoder".
 
-To work with JSON, we now have:
+In additon, to work with JSON we now have:
 
 - [json-pointer](https://github.com/y2q-actionman/cl-json-pointer) - A JSON Pointer implementation.
 - [json-mop](https://github.com/gschjetne/json-mop) - A metaclass for bridging CLOS and JSON objects (remind that JSON libraries can already serialize your own objects).
@@ -172,7 +172,7 @@ To work with JSON, we now have:
 
 **Consolidation**
 
-There are still too many JSON libraries. This leads to choice paralysis.
+There is not a predominant JSON library. This leads to choice paralysis.
 
 They all represent null values differently. We need a library that
 "does the right thing". See maybe the massive [web-toolkit](https://github.com/xh4/web-toolkit#json) for its JSON handling ?
@@ -216,14 +216,14 @@ Very recently, David Botton released [CLOG](https://github.com/rabbibotton/clog)
 
 It is "complete enough for most uses". You might find a demo [here](http://office.botton.com:8080/).
 
-There are more GUI libraries and frameworks: https://github.com/CodyReichert/awesome-cl#Gui (and more under the works).
+There are more GUI libraries and frameworks: https://github.com/CodyReichert/awesome-cl#Gui (and more under the works). In particular, LispWorks' CAPI is still presented as the best in town by the ones who tried it.
 
 **Consolidation**
 
 Since roughly October, 2020, Nicolas Hafner works full time on
 [Kandria](https://kandria.com/). Supporting his work, through [GitHub
 sponsors](https://github.com/sponsors/Shinmera) or
-[ko-fi](https://ko-fi.com/shinmera) would be 1) a great sign of recognition and 2) useful for ecosystem, especially for Alloy.
+[ko-fi](https://ko-fi.com/shinmera) would be 1) a great sign of recognition and 2) useful for the ecosystem, especially for Alloy.
 
 I wrote an introduction to these frameworks in the Cookbook:
 [Cookbook/gui](https://lispcookbook.github.io/cl-cookbook/gui.html). More
@@ -239,11 +239,11 @@ Study other approaches to GUI bindings. What about
 [gtk-server](http://www.gtk-server.org/)? GObject introspection? An
 effort started for Qt: [giqt](https://github.com/mrosset/giqt/) (in
 which we recognize @ambrevar from the [Nyxt
-project](https://github.com/atlas-engineer/nyxt/): supporting them is
+browser](https://github.com/atlas-engineer/nyxt/): supporting them is
 helping the Lisp ecosystem too).
 
 LispWorks' [CAPI](http://www.lispworks.com/products/capi.html) and Allegro's [Common Graphics](https://franz.com/products/allegro-common-lisp/acl_ide.lhtml)
-are proprietary, but have free trial versions and are the most
+are proprietary, but have free trial versions and are still presented as the most
 advanced GUI toolkits for Common Lisp. CAPI even targets the Android platform. More examples and tutorials are necessary.
 
 ## Machine Learning
@@ -252,7 +252,7 @@ advanced GUI toolkits for Common Lisp. CAPI even targets the Android platform. M
 
 ## System
 
-To quote Fernando again:
+To quote Fernando:
 
 > UIOP, ASDF’s portable compatibility layer, contains a large set of tools for portably doing everything from querying the hostname to running external programs to manipulating environment variables.
 
@@ -264,28 +264,34 @@ Built on top of UIOP, Ruricolist's [cmd](https://github.com/ruricolist/cmd) brin
 
 ### Backend
 
-Common Lisp's main web servers are Hunchentoot and Clack. Since 2015, Clack's state of the documentation barely improved and is still lacking.
+Common Lisp's main web servers are Hunchentoot and Clack. Since 2015, Clack's documentation state barely improved and is still lacking.
 
-[Clack](https://github.com/fukamachi/clack), the equivalent of
-WSGI/Rack has existed since 2009. Web frameworks are built on top of
-it, for example [Caveman2](http://8arrow.org/caveman/). It is an HTTP
+[Clack](https://github.com/fukamachi/clack) is the equivalent of
+WSGI/Rack. It has existed since 2009. It is an HTTP
 server abstraction, that allows the user to write web applications
 (or, more reasonably, web application frameworks) without depending on
-a particular server.
+a particular server. Some web frameworks are built on top of
+it, for example [Caveman2](http://8arrow.org/caveman/).
 
-Ferando wrote:
+Fernando wrote:
 
 > the importance of using Clack cannot be understated: If you build an application directly on, say, Hunchentoot, you’re tied to Hunchentoot, and if a new, faster server – like [Woo](https://github.com/fukamachi/woo) – comes out, you have to rewrite the entire application to use it. If you write a plugin for Clack – like [clack-errors](https://github.com/eudoxia0/clack-errors) – it is automatically usable by all applications, regardless of framework, that are built on Clack, reducing useless duplication of code.
 
 > With Clack, switching from Hunchentoot to Woo, and enjoying the incredible speedup, is a simple matter of installing libev and changing a keyword argument.
 
-This still holds true, but the situation didn't improve much. In comparison, Hunchentoot is very well documented (and you can read its documentation on [readthedocs here](https://common-lisp-libraries.readthedocs.io/hunchentoot/)), and it is "fast enough".
+This still holds true, but the situation didn't improve much. In comparison, Hunchentoot is very well documented (and you can read its documentation on a better looking [readthedocs here](https://common-lisp-libraries.readthedocs.io/hunchentoot/)), and it is "fast enough".
 
-About Hunchentoot: Mariano Montone wrote [easy-routes](https://github.com/mmontone/easy-routes), a little but handy route handling facility on top of Hunchentoot. It brings dispatch by HTTP method, arguments extraction from the URL path, and "decorators". It is also integrated with the Djula framework to generate URLs from the route name.
+About Hunchentoot: Mariano Montone wrote [easy-routes](https://github.com/mmontone/easy-routes), a little but handy route handling facility on top of Hunchentoot. It brings:
+
+- dispatch by HTTP method,
+- arguments extraction from the URL path,
+- and "decorators".
+
+It is also integrated with the Djula framework to generate URLs from route names.
 
 **Achievement**
 
-More [Clack plugins](https://github.com/CodyReichert/awesome-cl#clack-plugins)
+Several [Clack plugins](https://github.com/CodyReichert/awesome-cl#clack-plugins)
 were written, such as a single-sign on middleware.
 
 **Consolidation**
@@ -333,7 +339,7 @@ Two new are in development:
 Help develop one of the existing CL-to-JS implementations. Why not have a look at JSCL's [issues
 issues](https://github.com/jscl-project/jscl/issues)?
 
-Bring some new macros to ParenScript for new JavaScript, as in [Paren6](https://github.com/BnMcGn/paren6/). For example, allow to write `async` and `await`.
+Bring some new macros to ParenScript for new JavaScript idioms, as [Paren6](https://github.com/BnMcGn/paren6/). For example, allow to write `async` and `await`.
 
 
 # Development
@@ -396,11 +402,13 @@ Make it look world-class with a real and modern theme.
 
 ### awesome-cl
 
-The [awesome-cl](https://github.com/CodyReichert/awesome-cl) list saw continuous updates and is still now a great solution to choose your Lisp library.
+The [awesome-cl](https://github.com/CodyReichert/awesome-cl) list saw continuous updates and is  now a great solution to have an overview of the ecosystem and choose a library.
+
+One of its goals is to break choice paralysis by recommending libraries, with its "+1" marks.
 
 **Consolidation**
 
-Help choose the recommended libraries.
+Help furnish and curate it.
 
 ### More
 
