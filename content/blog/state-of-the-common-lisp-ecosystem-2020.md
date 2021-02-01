@@ -375,6 +375,14 @@ Bring some new macros to ParenScript for new JavaScript idioms, as [Paren6](http
 
 ## Implementations
 
+All implementations saw new releases, except CLisp, whose development however continues.
+
+Active implementations include: ABCL, CCL, CLASP, ECL, LispWorks, AllegroCL, SBCL. And to a certain extent, CLisp and SICL (which is the newest one).
+
+SBCL still ships monthly releases. SBCL turned 20. We can read a blog on the party [here](https://mstmetent.blogspot.com/2020/01/sbcl20-in-vienna-last-month-i-attended.html).
+
+ABCL [jumped to v1.8.0](https://abcl-dev.blogspot.com/2020/10/abcl-180.html) to support openjdk15.
+
 ## Editors
 
 ## Package Management
