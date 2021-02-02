@@ -39,7 +39,7 @@ More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReic
         - [Backend](#backend)
         - [Frontend](#frontend)
         - [JavaScript](#javascript)
-    - [Isomorphic web frameworks](#isomorphic-web-frameworks)
+        - [Isomorphic web frameworks](#isomorphic-web-frameworks)
 - [Languages interop](#languages-interop)
     - [APL](#apl)
     - [C, C++, Objective C](#c-c-objective-c)
@@ -413,7 +413,7 @@ issues](https://github.com/jscl-project/jscl/issues)?
 
 Bring some new macros to ParenScript for new JavaScript idioms, as [Paren6](https://github.com/BnMcGn/paren6/). For example, allow to write `async` and `await`.
 
-## Isomorphic web frameworks
+### Isomorphic web frameworks
 
 Weblocks is an already old framework that allows to write dynamic web
 applications without writing JavaScript (it isn't as dynamic as modern
