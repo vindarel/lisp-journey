@@ -253,7 +253,7 @@ Very recently, David Botton released [CLOG](https://github.com/rabbibotton/clog)
 
 > CLOG uses web technology to produce graphical user interfaces for applications locally or remotely. CLOG can take the place, or work alongside, most cross-platform GUI frameworks and website frameworks. The CLOG package starts up the connectivity to the browser or other websocket client (often a browser embedded in a native template application.)
 
-It is "complete enough for most uses". You might find a demo [here](http://office.botton.com:8080/).
+> It is complete enough for most uses.
 
 There are more GUI libraries and frameworks: https://github.com/CodyReichert/awesome-cl#Gui (and more under the works). In particular, LispWorks' CAPI is still presented as the best in town by the ones who tried it.
 
@@ -278,8 +278,7 @@ Study other approaches to GUI bindings. What about
 [gtk-server](http://www.gtk-server.org/)? GObject introspection? An
 effort started for Qt: [giqt](https://github.com/mrosset/giqt/) (in
 which we recognize @ambrevar from the [Nyxt
-browser](https://github.com/atlas-engineer/nyxt/): supporting them is
-helping the Lisp ecosystem too).
+browser](https://github.com/atlas-engineer/nyxt/)).
 
 LispWorks' [CAPI](http://www.lispworks.com/products/capi.html) and Allegro's [Common Graphics](https://franz.com/products/allegro-common-lisp/acl_ide.lhtml)
 are proprietary, but have free trial versions and are still presented as the most
@@ -354,7 +353,7 @@ guide](https://jasom.github.io/clack-tutorial/posts/getting-started-with-clack/)
 
 **Future work**
 
-A more batteries-included framework would be nice (to save passwords securely, manage users and login out of the box, etc).
+Build a batteries-included framework.
 
 
 ### Frontend
@@ -404,8 +403,8 @@ Two new are in development:
 
 **Consolidation**
 
-Help develop one of the existing CL-to-JS implementations. Why not have a look at JSCL's [issues
-issues](https://github.com/jscl-project/jscl/issues)?
+Help develop one of the existing CL-to-JS implementations. Why not have a look at
+JSCL's [issues](https://github.com/jscl-project/jscl/issues)?
 
 Bring some new macros to ParenScript for new JavaScript idioms, as [Paren6](https://github.com/BnMcGn/paren6/). For example, allow to write `async` and `await`.
 
@@ -414,10 +413,10 @@ Bring some new macros to ParenScript for new JavaScript idioms, as [Paren6](http
 Weblocks is an already old framework that allows to write dynamic web
 applications without writing JavaScript (it isn't as dynamic as modern
 JS frameworks, there is no "double data binding"). Its server-based
-components use Ajax if available (or fallback to plain HTTP) and
+components use Ajax if available or fallback to plain HTTP and
 update the DOM. It is a framework in the vein of Smalltalk's Seaside.
 
-Weblocks was getting old and unmaintained but Alexander Artemenko greatly updated and refactored it in his [Reblocks](https://github.com/40ants/weblocks/) branch. He uses it for the [Ultralisp](https://ultralisp.org/) website. You can reach users and developers [on Gitter](https://gitter.im/40ants/weblocks).
+Weblocks was getting old and unmaintained but Alexander Artemenko greatly updated and refactored it in his [Reblocks](https://github.com/40ants/weblocks/) branch. He uses it for the [Ultralisp](https://ultralisp.org/) website, and more apps. You can reach users and developers [on Gitter](https://gitter.im/40ants/weblocks).
 
 Recently, a very new web framework appeared:
 [ISSR](https://github.com/interactive-ssr), for Interactive
@@ -439,17 +438,17 @@ New solutions arose to interoperate with other runtimes.
 
 ## APL
 
-* [April](https://github.com/phantomics/april): the APL programming language (a subset thereof) compiling to Common Lisp. Replace hundreds of lines of number-crunching code with a single line of APL.
+[April](https://github.com/phantomics/april) brings the APL programming language (a subset thereof) to Common Lisp. Replace hundreds of lines of number-crunching code with a single line of APL.
 
 ## C, C++, Objective C
 
 We had [CFFI](https://github.com/cffi/cffi) (a portable foreign function interface for CL), [C2FFI](https://github.com/rpav/c2ffi) (Clang-based FFI wrapper generator), then [cl-autowrap](https://github.com/rpav/cl-autowrap), a c2ffi-based wrapper generator that makes creating C bindings real quick.
 
-Pavel Korolev is developing [CLAW](https://github.com/borodust/claw), started as a fork of cl-autowrap, which brings **C++ support**. As a practice he generates bindings to GLM or the Godot engine.
+Pavel Korolev is developing [CLAW](https://github.com/borodust/claw), started as a fork of cl-autowrap, which brings **C++ support**. For practice he generates bindings to GLM or the Godot engine.
 
 **Achievement**
 
-It will be a great achievement when bindings are officially ready to use. This is not yet the case (though the GLM bindings basically do their hello world on Android).
+It will be a great achievement when CLAW is officially ready to use. This is not yet the case (though the GLM bindings basically do their hello world on Android, which is an achievement per se).
 
 ## Clojure
 
@@ -491,7 +490,7 @@ All implementations saw new releases, except CLisp, whose development however co
 
 Active implementations include: ABCL, CCL, CLASP, ECL, LispWorks, AllegroCL, SBCL. And to a certain extent, GNU CLisp, SICL (which is the newest one) and Corman Lisp (a CL development environment for Windows) (regenerated [here](https://github.com/sharplispers/cormanlisp)).
 
-SBCL still ships monthly releases. It turned 20 and keeps improving. We can read a blog on the party in Vienna [here](https://mstmetent.blogspot.com/2020/01/sbcl20-in-vienna-last-month-i-attended.html).
+SBCL still ships monthly releases. It turned 20 and keeps improving. We can read a blog on the party in Vienna [here](https://mstmetent.blogspot.com/2020/01/sbcl20-in-vienna-last-month-i-attended.html) (did you know that Doug Katzman of Google fame contributes to SBCL?)
 
 ABCL [jumped to v1.8.0](https://abcl-dev.blogspot.com/2020/10/abcl-180.html) to support openjdk15.
 
@@ -514,7 +513,7 @@ SLY might need more praise. It has sound features such as SLY stickers and the u
 
 Life continues to improve for the developper. We will cite some new tools:
 
-- [cl-flamegraph](https://github.com/40ants/cl-flamegraph) is a wrapper around SBCL's statistical profiler to generate FlameGraph charts from Common Lisp programs.
+* [cl-flamegraph](https://github.com/40ants/cl-flamegraph) is a wrapper around SBCL's statistical profiler to generate FlameGraph charts from Common Lisp programs.
 * [tracer](https://github.com/TeMPOraL/tracer) is a tracing profiler for Common Lisp, with output suitable for display in Chrome’s/Chromium’s Tracing Viewer.
 * [GTFL](http://www.martin-loetzsch.de/gtfl/) is a graphical terminal for Lisp, meant for Lisp programmers who want to debug or visualize their own algorithms. It is a graphical trace in the browser.
 * [Lisp REPL core dumper](https://gitlab.com/ambrevar/lisp-repl-core-dumper/) is a portable wrapper to generate Lisp cores on demand to start a REPL blazingly fast. It can preload provided systems to help build a collection of specialized Lisp cores.
@@ -530,7 +529,17 @@ Quicklisp is the de-facto package manager. However, we now have:
 
 Not forgetting Qlot, to install Quicklisp libraries relative to a directory.
 
-Last but not least, many CL libraries where packaged for Guix (most notably by Pierre Neidhart of Nyxt). Guix features reproducible builds, rollbacks, the ability to install exact versions of any library (including system dependencies), and contained environments.
+Last but not least, many CL libraries where packaged for Guix (most notably by Pierre Neidhart of Nyxt). Guix brings reproducible builds, rollbacks, the ability to install exact versions of any library (including system dependencies), and contained environments.
+
+**Achievement**
+
+Ultralisp solves the 1-month release schedule of Quicklisp (which is a feature, but not to everyone's taste) and makes it straightforward and quick to publish a library. CLPM by tackling a different approach solves other Quicklisp limitations. Both are great achievements.
+
+Ultralisp also has a search box that searches a symbol on all its registered libraries. Very useful.
+
+**Future work**
+
+Alexander is working on allowing every Ultralisp user to create his own Quicklisp dist in a few clicks.
 
 
 ## Build System
