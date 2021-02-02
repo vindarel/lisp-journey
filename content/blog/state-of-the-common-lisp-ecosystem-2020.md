@@ -197,7 +197,7 @@ contribs. Use the libraries in the wild and write about them.
 
 There exist Common Lisp libraries for all the major file formats:
 
-- XML: [Plump](https://github.com/Shinmera/plump) (and [Lquery](https://github.com/Shinmera/lquery/))
+- XML: [Plump](https://github.com/Shinmera/plump) (and [Lquery](https://github.com/Shinmera/lquery/)), as well as [CXML](https://common-lisp.net/project/cxml/), which can parse large files incrementally.
 - JSON: [Jonathan](https://github.com/Rudolph-Miller/jonathan), [cl-json](https://common-lisp.net/project/cl-json/) or [more](https://sabracrolleton.github.io/json-review).
 - YAML: cl-yaml
 - CSV: [cl-csv](https://github.com/AccelerationNet/cl-csv)
@@ -221,7 +221,7 @@ They all represent null values differently. We need a library that
 
 > It distinguishes null, false and [] from Lisp's NIL thus supports identical transformation between JSON values. It provides object constructor and accessor to build and access nesting JSON objects.
 
-Help maintain cl-csv.
+Give the [XPath](https://github.com/sharplispers/xpath) library some love and documentation.
 
 **Future Work**
 
