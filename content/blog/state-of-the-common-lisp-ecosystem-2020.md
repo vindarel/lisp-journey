@@ -639,6 +639,10 @@ Help furnish and curate it.
 
 Several popular libraries have been ported to readthedocs, so the reading experience is more pleasant: [https://common-lisp-libraries.readthedocs.io/](https://common-lisp-libraries.readthedocs.io/).
 
+Michal "phoe" Herda organized many online Lisp meetings, and we can find the videos on Youtube: https://www.youtube.com/c/OnlineLispMeetings/videos
+
+Alexander Artemenko started [lisp project of the day](https://40ants.com/lisp-project-of-the-day/), a blog to review a library every day for a month, and he is now at post #219. Lately he reviewed many documentation builders for CL.
+
 On a sadder note, Quickdocs closed :(
 
 ## New books
