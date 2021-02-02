@@ -434,7 +434,17 @@ Here too, great progress has been made. While a usual complain of non-lispers wa
 
 **Consolidation**
 
-Defend more SLY. See its SLY stickers and the upcoming SLY stepper.
+SLY might need more praise. It has sound features such as SLY stickers and the upcoming SLY stepper.
+
+## Developer utilities
+
+Life continues to improve for the developper. We will cite some new tools:
+
+- [cl-flamegraph](https://github.com/40ants/cl-flamegraph) is a wrapper around SBCL's statistical profiler to generate FlameGraph charts from Common Lisp programs.
+* [tracer](https://github.com/TeMPOraL/tracer) is a tracing profiler for Common Lisp, with output suitable for display in Chrome’s/Chromium’s Tracing Viewer.
+* [GTFL](http://www.martin-loetzsch.de/gtfl/) is a graphical terminal for Lisp, meant for Lisp programmers who want to debug or visualize their own algorithms. It is a graphical trace in the browser.
+* [Lisp REPL core dumper](https://gitlab.com/ambrevar/lisp-repl-core-dumper/) is a portable wrapper to generate Lisp cores on demand to start a REPL blazingly fast. It can preload provided systems to help build a collection of specialized Lisp cores.
+  - if you are used to working in different environments that require their own set of libraries, this core dumper (optionally along with SLY's mrepl) can make switching from one another easier and faster.
 
 
 ## Package Management
