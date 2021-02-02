@@ -198,15 +198,12 @@ contribs. Use the libraries in the wild and write about them.
 There exist Common Lisp libraries for all the major file formats:
 
 - XML: [Plump](https://github.com/Shinmera/plump) (and [Lquery](https://github.com/Shinmera/lquery/)), as well as [CXML](https://common-lisp.net/project/cxml/), which can parse large files incrementally.
-- JSON: [Jonathan](https://github.com/Rudolph-Miller/jonathan), [cl-json](https://common-lisp.net/project/cl-json/) or [more](https://sabracrolleton.github.io/json-review).
+- JSON: [Jonathan](https://github.com/Rudolph-Miller/jonathan), [cl-json](https://common-lisp.net/project/cl-json/) or [more](https://sabracrolleton.github.io/json-review). With utilities:
+  - [json-pointer](https://github.com/y2q-actionman/cl-json-pointer) - A JSON Pointer implementation.
+  - [json-mop](https://github.com/gschjetne/json-mop) - A metaclass for bridging CLOS and JSON objects (remind that JSON libraries can already serialize your own objects).
+  - [json-schema](https://github.com/fisxoj/json-schema)
 - YAML: cl-yaml
 - CSV: [cl-csv](https://github.com/AccelerationNet/cl-csv)
-
-In additon, to work with JSON we now have:
-
-- [json-pointer](https://github.com/y2q-actionman/cl-json-pointer) - A JSON Pointer implementation.
-- [json-mop](https://github.com/gschjetne/json-mop) - A metaclass for bridging CLOS and JSON objects (remind that JSON libraries can already serialize your own objects).
-- [json-schema](https://github.com/fisxoj/json-schema)
 
 **Achievement**
 
