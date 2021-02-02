@@ -408,6 +408,55 @@ issues](https://github.com/jscl-project/jscl/issues)?
 
 Bring some new macros to ParenScript for new JavaScript idioms, as [Paren6](https://github.com/BnMcGn/paren6/). For example, allow to write `async` and `await`.
 
+# Languages interop
+
+New solutions arose to interoperate with other runtimes.
+
+## APL
+
+* [April](https://github.com/phantomics/april): the APL programming language (a subset thereof) compiling to Common Lisp. Replace hundreds of lines of number-crunching code with a single line of APL.
+
+## C, C++, Objective C
+
+We had [CFFI](https://github.com/cffi/cffi) (a portable foreign function interface for CL), [C2FFI](https://github.com/rpav/c2ffi) (Clang-based FFI wrapper generator), then [cl-autowrap](https://github.com/rpav/cl-autowrap), a c2ffi-based wrapper generator that makes creating C bindings real quick.
+
+Pavel Korolev is developing [CLAW](https://github.com/borodust/claw), started as a fork of cl-autowrap, which brings **C++ support**. As a practice he generates bindings to GLM or the Godot engine.
+
+**Achievement**
+
+It will be a great achievement when bindings are officially ready to use. This is not yet the case (though the GLM bindings basically do their hello world on Android).
+
+## Clojure
+
+[ABCLJ](https://github.com/lsevero/abclj) provides a "dead easy  Clojure to Common lisp interop":
+
+> instead of rewriting the whole Clojure langugage on CL I'm embedding ABCL in Clojure. Since both are implemented in Java and Clojure has an awesome java interop is easy to have full access on the ABCL Common Lisp environment. This way we have complete support for both Clojure and Common Lisp.
+
+But why?
+
+> The reason I wanted to see Clojure and Common Lisp working with each other was to use CL programs/libraries on Clojure, especially Maxima and ACL2. Since ABCL already compiles and runs Maxima it should be possible but we are very far from it 🤷.
+
+> There are others of attempts to shorten the gap between clojure and common lisp like Cloture and clclojure. Once they are complete Clojure will benefit from native binaries and excelent compilers like SBCL, however they are far from complete.
+
+## Python
+
+[py4cl](https://github.com/bendudson/py4cl) is the new lib in town. It allows Common Lisp code to access Python libraries. It is basically the inverse of [cl4py](https://github.com/marcoheisig/cl4py).
+
+See also [async-process](https://github.com/cxxxr/async-process/).
+
+**Achievement**
+
+Calling to Python is easier than ever.
+
+**Future work**
+
+Improving CL libraries such as
+[Numcl](https://github.com/numcl/numcl) (a Numpy clone) is what's
+required to drive Common Lisp forward.
+
+## .Net Core
+
+[Bike](https://github.com/Lovesan/bike) is a cross-platform .Net Core interface.
 
 # Development
 
