@@ -39,6 +39,7 @@ More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReic
         - [Backend](#backend)
         - [Frontend](#frontend)
         - [JavaScript](#javascript)
+    - [Isomorphic web frameworks](#isomorphic-web-frameworks)
 - [Languages interop](#languages-interop)
     - [APL](#apl)
     - [C, C++, Objective C](#c-c-objective-c)
@@ -82,13 +83,14 @@ very easily compiling tiny scripts into executables.
 [cl-readline](https://github.com/vindarel/cl-readline) and
 [linedit](https://common-lisp.net/project/linedit) are still there.
 
-To parse command line arguments, [unix-opts](https://github.com/mrkkrp/unix-opts) shows a decent activity.
+To parse command line arguments, [unix-opts](https://github.com/mrkkrp/unix-opts) shows a decent activity. (as a reminder, the CLI arguments are stored portably in `uiop:command-line-arguments`.)
 
 [Adams](https://github.com/cl-adams/adams) is a new UNIX system administration tool, not unlike Chef or Ansible.
 
 **Consolidation**
 
 More features to the [sripting libraries](https://github.com/CodyReichert/awesome-cl#scripting) is necessary.
+
 
 ## Databases
 
@@ -366,10 +368,6 @@ Many HTML generators and template libraries exist (see the list below). However,
 * [TEN](https://github.com/mmontone/ten), by Djula's maintainer, brings the completness of Djula with the usability of Eco (by Fernando Borretti), aka: you write Django-like HTML templates but you can interleave any Lisp code.
 * [markup](https://github.com/moderninterpreters/markup) - a JSX-like templating engine, where HTML tags are Common Lisp code. Comes with an Emacs package.
 
-A very new web framework appeared:
-
-* [ISSR](https://github.com/interactive-ssr), for Interactive Server-Side rendering. It links a client to its server with a websocket connection, and it allows to **write interactive web pages without writing any JavaScript at all**. Yes, it competes in Weblocks' pace (and maybe, in CLOG's too). It is thus not unlike Phoenix's LiveView or [Hotwire](https://github.com/hotwired/turbo).
-
 Other HTML generators and templating engines include:
 
 * [spinneret](https://github.com/ruricolist/spinneret) - Common Lisp HTML5 generator.
@@ -398,7 +396,7 @@ As in 2015:
 
 ### JavaScript
 
-The two "historical" solutions are:
+The two "historical" Common Lisp to JavaScript compilers are:
 
 * [Parenscript](https://github.com/vsedach/Parenscript), a DSL that compiles a subset of Common Lisp to idiomatic JavaScript, and
 * [JSCL](https://github.com/davazp/jscl), a CL-to-JS compiler designed to be self-hosting from day one. JSCL is not complete (yet), it lacks CLOS, format and loop.
@@ -414,6 +412,30 @@ Help develop one of the existing CL-to-JS implementations. Why not have a look a
 issues](https://github.com/jscl-project/jscl/issues)?
 
 Bring some new macros to ParenScript for new JavaScript idioms, as [Paren6](https://github.com/BnMcGn/paren6/). For example, allow to write `async` and `await`.
+
+## Isomorphic web frameworks
+
+Weblocks is an already old framework that allows to write dynamic web
+applications without writing JavaScript (it isn't as dynamic as modern
+JS frameworks, there is no "double data binding"). Its server-based
+components use Ajax if available (or fallback to plain HTTP) and
+update the DOM. It is a framework in the vein of Smalltalk's Seaside.
+
+Weblocks was getting old and unmaintained but Alexander Artemenko greatly updated and refactored it in his [Reblocks](https://github.com/40ants/weblocks/) branch. He uses it for the [Ultralisp](https://ultralisp.org/) website. You can reach users and developers [on Gitter](https://gitter.im/40ants/weblocks).
+
+Recently, a very new web framework appeared:
+[ISSR](https://github.com/interactive-ssr), for Interactive
+Server-Side rendering. It links a client to the server with a
+websocket connection and updates the DOM selectively. It is thus not
+unlike Phoenix's LiveView or
+[Hotwire](https://github.com/hotwired/turbo).
+
+See this [todo-app tutorial](http://cjackson.tk/todo-tutorial).
+
+**Achievement**
+
+Reviving Weblocks and releasing CLOG and ISSR are great achievements. However, work is only started to create a community of users around them.
+
 
 # Languages interop
 
