@@ -53,8 +53,7 @@ More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReic
     - [Package Management](#package-management)
     - [Build System](#build-system)
     - [Type system](#type-system)
-    - [Testing](#testing)
-    - [Testing on CI services](#testing-on-ci-services)
+    - [Testing, CI](#testing-ci)
 - [Community](#community)
     - [Online presence](#online-presence)
         - [New common-lisp.net website](#new-common-lispnet-website)
@@ -561,7 +560,7 @@ Moreover, the [Coalton](https://github.com/stylewarning/coalton/) library is bri
 
 Help develop Coalton.
 
-## Testing
+## Testing, CI
 
 Fernando cited FiveAM and recommended it along with the much newer
 Prove. Prove has a couple issues and is now deprecated by its author,
@@ -569,17 +568,25 @@ and its younger brother Rove is not in par yet.
 
 So, use FiveAM.
 
-**Consolidation**
-
-Rove or [Parachute](https://github.com/Shinmera/parachute) would be great alternatives if developed a bit further.
-
-## Testing on CI services
-
-Common Lisp has good support for the CI/CD services out there.
+Moreover, Common Lisp has good support for the CI/CD services out there.
 
 CL Foundation's Docker images have integrated best practices over the
 years and are recommended:
 https://common-lisp.net/project/cl-docker-images/
+
+[CI-Utils](https://github.com/neil-lindquist/CI-Utils) regroups
+utilities for various platforms (Travis, Circle, Gitlab, Github,
+Appveyor, Bitbucket, Azure) and test frameworks.
+
+We got a comprehensive blog post for GitHub actions: [part1](http://3bb.cc/blog/2020/09/11/github-ci/) and [part2](http://3bb.cc/blog/2020/09/13/github-ci2/).
+
+For Travis CI, you can also see [cl-travis](https://github.com/luismbo/cl-travis) (for ABCL, Allegro CL, SBCL, CMUCL, CCL and ECL).
+
+You will find an example for Gitlab CI on the Cookbook.
+
+**Consolidation**
+
+Rove or [Parachute](https://github.com/Shinmera/parachute) would be great alternatives if developed a bit further.
 
 **Further work**
 
