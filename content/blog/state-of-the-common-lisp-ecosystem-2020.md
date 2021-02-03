@@ -501,9 +501,12 @@ Here too, great progress has been made. While a usual complain of non-lispers wa
 - [Portacle](https://portacle.github.io/) is the easiest way to get started with Emacs. It is portable and multi-platform, ready-to-use in three clicks. It ships Emacs, SBCL, Slime, Quicklisp and git.
 - [SLIMA](https://github.com/neil-lindquist/SLIMA/) is the Atom extension. It is nearly as good as Slime for Emacs.
 - VSCode has two extensions: [commonlisp-vscode](https://github.com/ailisp/commonlisp-vscode), using the Language Server Protocol, and [Alive](https://github.com/nobody-famous/alive), more recent, using a Lisp backend (Swank) as traditional extensions.
+- Sublime Text got a good extension: [Slyblime](https://github.com/s-clerc/slyblime) is an implementation of SLY and it uses the same backend (SLYNK). It ships advanced features including a debugger with stack frame inspection.
 - [Lem](https://github.com/cxxxr/lem/) is an editor written in Common Lisp. It allows to start developing in CL at once, and it supports other languages.
 - we have a [Jupyter kernel](https://github.com/yitzchak/common-lisp-jupyter) for CL.
 - the [Dandelion Eclipse plugin](https://github.com/Ragnaroek/dandelion/) was re-discovered. While it isn't as feature-rich as others (no interactive debugger for example), it has its users. It specifically targets beginners.
+
+Last but not least, if you want to play in your iPhone or iPad, the [CodePlayground](https://codeplayground.app/) app got Lisp support via CCL.
 
 **Consolidation**
 
