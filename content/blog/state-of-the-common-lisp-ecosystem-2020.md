@@ -308,7 +308,7 @@ To quote Fernando:
 
 We should not require cl-fad nor Osicat anymore.
 
-Built on top of UIOP, Ruricolist's [cmd](https://github.com/ruricolist/cmd) brings short and handy commands to run and pipe programs.
+Built on top of UIOP, Paul M. Rodriguez's [cmd](https://github.com/ruricolist/cmd) brings short and handy commands to run and pipe programs.
 
 ## Web Development
 
@@ -669,39 +669,17 @@ We now have a curated list of companies using CL: [awesome-cl-companies](https:/
 
 And see also [lisp-lang.org's success stories](https://lisp-lang.org/success/).
 
-Some additions of this year are:
-
-- [GraphMetrix](https://graphmetrix.com/)
-  - automation of document extraction and publishing for construction, property and logistics.
-  - Active as of September 2020.
-> "We are using Lisp as the main engine for our RDF -> Sparql -> in-memory rdf db -> conceptual inference system at graphMetrix"
-- Doremir Music Research AB
-  - Developing [ScoreCloud](https://scorecloud.com/), a music notation software (a LispWorks product). Stockholm.
-- [Keepit](https://www.keepit.com/)
-  - a cloud-to-cloud backup service provider. Was hiring two Common Lisp developers in October, 2020.
-- [Mind AI](https://www.mind.ai)
-  - Founded in 2018, Mind AI is an artificial intelligence engine and an ecosystem that was created to offer an entirely new approach to AI.
-- Virtual Insurance Products Ltd
-  - Insurance MGA with a bespoke business to business web platform (with some customer facing parts) written in Common Lisp.
-  - Active as of November 2020
-  - http://insurevip.co.uk and [Github account](https://github.com/Virtual-Insurance-Products/)
-  - Currently (November 2020) looking to hire CL developer(s)
-- [The Mimix Company](https://mimix.io/)
-  - creators of MSL and Nebula, new tools for working with facts and documents.
-  - location: Houston, TX
-  - Active as of December 2020.
-
-## Developers to support
-
-I created a list on GitHub to help spot lisp developers that accept donations:
-
-- https://github.com/vindarel/lisp-maintainers/
-
-You can add yourself to the list.
+Some additions of this year include
+[GraphMetrix](https://graphmetrix.com/) (automation of document extraction and publishing for construction, property and logistics),
+Doremir Music Research AB (developing [ScoreCloud](https://scorecloud.com/), a music notation software: you sing, it writes the score),
+[Keepit](https://www.keepit.com/) (a cloud-to-cloud backup service provider),
+[Mind AI](https://www.mind.ai) (an artificial intelligence engine and ecosystem),
+[Virtual Insurance Products Ltd](http://insurevip.co.uk) (insurance MGA with a bespoke business to business web platform) or again
+[the Mimix Company](https://mimix.io/) (creators of MSL and Nebula, new tools for working with facts and documents).
 
 ## Growth
 
-?
+ONGOING
 
 # Last words
 
