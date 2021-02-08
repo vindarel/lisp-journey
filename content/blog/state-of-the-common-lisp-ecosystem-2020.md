@@ -327,7 +327,7 @@ About Hunchentoot: Mariano Montone wrote [easy-routes](https://github.com/mmonto
 
 - dispatch by HTTP method,
 - arguments extraction from the URL path,
-- and "decorators" to, for example, quickly add authorization checks,
+- "decorators" to, for example, quickly add authorization checks,
 - integration with the Djula framework to generate URLs from route names.
 
 **Achievement**
