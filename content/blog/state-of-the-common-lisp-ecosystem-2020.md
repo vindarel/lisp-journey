@@ -1,10 +1,8 @@
 ---
 title: "State of the Common Lisp ecosystem, 2020"
 date: 2021-01-27T16:29:11+02:00
-draft: true
+draft: false
 ---
-
-DRAFT
 
 This is a description of the Common Lisp ecosystem, as of January, 2021,
 from the perspective of a user and contributor.
@@ -676,7 +674,7 @@ Doremir Music Research AB (developing [ScoreCloud](https://scorecloud.com/), a m
 
 We are able to compare the number of downloads of the 100 most popular Quicklisp libraries between 2015 and 2020:
 
-![](/sotu-downloads-2020.png)
+![](/sotu-downloads-2020.png "Comparing total downloads of Quicklisp libraries shows a 3x increase between 2015 and 2020.")
 
 We can observe a 3x growth in five years. Of course, these figures need to be taken with a grain of salt, what they really represent is subject to interpretation. What is the role of Continuous Integration here?
 
