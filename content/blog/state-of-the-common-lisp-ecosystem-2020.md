@@ -448,6 +448,22 @@ But why?
 
 > There are others of attempts to shorten the gap between clojure and common lisp like Cloture and clclojure. Once they are complete Clojure will benefit from native binaries and excelent compilers like SBCL, however they are far from complete.
 
+On the topic, see this talk by Alan Dipert: ["Common Lisp for the curious Clojurian"](https://www.youtube.com/watch?v=44Q9ew9JH_U).
+
+Abstract:
+
+---
+
+> “If I had to be stranded with something other than Clojure, I’d be happiest with a good Common Lisp and its source code.” - Rich Hickey, 2011
+
+Common Lisp (CL) and Clojure are both dialects of Lisp. Rich Hickey, the creator of Clojure, learned CL and used it professionally before creating Clojure.
+
+What can Clojure do that CL can’t, and vice versa? Why would anyone use CL today, when both Clojure and ClojureScript exist?
+
+In this talk, I will try to answer these questions and more, from the perspective of a long-time Clojurian with a growing passion for CL.
+
+---
+
 ## Python
 
 [py4cl](https://github.com/bendudson/py4cl) is the new lib in town. It allows Common Lisp code to access Python libraries. It is basically the inverse of [cl4py](https://github.com/marcoheisig/cl4py).
