@@ -16,13 +16,14 @@ Each application domain has recommendations for consolidating that
 part of the ecosystem, and pointers for interesting future work.
 
 This article is derived from
-Fernando Borretti's [State of the Common Lisp ecosystem from 2015](https://borretti.me/article/common-lisp-sotu-2015).
-This new one will be an opportunity to look at what was achieved -or what is
+Fernando Borretti's [State of the Common Lisp ecosystem from 2015](https://borretti.me/article/common-lisp-sotu-2015), hence the introduction that sounded familiar.
+This new one will be an opportunity to look at what was achieved, or what is
 still lacking.
 
-these years… 2018
+**Disclaimer**: This article is not a list of every project or article of interest that came out in the last years. I wrote an overview of 2018 closer to that goal [here](/blog/these-years-in-common-lisp-2018/). More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReichert/awesome-cl) list, on GitHub and on [Cliki](https://www.cliki.net/).
 
-More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReichert/awesome-cl) list, on GitHub and on [Cliki](https://www.cliki.net/).
+**Acknowledgements** I would like to thank @borodust and @ambrevar for their kind feedback.
+
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
