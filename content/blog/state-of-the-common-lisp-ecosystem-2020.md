@@ -679,7 +679,13 @@ Doremir Music Research AB (developing [ScoreCloud](https://scorecloud.com/), a m
 
 ## Growth
 
-ONGOING
+We are able to compare the number of downloads of the 100 most popular Quicklisp libraries between 2015 and 2020:
+
+![](/sotu-downloads-2020.png)
+
+We can observe a 3x growth in five years. Of course, these figures need to be taken with a grain of salt, what they really represent is subject to interpretation. What is the role of Continuous Integration here?
+
+Check it yourself: [snippet](https://gitlab.com/-/snippets/2070318).
 
 # Last words
 
