@@ -1,5 +1,5 @@
 ---
-title: "State of the Common Lisp ecosystem, 2020"
+title: "State of the Common Lisp ecosystem, 2020  🎉"
 date: 2021-02-08T11:29:11+02:00
 draft: false
 ---
