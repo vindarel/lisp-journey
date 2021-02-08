@@ -630,6 +630,12 @@ Help furnish and curate it.
 
 ### More
 
+A first Common Lisp User survey was run, we can consult its results here [on Google docs](https://docs.google.com/forms/d/e/1FAIpQLSfg7UJRKrkI3OjOHWL4xI-murE4LpQjIxsiAhFdPEmtyLX3kg/viewanalytics) and read comments [on reddit](https://www.reddit.com/r/lisp/comments/jwdimb/state_of_common_lisp_survey_2020_raw_results/) as well as feedback on the questions [here](https://www.reddit.com/r/Common_Lisp/comments/f8wqkj/state_of_common_lisp_survey_2020/).
+
+I agree with /u/defunkydrummer here:
+
+> Note that many, many things that people wish to see, are already available, so perhaps we, as a community, are not fully communicating the state of our ecosystem even to our insiders (!)
+
 Several popular libraries have been ported to readthedocs, so the reading experience is more pleasant: [https://common-lisp-libraries.readthedocs.io/](https://common-lisp-libraries.readthedocs.io/).
 
 Michal "phoe" Herda organized many online Lisp meetings, and we can find the videos on Youtube: https://www.youtube.com/c/OnlineLispMeetings/videos
