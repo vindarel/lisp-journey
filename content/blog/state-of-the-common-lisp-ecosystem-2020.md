@@ -74,23 +74,25 @@ still lacking.
 
 ## Command line
 
-There used to be several options, but now
-[Roswell](https://github.com/snmsts/roswell) has gained most momentum,
+There used to be several options to ease building and distribution of command line programs,
+but now [Roswell](https://github.com/snmsts/roswell) has gained most momentum,
 and that's a good thing. Roswell is an implementation
-manager/installer and script runner. One neat feature is support for
+manager, installer and a script runner, and one of its neat features is support for
 very easily compiling tiny scripts into executables.
 
-[cl-readline](https://github.com/vindarel/cl-readline) and
-[linedit](https://common-lisp.net/project/linedit) are still there.
+Now, [GNU Guix](https://guix.gnu.org/) has gained many CL libraries, and becomes a contender to Roswell. Guix can be used as a package manager on top of your Unix distribution. It brings reproducible builds, rollbacks, the ability to install exact versions of any library (including system dependencies), contained environments and user profiles. It makes it easy too to install the latest version of a CL implementation and libraries and, to a certain extent, to share scripts. See the article [A Lisp REPL as my main shell](https://ambrevar.xyz/lisp-repl-shell/index.html) for insights.
 
-To parse command line arguments, [unix-opts](https://github.com/mrkkrp/unix-opts) shows a decent activity. (as a reminder, the CLI arguments are stored portably in `uiop:command-line-arguments`.)
+To parse command line arguments, [unix-opts](https://github.com/mrkkrp/unix-opts) shows a decent activity (as a reminder, the CLI arguments are stored portably in `uiop:command-line-arguments`).
 
 [Adams](https://github.com/cl-adams/adams) is a new UNIX system administration tool, not unlike Chef or Ansible.
 
 **Consolidation**
 
-More features to the [sripting libraries](https://github.com/CodyReichert/awesome-cl#scripting) is necessary.
+More features to the [sripting libraries](https://github.com/CodyReichert/awesome-cl#scripting).
 
+**Future work**
+
+The [Lem editor](https://github.com/cxxxr/lem/) has built a great user interface and REPL on top of ncurses, with the cl-charms library. It would be great to re-use its components, so that lispers could easily build similar rich terminal-based interfaces.
 
 ## Databases
 
@@ -529,7 +531,7 @@ Quicklisp is the de-facto package manager. However, we now have:
 
 Not forgetting Qlot, to install Quicklisp libraries relative to a directory.
 
-Last but not least, many CL libraries where packaged for Guix (most notably by Pierre Neidhart of Nyxt). Guix brings reproducible builds, rollbacks, the ability to install exact versions of any library (including system dependencies), and contained environments.
+Last but not least, as said earlier, many CL libraries where packaged for Guix (most notably by [Pierre Neidhart](https://ambrevar.xyz) of Nyxt).
 
 **Achievement**
 
