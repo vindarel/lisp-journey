@@ -242,10 +242,6 @@ cross-platform (Windows, macOS, GNU/Linux, with new Android, iOs,
 Cocoa and Web Assembly drivers), has many widgets (but less than Qt), has a small api and
 is actively developed. IUP was created at the PUC university of Rio de Janeiro.
 
-Pavel Korolev develops bindings to the Nuklear immediate-mode library:
-[bodge-nuklear](https://github.com/borodust/bodge-nuklear) (and he
-uses it in his games which you should check out too).
-
 Nicolas Hafner started [Alloy](https://github.com/Shirakumo/alloy), a
 new user interface protocol and toolkit implementation, which he uses in his Kandria game.
 
