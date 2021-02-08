@@ -453,7 +453,10 @@ But why?
 
 [py4cl](https://github.com/bendudson/py4cl) is the new lib in town. It allows Common Lisp code to access Python libraries. It is basically the inverse of [cl4py](https://github.com/marcoheisig/cl4py).
 
-See also [async-process](https://github.com/cxxxr/async-process/).
+See also [async-process](https://github.com/cxxxr/async-process/) and,
+while we're at it, my [comparison of Python VS Common
+Lisp](/pythonvslisp), where we look at the differences of workflows and
+ecosystems.
 
 **Achievement**
 
