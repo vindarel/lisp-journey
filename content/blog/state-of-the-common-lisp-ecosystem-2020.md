@@ -82,7 +82,7 @@ very easily compiling tiny scripts into executables.
 
 Now, [GNU Guix](https://guix.gnu.org/) has gained many CL libraries, and becomes a contender to Roswell. Guix can be used as a package manager on top of your Unix distribution. It brings reproducible builds, rollbacks, the ability to install exact versions of any library (including system dependencies), contained environments and user profiles. It makes it easy too to install the latest version of a CL implementation and libraries and, to a certain extent, to share scripts. See the article [A Lisp REPL as my main shell](https://ambrevar.xyz/lisp-repl-shell/index.html) for insights.
 
-To parse command line arguments, [unix-opts](https://github.com/mrkkrp/unix-opts) shows a decent activity (as a reminder, the CLI arguments are stored portably in `uiop:command-line-arguments`).
+To parse command line arguments, [unix-opts](https://github.com/mrkkrp/unix-opts) shows decent activity. As a reminder, the CLI arguments are stored portably in `uiop:command-line-arguments`.
 
 [Adams](https://github.com/cl-adams/adams) is a new UNIX system administration tool, not unlike Chef or Ansible.
 
@@ -109,7 +109,7 @@ It also has a tutorial in the Cookbook:
 <!-- on how to compose queries with Mito and SxQL, and on how we only need -->
 <!-- lisp knowledge to replace Django functionalities. -->
 
-There are of course more libraries on that field. Some new ones since 2015 are:
+There are of course more libraries in that field. Some new ones since 2015 are:
 
 [cl-yesql](https://github.com/ruricolist/cl-yesql) (by the author of
 Serapeum, Spinneret and other great libraries) is based on Clojure's
@@ -241,8 +241,8 @@ repositories, you know that a Qt5 wrapper is in the works).
 
 Matthew Kennedy wrote excellent FFI bindings to the IUP Portable User
 Interface library: [IUP](https://github.com/lispnik/iup/). IUP is
-cross-platform (Windows, macOS, GNU/Linux, with new Android, iOs,
-Cocoa and Web Assembly drivers), has many widgets (but less than Qt), has a small api and
+cross-platform (Windows, macOS, GNU/Linux, with new Android, iOS,
+Cocoa and Web Assembly drivers), has many widgets (but less than Qt), has a small API and
 is actively developed. IUP was created at the PUC university of Rio de Janeiro.
 
 Nicolas Hafner started [Alloy](https://github.com/Shirakumo/alloy), a
@@ -267,14 +267,14 @@ I wrote an introduction to these frameworks in the Cookbook:
 [Cookbook/gui](https://lispcookbook.github.io/cl-cookbook/gui.html). More
 examples or demo projects would be welcome.
 
-There are two actively maintained diverged forks of the Gtk bindings. A reunification effort is required.
+There are two actively maintained diverged forks of the GTK bindings. A reunification effort is required.
 
 **Future work**
 
-Write a desktop application with IUP/your toolkit of choice for everydays' use and make it a Common Lisp flagship.
+Write a desktop application with IUP/your toolkit of choice for everyday use and make it a Common Lisp flagship.
 
 Study other approaches to GUI bindings. What about
-[gtk-server](http://www.gtk-server.org/)? GObject introspection? An
+[gtk-server](http://www.gtk-server.org/)? [GObject introspection](https://github.com/andy128k/cl-gobject-introspection)? An
 effort started for Qt: [giqt](https://github.com/mrosset/giqt/) (in
 which we recognize @ambrevar from the [Nyxt
 browser](https://github.com/atlas-engineer/nyxt/)).
@@ -305,9 +305,9 @@ To quote Fernando:
 
 > UIOP, ASDF’s portable compatibility layer, contains a large set of tools for portably doing everything from querying the hostname to running external programs to manipulating environment variables.
 
-We should not require cl-fad nor Osicat anymore.
+We should not require cl-fad anymore (but we need Osicat, which unlike UIOP is POSIX compatible).
 
-Built on top of UIOP, Paul M. Rodriguez's [cmd](https://github.com/ruricolist/cmd) brings short and handy commands to run and pipe programs.
+Built on top of UIOP, Paul M. Rodriguez's [cmd](https://github.com/ruricolist/cmd) brings in short and handy helpers to run and pipe programs.
 
 ## Web Development
 
@@ -345,7 +345,7 @@ were written, such as a single-sign on middleware.
 
 **Consolidation**
 
-Write more documentation for Clack. While lispers know about it,
+Write more documentation for Clack. While Lispers know about it,
 they don't necessarily adopt it because of the lack of
 documentation. We can expand this [getting started
 guide](https://jasom.github.io/clack-tutorial/posts/getting-started-with-clack/).
@@ -489,9 +489,11 @@ All implementations saw new releases, except CLisp, whose development however co
 
 Active implementations include: ABCL, CCL, CLASP, ECL, LispWorks, AllegroCL, SBCL. And to a certain extent, GNU CLisp, SICL (which is the newest one) and Corman Lisp (a CL development environment for Windows) (regenerated [here](https://github.com/sharplispers/cormanlisp)).
 
-SBCL still ships monthly releases. It turned 20 and keeps improving. We can read a blog on the party in Vienna [here](https://mstmetent.blogspot.com/2020/01/sbcl20-in-vienna-last-month-i-attended.html) (did you know that Doug Katzman of Google fame contributes to SBCL?)
+SBCL still ships monthly releases. It turned 20 and keeps improving. We can read a blog on the party held in Vienna [here](https://mstmetent.blogspot.com/2020/01/sbcl20-in-vienna-last-month-i-attended.html). (Did you know that Doug Katzman of Google fame contributes to SBCL?)
 
 ABCL [jumped to v1.8.0](https://abcl-dev.blogspot.com/2020/10/abcl-180.html) to support openjdk15.
+
+<!-- SICL was able to load the Alexandria library. Some of its components are already used in the wild (for example, the [Eclector](https://github.com/s-expressionists/Eclector) Common Lisp reader). -->
 
 ## Editors
 
@@ -509,7 +511,7 @@ Last but not least, if you want to play in your iPhone or iPad, the [CodePlaygro
 
 **Consolidation**
 
-SLY might need more praise. It has sound features such as SLY stickers and the upcoming SLY stepper.
+[SLY](https://github.com/joaotavora/sly) might need more praise. It has sound features such as SLY stickers and the new [SLY stepper](https://github.com/joaotavora/sly-stepper).
 
 ## Developer utilities
 
@@ -531,7 +533,7 @@ Quicklisp is the de-facto package manager. However, we now have:
 
 Not forgetting Qlot, to install Quicklisp libraries relative to a directory.
 
-Last but not least, as said earlier, many CL libraries where packaged for Guix (most notably by [Pierre Neidhart](https://ambrevar.xyz) of Nyxt).
+Last but not least, as said earlier, many CL libraries were packaged for Guix (most notably by [Pierre Neidhart](https://ambrevar.xyz) of Nyxt).
 
 **Achievement**
 
@@ -560,7 +562,7 @@ Quoting Fernando:
 
 > There’s not much to say here, except that Common Lisp has a pretty great type system that is not exploited nearly enough.
 
-And to our greatest pleasure, SBCL's type system continues to improve. For example, SBCL 1.5.9 now gives type warnings when a class's declared type doesn't match its `initform`. It continued to improve on SBCL 2.0 and onwards.
+And to our greatest pleasure, SBCL's type system continues to improve. For example, SBCL 1.5.9 now gives type warnings when a slot declared type doesn't match its `initform`. It continued to improve on SBCL 2.0 and onwards.
 
 Moreover, the [Coalton](https://github.com/stylewarning/coalton/) library is bringing a dialect of ML on top of CL, in order to write **statically typed programs** similar in spirit to Standard ML, OCaml, and Haskell.
 
@@ -651,11 +653,11 @@ On a sadder note, Quickdocs closed :(
 
 We got 3 new books on Common Lisp in 2020:
 
-- [Programming Algorithms](http://vseloved.github.io/progalgs.html), originally published by TODO on his website, then self-published in paperback and then published by Apress.
+- [Programming Algorithms](http://vseloved.github.io/progalgs.html), originally published by Vsevolod Dyomkin on his website, then self-published in paperback and then published by Apress.
 - [the Common Lisp Condition System](https://github.com/Apress/common-lisp-condition-system/), by Michal "phoe" Herda, was also published by himself and then by Apress.
 - The Cookbook that was made available in ePub and PDF :)
 
-and also:
+And also:
 
 - the book [Calendrical calculations](https://www.cambridge.org/us/academic/subjects/computer-science/computing-general-interest/calendrical-calculations-ultimate-edition-4th-edition?format=HB#resources), 4th edition, by Edward M. Reingold, Nachum Dershowitz, Cambridge Press. It provides Lisp sources.
 - [Building Problem Solvers](https://www.qrg.northwestern.edu/bps/readme.html), by Kenneth Forbus and Johan de Kleer, MIT Press, was made available.
@@ -687,7 +689,7 @@ We are able to compare the number of downloads of the 100 most popular Quicklisp
 
 We can observe a 3x growth in five years. Of course, these figures need to be taken with a grain of salt, what they really represent is subject to interpretation. What is the role of Continuous Integration here?
 
-Check it yourself: [snippet](https://gitlab.com/-/snippets/2070318).
+Check it yourself: [snippet](https://gitlab.com/-/snippets/2070318), [JSFiddle](https://jsfiddle.net/1q3xjyeL/1/).
 
 # Last words
 
