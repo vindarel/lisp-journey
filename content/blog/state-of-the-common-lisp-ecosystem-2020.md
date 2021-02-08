@@ -61,7 +61,6 @@ still lacking.
         - [More](#more)
     - [New books](#new-books)
     - [Companies](#companies)
-    - [Developers to support](#developers-to-support)
     - [Growth](#growth)
 - [Last words](#last-words)
 
