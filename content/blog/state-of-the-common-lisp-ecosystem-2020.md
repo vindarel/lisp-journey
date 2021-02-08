@@ -440,7 +440,7 @@ New solutions arose to interoperate with other runtimes.
 
 We had [CFFI](https://github.com/cffi/cffi) (a portable foreign function interface for CL), [C2FFI](https://github.com/rpav/c2ffi) (Clang-based FFI wrapper generator), then [cl-autowrap](https://github.com/rpav/cl-autowrap), a c2ffi-based wrapper generator that makes creating C bindings real quick.
 
-Pavel Korolev is developing [CLAW](https://github.com/borodust/claw), started as a fork of cl-autowrap, which brings **C++ support**. For practice he generates bindings to GLM or the Godot engine.
+Pavel Korolev is developing [CLAW](https://github.com/borodust/claw), started as a fork of cl-autowrap, which brings **C++ support**. For practice he generates bindings to GLM or [to the Filament](https://github.com/borodust/claw-filament) rendering engine.
 
 **Achievement**
 
