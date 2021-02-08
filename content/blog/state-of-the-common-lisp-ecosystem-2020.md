@@ -495,9 +495,15 @@ All implementations saw new releases, except CLisp, whose development however co
 
 Active implementations include: ABCL, CCL, CLASP, ECL, LispWorks, AllegroCL, SBCL. And to a certain extent, GNU CLisp, SICL (which is the newest one) and Corman Lisp (a CL development environment for Windows) (regenerated [here](https://github.com/sharplispers/cormanlisp)).
 
-SBCL still ships monthly releases. It turned 20 and keeps improving. We can read a blog on the party held in Vienna [here](https://mstmetent.blogspot.com/2020/01/sbcl20-in-vienna-last-month-i-attended.html). (Did you know that Doug Katzman of Google fame contributes to SBCL?)
-
 ABCL [jumped to v1.8.0](https://abcl-dev.blogspot.com/2020/10/abcl-180.html) to support openjdk15.
+
+SBCL still ships monthly releases. It turned 20 and keeps improving (RISC-V port, M1 port, block compilation, more compile-time type checking…). We can read a blog on the party held in Vienna [here](https://mstmetent.blogspot.com/2020/01/sbcl20-in-vienna-last-month-i-attended.html). Did you know that Doug Katzman of Google fame contributes to SBCL?
+
+(edit:)
+
+> Doug Katzman talked about his work at Google getting SBCL to work with Unix better. For those of you who don’t know, he’s done a lot of work on SBCL over the past couple of years, not only adding a lot of new features to the GC and making it play better with applications which have alien parts to them, but also has done a tremendous amount of cleanup on the internals and has helped SBCL become even more Sanely Bootstrappable. That’s a topic for another time, and I hope Doug or Christophe will have the time to write up about the recent improvements to the process, since it really is quite interesting.
+
+> Anyway, what Doug talked about was his work on making SBCL more amenable to external debugging tools, such as gdb and external profilers. It seems like they interface with aliens a lot from Lisp at Google, so it’s nice to have backtraces from alien tools understand Lisp. It turns out a lot of prerequisite work was needed to make SBCL play nice like this, including implementing a non-moving GC runtime, so that Lisp objects and especially Lisp code (which are normally dynamic space objects and move around just like everything else) can’t evade the aliens and will always have known locations.
 
 <!-- SICL was able to load the Alexandria library. Some of its components are already used in the wild (for example, the [Eclector](https://github.com/s-expressionists/Eclector) Common Lisp reader). -->
 
