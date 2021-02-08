@@ -22,7 +22,7 @@ still lacking.
 
 **Disclaimer**: This article is not a list of every project or article of interest that came out in the last years. I wrote an overview of 2018 closer to that goal [here](/blog/these-years-in-common-lisp-2018/). More libraries can be discovered on the [Awesome-cl](https://github.com/CodyReichert/awesome-cl) list, on GitHub and on [Cliki](https://www.cliki.net/).
 
-**Acknowledgements** I would like to thank @borodust and @ambrevar for their kind feedback.
+**Acknowledgements** I would like to thank @borodust, @ambrevar and @digikar for their kind feedback.
 
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -92,7 +92,7 @@ More features to the [sripting libraries](https://github.com/CodyReichert/awesom
 
 **Future work**
 
-The [Lem editor](https://github.com/cxxxr/lem/) has built a great user interface and REPL on top of ncurses, with the cl-charms library. It would be great to re-use its components, so that lispers could easily build similar rich terminal-based interfaces.
+The [Lem editor](https://github.com/cxxxr/lem/) has built a great user interface and REPL on top of ncurses, with the cl-charms library. It would be great to re-use its components, so that Lispers could easily build similar rich terminal-based interfaces.
 
 ## Databases
 
@@ -136,7 +136,7 @@ And of course, [pgloader](https://github.com/dimitri/pgloader) is still a Common
 
 **Achievement**
 
-Among the emerging ORMs, Mito is the one actively maintained that lispers seem to have chosen. Good. CLSQL certainly still works, but we don't hear about it and it looks outdated. So, Mito it is.
+Among the emerging ORMs, Mito is the one actively maintained that Lispers seem to have chosen. Good. CLSQL certainly still works, but we don't hear about it and it looks outdated. So, Mito it is.
 
 **Consolidation**
 
@@ -157,7 +157,7 @@ In the last year, Manfred Bergmann developed
 Its v1 features:
 
 - actors can use a shared pool of message dispatchers which effectively allows to create millions of actors.
-- the possibility to create actor hierarchies. An actor can have child actors. An actor now can also "watch" another actor to get notified about it’s termination.
+- the possibility to create actor hierarchies. An actor can have child actors. An actor now can also "watch" another actor to get notified about its termination.
 
 
 Many other libraries exist in this area:
@@ -183,7 +183,7 @@ Many other libraries exist in this area:
     hosts can go down and return back later".
 * [swank-crew](https://github.com/brown/swank-crew) - distributed computation framework implemented using Swank Client.
 * [cl-coroutine](https://github.com/takagi/cl-coroutine) - a coroutine library. It uses the CL-CONT continuations library in its implementation.
-* [CMTX](https://github.com/cosmos72/stmx): high performance transactional memory for Common Lisp ).
+* [CMTX](https://github.com/cosmos72/stmx): high performance transactional memory for Common Lisp.
   - In our opinion, a library not well known and under-appreciated.
 
 (see [awesome-cl#parallelism-and-concurrency](https://github.com/CodyReichert/awesome-cl#parallelism-and-concurrency))
@@ -237,7 +237,7 @@ cross-platform GUI solution. Ltk is a very good library, but Tk is
 limited. Qtools is great, but is only for Qt4.
 
 A lot has happened, and is still happening (if you watch the right
-repositories, you know that a Qt5 wrapper is in the works).
+repositories, you know that a Qt5 wrapper is in the works (ECL already has Qt5 bindings: [EQL5](https://gitlab.com/eql/EQL5/), with an [Android port](https://gitlab.com/eql/EQL5-Android))).
 
 Matthew Kennedy wrote excellent FFI bindings to the IUP Portable User
 Interface library: [IUP](https://github.com/lispnik/iup/). IUP is
@@ -279,9 +279,6 @@ effort started for Qt: [giqt](https://github.com/mrosset/giqt/) (in
 which we recognize @ambrevar from the [Nyxt
 browser](https://github.com/atlas-engineer/nyxt/)).
 
-LispWorks' [CAPI](http://www.lispworks.com/products/capi.html) and Allegro's [Common Graphics](https://franz.com/products/allegro-common-lisp/acl_ide.lhtml)
-are proprietary, but have free trial versions and are still presented as the most
-advanced GUI toolkits for Common Lisp. CAPI even targets the Android platform. More examples and tutorials are necessary.
 
 ## Machine Learning
 
@@ -305,7 +302,7 @@ To quote Fernando:
 
 > UIOP, ASDF’s portable compatibility layer, contains a large set of tools for portably doing everything from querying the hostname to running external programs to manipulating environment variables.
 
-We should not require cl-fad anymore (but we need Osicat, which unlike UIOP is POSIX compatible).
+We should not require cl-fad anymore (but we need Osicat, which unlike UIOP is POSIX friendly).
 
 Built on top of UIOP, Paul M. Rodriguez's [cmd](https://github.com/ruricolist/cmd) brings in short and handy helpers to run and pipe programs.
 
@@ -322,9 +319,7 @@ server abstraction, that allows the user to write web applications
 a particular server. Some web frameworks are built on top of
 it, for example [Caveman2](http://8arrow.org/caveman/).
 
-Fernando wrote:
-
-> the importance of using Clack cannot be understated: If you build an application directly on, say, Hunchentoot, you’re tied to Hunchentoot, and if a new, faster server – like [Woo](https://github.com/fukamachi/woo) – comes out, you have to rewrite the entire application to use it. If you write a plugin for Clack – like [clack-errors](https://github.com/eudoxia0/clack-errors) – it is automatically usable by all applications, regardless of framework, that are built on Clack, reducing useless duplication of code.
+> The importance of using Clack cannot be understated: If you build an application directly on, say, Hunchentoot, you’re tied to Hunchentoot, and if a new, faster server – like [Woo](https://github.com/fukamachi/woo) – comes out, you have to rewrite the entire application to use it. If you write a plugin for Clack – like [clack-errors](https://github.com/eudoxia0/clack-errors) – it is automatically usable by all applications, regardless of framework, that are built on Clack, reducing useless duplication of code.
 
 > With Clack, switching from Hunchentoot to Woo, and enjoying the incredible speedup, is a simple matter of installing libev and changing a keyword argument.
 
@@ -334,7 +329,7 @@ About Hunchentoot: Mariano Montone wrote [easy-routes](https://github.com/mmonto
 
 - dispatch by HTTP method,
 - arguments extraction from the URL path,
-- and "decorators".
+- and "decorators" to quickly add authorization checks etc.
 
 It is also integrated with the Djula framework to generate URLs from route names.
 
@@ -374,10 +369,6 @@ We have nice other building blocks, such as a nice form handling
 library ([cl-forms](https://github.com/mmontone/cl-forms)) and
 libraries to create Open-API interfaces. An integrated, opinionated
 all-in-one solution could be a productivity boom.
-
-**Achievement**
-
-A lot is going on in that field and ISSR and CLOG are great additions.
 
 **Consolidation**
 
@@ -443,7 +434,7 @@ New solutions arose to interoperate with other runtimes.
 
 We had [CFFI](https://github.com/cffi/cffi) (a portable foreign function interface for CL), [C2FFI](https://github.com/rpav/c2ffi) (Clang-based FFI wrapper generator), then [cl-autowrap](https://github.com/rpav/cl-autowrap), a c2ffi-based wrapper generator that makes creating C bindings real quick.
 
-Pavel Korolev is developing [CLAW](https://github.com/borodust/claw), started as a fork of cl-autowrap, which brings **C++ support**. For practice he generates bindings to GLM or [to the Filament](https://github.com/borodust/claw-filament) rendering engine.
+Pavel Korolev is developing [CLAW](https://github.com/borodust/claw), started as a fork of cl-autowrap, which brings **C++ support**. For practice he generated bindings to GLM or [to the Filament](https://github.com/borodust/claw-filament) rendering engine.
 
 **Achievement**
 
@@ -469,7 +460,7 @@ See also [async-process](https://github.com/cxxxr/async-process/).
 
 **Achievement**
 
-Calling to Python is easier than ever.
+Calling to Python and hooking into its ecosystem is easier than ever.
 
 **Future work**
 
@@ -497,7 +488,7 @@ ABCL [jumped to v1.8.0](https://abcl-dev.blogspot.com/2020/10/abcl-180.html) to 
 
 ## Editors
 
-Here too, great progress has been made. While a usual complain of non-lispers was the lack of editor support besides Emacs (and Vim), we now nearly reach choice paralysis:
+Here too, great progress has been made. While a usual complain of non-Lispers was the lack of editor support besides Emacs (and Vim), we now nearly reach choice paralysis:
 
 - [Portacle](https://portacle.github.io/) is the easiest way to get started with Emacs. It is portable and multi-platform, ready-to-use in three clicks. It ships Emacs, SBCL, Slime, Quicklisp and git.
 - [SLIMA](https://github.com/neil-lindquist/SLIMA/) is the Atom extension. It is nearly as good as Slime for Emacs.
@@ -572,7 +563,7 @@ Help develop Coalton.
 
 ## Testing, CI
 
-Fernando cited FiveAM and recommended it along with the much newer
+Fernando cited [FiveAM](https://common-lisp.net/project/fiveam/docs/Introduction.html) and recommended it along with the much newer
 Prove. Prove has a couple issues and is now deprecated by its author,
 and its younger brother Rove is not in par yet.
 
@@ -617,17 +608,17 @@ the last three or four years.
 
 ### Cookbook
 
-The [Common Lisp Cookbook](https://lispcookbook.github.io/cl-cookbook/) on GitHub got revived by many new contributors. It got many new content and a new UI. It is also now available in ePub and PDF, for free or as a "pay what you want" option.
+The [Common Lisp Cookbook](https://lispcookbook.github.io/cl-cookbook/) on GitHub got revived by many new contributors, included myself. It got many new content and a new UI. It is also now available in ePub and PDF, for free or as a "pay what you want" option.
 
 **Consolidation**
 
-Write content on the Cookbook. Don't write tutorials on your blog. Everyone can help, even new lispers (and in fact: *mostly* new lispers can write content best suited to the Cookbook's target audience).
-
-Maybe help revive the [minispec](https://github.com/lamberta/minispec) ?
+Write content on the Cookbook. Don't write tutorials on your blog. Everyone can help, even new Lispers (and in fact: *mostly* new Lispers can write content best suited to the Cookbook's target audience).
 
 **Future work**
 
 Make it look world-class with a real and modern theme.
+
+Help revive the [minispec](https://github.com/lamberta/minispec) ?
 
 ### awesome-cl
 
@@ -693,4 +684,8 @@ Check it yourself: [snippet](https://gitlab.com/-/snippets/2070318), [JSFiddle](
 
 # Last words
 
-A lot is happening. Thanks to the contributors!
+Many things are happening in the CL universe. Stay tuned!
+
+---
+
+The [article source](https://gitlab.com/lisp-journey/lisp-journey.gitlab.io/-/blob/master/content/blog/state-of-the-common-lisp-ecosystem-2020.md#implementations).
