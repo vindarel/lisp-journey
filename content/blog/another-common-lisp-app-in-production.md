@@ -14,7 +14,7 @@ language it is implemented in!
 It is a simple application that reads data from an existing DB, builds
 a text file with special rules, sends the file to an FTP server, and
 does it every day. I used cl-dbi with raw SQL queries,
-[cl-ftp](https://github.com/pinterface/cl-ftp), and a CRON job. I
+[cl-ftp](https://github.com/pinterface/cl-ftp) (does its job perfectly), and a CRON job. I
 built a binary that I sent to my server. It is a stand-alone
 application that reads a DB that is created by a bigger Python/Django
 web app (that I also develop). I didn't want to make this one more
@@ -22,6 +22,8 @@ bloated, so given the goals are complementary but orthogonal, I went
 with a stand-alone tool.
 
 That's it. One more!
+
+Another tool I am running connects to a SOAP service, shows data on a website (with Sentry configured in production), sells products with Stripe and sends emails with Sendgrid. And I (generally) update it while it runs by connecting to the Lisp REPL. Just throwing out buzzwords to you.
 
 While I'm at it, let me stress one point, to answer in advance a kind
 of feedback I already had: no, the resulting application doesn't use
