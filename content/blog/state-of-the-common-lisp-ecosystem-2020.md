@@ -236,6 +236,8 @@ limited. Qtools is great, but is only for Qt4.
 A lot has happened, and is still happening (if you watch the right
 repositories, you know that a Qt5 wrapper is in the works (ECL already has Qt5 bindings: [EQL5](https://gitlab.com/eql/EQL5/), with an [Android port](https://gitlab.com/eql/EQL5-Android))).
 
+edit: see also [EQL5-sailfish](https://gitlab.com/eql/eql5-sailfish) for Sailfish OS. [Here](https://openrepos.net/user/13436/programs) are two example apps.
+
 Matthew Kennedy wrote excellent FFI bindings to the IUP Portable User
 Interface library: [IUP](https://github.com/lispnik/iup/). IUP is
 cross-platform (Windows, macOS, GNU/Linux, with new Android, iOS,
