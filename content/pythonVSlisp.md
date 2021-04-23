@@ -44,11 +44,11 @@ and thanks to the proofreaders.
 - [Performance](#performance)
 - [Conclusion](#conclusion)
 - [Appendix: FAQ](#appendix-faq)
-    - [Are there no iterators ?](#are-there-no-iterators-)
-    - [Can I define my own `+` operator like in an OO language ?](#can-i-define-my-own--operator-like-in-an-oo-language-)
-    - [To which extent can Lisp be compiled, with all its dynamic nature, garbage collection, macros and what else ?](#to-which-extent-can-lisp-be-compiled-with-all-its-dynamic-nature-garbage-collection-macros-and-what-else-)
-    - [But what is Common Lisp good for, really ?](#but-what-is-common-lisp-good-for-really-)
-    - [So why is CL not more popular ?](#so-why-is-cl-not-more-popular-)
+    - [Are there no iterators ?](#are-there-no-iterators)
+    - [Can I define my own `+` operator like in an OO language ?](#can-i-define-my-own-operator-like-in-an-oo-language)
+    - [To which extent can Lisp be compiled, with all its dynamic nature, garbage collection, macros and what else ?](#to-which-extent-can-lisp-be-compiled-with-all-its-dynamic-nature-garbage-collection-macros-and-what-else)
+    - [But what is Common Lisp good for, really ?](#but-what-is-common-lisp-good-for-really)
+    - [So why is CL not more popular ?](#so-why-is-cl-not-more-popular)
 
 <!-- markdown-toc end -->
 
