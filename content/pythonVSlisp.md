@@ -241,7 +241,7 @@ utilities to make local transformations, like "extract this expression
 into a `let` variable at the top of the function", "transform a
 function to a lambda equivalent" or the contrary, etc.
 
-(edit January, 2020: the language-agnostic tool [Comby](https://github.com/comby-tools/comby) will be useful here. I used it for syntactic manipulation, for example to replace a `(if (…) (progn …))` by a `(when (…) …)`).
+(edit January, 2020: the language-agnostic tool [Comby](https://github.com/comby-tools/comby) will be useful here. I used it for syntactic manipulation, for example to replace a `(if (…) (progn …))` by a `(when (…) …)`). See [Colisper](https://github.com/vindarel/colisper) (a POC).
 
 # Libraries
 
@@ -320,7 +320,7 @@ You might use Mako templates, but there's something you can't do.
 In CL, we can also use a Django-like templating engine, [Djula](https://github.com/mmontone/djula)
 templates (despite its modest number
 of stars, it is one of the most downloaded projects on Quicklisp).
-The Mako equivalent would be [Eco](https://github.com/eudoxia0/eco).
+The Mako equivalent would be [Ten](https://github.com/mmontone/ten).
 However, we can alternatively just use plain old Lisp, for example with
 [Spinneret](https://github.com/ruricolist/spinneret/). As a
 consequence, we can factorize code as we always do (with spinneret functions or
@@ -455,12 +455,12 @@ First, some reminders:
 
 That being said, my 2 cents since you ask:
 
-- I think the CL world missed the web bandwagon for some time ([common-lisp.net](http://common-lisp.net/) was horrible for some years), but that's being fixed.
+- I think the CL world missed the web bandwagon for some time ([common-lisp.net](http://common-lisp.net/) was horrible for some years), but that's been fixed.
 - an enormous code-base existed before GitHub.
 - we missed visually nice, practical content on the web, even though
   there are many books. It's a bit better now.
 - CL missed a package manager for some time behind other languages, that's now fixed.
-- I reckon CL is still quite hard for the web, it doesn't have a killer web framework (though maybe [Weblocks](http://40ants.com/weblocks/quickstart.html) soon©, an isomorphic web framework), hence no hype.
+- I reckon CL is still quite hard for the web, it doesn't have a killer web framework (though maybe [Weblocks](http://40ants.com/weblocks/quickstart.html), [CLOG](https://github.com/rabbibotton/clog) or [ISSR](https://github.com/interactive-ssr/hunchenissr) soon©, all isomorphic web frameworks), hence no hype.
 - CL seems to be used for big, non-trivial projects, hence it gets no easy hype.
 - CL has no entity doing marketing today. We saw the Common Lisp
   foundation pairing with sponsors recently. It *did* receive a lot of
