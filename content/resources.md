@@ -27,11 +27,11 @@ search libraries on
   short videos on various topics: inspecting a condition, basics of
   lisp's evaluation model,…
 * [Common Lisp Tutorials](https://www.youtube.com/playlist?list=PL2VAYZE_4wRIoHsU5cEBIxCYcbHzy4Ypj), of which [Emacs and Slime - useful keyboard shortcuts](https://www.youtube.com/watch?v=sBcPNr1CKKw&index=4&list=PL2VAYZE_4wRIoHsU5cEBIxCYcbHzy4Ypj)
-* [Common Lisp Study Group](https://www.youtube.com/channel/UCYg6qFXDE5SGT_YXhuJPU0A/videos) (long videos)
 * [Programming a message bus in Common Lisp](https://www.youtube.com/watch?v=CNFr7zIfyeM) - shows the interactive nature of lisp, good use of the debugger, test-driven development to shape the api, bordeaux-threads.
+* [Marco Baringer's SLIME Tutorial Video](https://www.youtube.com/watch?v=_B_4vhsmRRI) - a video showing Marco develop a package and explaining Slime and Lisp features, with many little important explanations (1 hour).
+* [Interactively fixing failing tests](https://www.youtube.com/watch?v=KsHxgP3SRTs) - very short video to showcase the interactive debugger and that we can re-compile a failing function and resume the execution from where it failed to see it finally pass.
 * [Web development in Emacs with Common Lisp and ClojureSCript](https://www.youtube.com/watch?v=bl8jQ2wRh6k) -
   building [Potato](https://github.com/cicakhq/potato), a Slack-like app.
-* [Programming a MessageBus in Common Lisp](https://www.youtube.com/watch?v=CNFr7zIfyeM)
 * Shinmera playlists:
   [Treehouse](https://www.youtube.com/playlist?list=PLkDl6Irujx9MtJPRRP5KBH40SGCenztPW)
   (game dev),
@@ -40,10 +40,10 @@ search libraries on
 * [Pushing pixels with Lisp](https://www.youtube.com/watch?v=82o5NeyZtvw), and by the same author:
  * [CEPL demo](https://www.youtube.com/watch?v=a2tTpjGOhjw&index=20&list=RDxzTH_ZqaFKI) - working with OpenGL
  * [Baggers' channels](https://www.youtube.com/channel/UCMV8p6Lb-bd6UZtTc_QD4zA).
+* [Common Lisp Study Group](https://www.youtube.com/channel/UCYg6qFXDE5SGT_YXhuJPU0A/videos) (long videos)
  * [Cando: computational chemistry with Common Lisp on LLVM with Jupyter notebooks](https://www.youtube.com/playlist?list=PLbl4KVdl9U3I3MhFWgauT0cz-x7SymZmn&disable_polymer=true)
 
 * [McClim interactive GUI demos](https://www.youtube.com/watch?v=XGmo0E_S46I). [Code examples](https://github.com/robert-strandh/McCLIM/blob/master/Examples/demodemo.lisp). Presentation of [Clim listener, Clim debugger, drawing objects into the GUI repl](https://www.youtube.com/watch?v=kfBmRsPRdGg).
-* [Interactively fixing failing tests](https://www.youtube.com/watch?v=KsHxgP3SRTs)
 * [videos of the European Lisp Symposium](https://www.youtube.com/channel/UC55S8D_44ge2cV10aQmxNVQ)
 
 and more on [Cliki](http://www.cliki.net/Lisp%20Videos).
