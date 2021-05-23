@@ -830,6 +830,10 @@ server, so new code is present but not running. It connects to the
 local swank server, loads the new code, stops and starts the app in a
 row.
 
+---
+
 <a href='https://ko-fi.com/K3K828W0V' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+<iframe src="https://github.com/sponsors/vindarel/card" title="Sponsor vindarel" height="225" width="600" style="border: 0;"></iframe>
 
 (yes that currently helps, thanks!)
