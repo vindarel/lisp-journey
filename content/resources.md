@@ -28,7 +28,7 @@ search libraries on
   lisp's evaluation model,…
 * [Common Lisp Tutorials](https://www.youtube.com/playlist?list=PL2VAYZE_4wRIoHsU5cEBIxCYcbHzy4Ypj), of which [Emacs and Slime - useful keyboard shortcuts](https://www.youtube.com/watch?v=sBcPNr1CKKw&index=4&list=PL2VAYZE_4wRIoHsU5cEBIxCYcbHzy4Ypj)
 * [Programming a message bus in Common Lisp](https://www.youtube.com/watch?v=CNFr7zIfyeM) - shows the interactive nature of lisp, good use of the debugger, test-driven development to shape the api, bordeaux-threads.
-* [Marco Baringer's SLIME Tutorial Video](https://www.youtube.com/watch?v=_B_4vhsmRRI) - a video showing Marco develop a package and explaining Slime and Lisp features, with many little important explanations (1 hour).
+* [Marco Baringer's SLIME Tutorial Video](https://www.youtube.com/watch?v=_B_4vhsmRRI) - a video showing Marco develop a package and explaining Slime and Lisp features, with many little important explanations (1 hour). It only has some rotten bits, for example it installs packages with asdf-install and not Quicklisp.
 * [Interactively fixing failing tests](https://www.youtube.com/watch?v=KsHxgP3SRTs) - very short video to showcase the interactive debugger and that we can re-compile a failing function and resume the execution from where it failed to see it finally pass.
 * [Web development in Emacs with Common Lisp and ClojureSCript](https://www.youtube.com/watch?v=bl8jQ2wRh6k) -
   building [Potato](https://github.com/cicakhq/potato), a Slack-like app.
