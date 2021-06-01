@@ -46,6 +46,8 @@ But yes again, it has not the modern vocabulary we expect
 and it seems abandonware (and its documentation is an old pdf paper
 but now hopefully this wiki is better).
 
+**edit 2021**: [GTWIWTG](https://github.com/cbeo/gtwiwtg) is a "generators" library similar in scope from Series, with modern idioms, but probably not as efficient. BTW, there are now lots of Series example snippets in the [Cookbook/iteration](https://lispcookbook.github.io/cl-cookbook/iteration.html) page.
+
 CL21 has an operator to compose functions: https://github.com/cl21/cl21/wiki/Language-Difference-between-CL21-and-Common-Lisp#function
 
 ### Threading macros (pipes)
@@ -76,7 +78,7 @@ I like anaphoric macros but I didn't find one ready to use in a library to write
 ```
 so than we can write
 ```common-lisp
-(mapcar (* it 2) '(2 3))
+(--map (* it 2) '(2 3))
 ```
 
 instead of `(mapcar (lambda (it) (* it 2) '(2 3)))`.
