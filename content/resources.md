@@ -74,3 +74,7 @@ and more on [Cliki](http://www.cliki.net/Lisp%20Videos).
 * http://www.sebity.com/projects.php (Snake, the Invaders,… with OpenGL)
 
 * [cl-snake](https://github.com/SahilKang/cl-snake) snake in the terminal
+
+* [Fruktorama](https://github.com/lisp-mirror/fruktorama), Tetris-like with fruits.
+
+![](https://camo.githubusercontent.com/f14f4bd34f1b41942c4dd9fdece3f7ea448e2f94f40fb040c7b03b230d6f3452/68747470733a2f2f6269746275636b65742e6f72672f50617261736974654e6574776f726b2f6672756b746f72616d61332d6c6973702d65646974696f6e2f7261772f306465613761623834326665306638616530336262636564356266316237636633353832343961392f73637265656e73686f74732f73637265656e73686f742d322e706e67)
