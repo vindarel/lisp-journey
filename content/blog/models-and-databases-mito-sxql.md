@@ -158,7 +158,7 @@ So a helper function:
 
 ~~~lisp
 (defun ensure-tables ()
-  (mapcar #'mito:ensure-table-exists '('user 'foo 'bar)))
+  (mapcar #'mito:ensure-table-exists '(user foo bar)))
 ~~~
 
 
