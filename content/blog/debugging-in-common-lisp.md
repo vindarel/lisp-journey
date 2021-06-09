@@ -221,12 +221,23 @@ and the backtrace. A few remarks:
 
 Usually your compiler will optimize things out and this will reduce
 the amount of information available to the debugger. For example
-sometimes we can't see intermediate variables of computations. We can
-change the optimization choices with:
+sometimes we can't see intermediate variables of computations. You might
+want to print a function argument (with `e` to "eval in frame", see
+below), but you keep getting a `Variable XYZ is unbound` error.
+
+To fix this, we have to change the optimization choices with `declaim`, at the beginning of the file:
 
     (declaim (optimize (speed 0) (space 0) (debug 3)))
 
-and recompile our code.
+or with `declare`, inside a `defun`:
+
+```lisp
+(defun my-fun (xyz)
+  (declare (optimize (debug 3)))
+  …)
+```
+
+and recompile the code. Now you should be able to see local variables such as`xyz`.
 
 
 ## Trace
