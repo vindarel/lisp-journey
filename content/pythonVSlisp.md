@@ -86,6 +86,9 @@ fail, develops it, and tests it, all quickly by interacting with the REPL.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CNFr7zIfyeM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+![Debugging a complex stacktrace in Python VS Common Lisp (author unknown)](/images/debugging-python-VS-lisp.png)
+
 ## Editing code
 
 *Python*: we edit code line by line, paragraph by paragraph. We can
