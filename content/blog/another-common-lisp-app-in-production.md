@@ -7,7 +7,7 @@ draft: false
 A quick post to celebrate the birth of another Common Lisp application
 running in production©. This time, it is not open source, but I can describe it.
 
-It is used by bookshops in France and Belgium to upload there catalogue to online
+It is used by bookshops in France and Belgium to upload their catalogue to online
 platforms. And no, they don't know, and don't need to know, the
 language it is implemented in!
 
@@ -23,7 +23,7 @@ with a stand-alone tool.
 
 That's it. One more!
 
-Another tool I am running connects to a SOAP service, shows data on a website (with Sentry configured in production), sells products with Stripe and sends emails with Sendgrid. And I (generally) update it while it runs by connecting to the Lisp REPL. Just throwing out buzzwords to you.
+Another tool I am running connects to a SOAP service, shows data on a website (with Sentry configured in production), sells products with Stripe (edit: it's postponed :/ ) and sends emails with Sendgrid. And I (generally) update it while it runs by connecting to the Lisp REPL. Just throwing out buzzwords to you.
 
 While I'm at it, let me stress one point, to answer in advance a kind
 of feedback I already had: no, the resulting application doesn't use
@@ -34,9 +34,10 @@ superpowers during development (by using the superior REPL, being able
 to build a binary and all that). In conclusion: there are **tons** of
 places where Lisp can be used for professional needs out there.
 
-Oh. In doing it, I built those two utilities:
+Oh. In doing it, I built those ~~two~~ three utilities:
 
+- [cl-sendgrid](https://github.com/vindarel/cl-sendgrid), a trivial interface to the Sendgrid API (to send emails).
 - [progressons](https://github.com/vindarel/progressons), a progress bar that holds on one line and works on the terminal as well as on Slime. It works for me©. My next goal is to make it output a prettier bar with unicode bars.
 - [termp](https://github.com/vindarel/termp), a trivial utility that checks if we are on a real or on a dumb terminal (by checking the `TERM` environment variable). So you can `quit` or `error` out.
 
-Two more Lisp repositories on Github !
+More Lisp repositories on Github !
