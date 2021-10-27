@@ -7,7 +7,7 @@ draft: false
 
 Turtl is a very well done, secure collaborative notebook web app.
 
-- https://turtlapp
+- https://turtlapp.com
 
 Its api backend is built in Common Lisp:
 
