@@ -1,6 +1,7 @@
 ---
 title: "I Now Work Professionally in Common Lisp O_o"
 date: 2019-05-20T18:48:31+02:00
+tags: ["companies",]
 draft: false
 ---
 

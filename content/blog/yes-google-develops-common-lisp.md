@@ -1,7 +1,7 @@
 ---
 title: "Yes Google Uses and Hacks on Common Lisp"
 date: 2020-03-02T20:47:32+01:00
-tags: ["google special tag", "sbcl",]
+tags: ["google special tag", "sbcl", "companies",]
 draft: false
 ---
 

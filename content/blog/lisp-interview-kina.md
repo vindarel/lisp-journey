@@ -1,6 +1,7 @@
 ---
 title: "Lisp Interview: questions to  Alex Nygren of Kina Knowledge, using Common Lisp extensively in their document processing stack"
 date: 2021-10-22T12:49:17+02:00
+tags: ["companies", "sbcl",]
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "State of the Common Lisp ecosystem, 2020  🎉"
 date: 2021-02-08T11:29:11+02:00
+tags: ["libraries",]
 draft: false
 ---
 
@@ -615,6 +616,11 @@ Rove or [Parachute](https://github.com/Shinmera/parachute) would be great altern
 **Further work**
 
 Integration with the CI services' advanced features such as Gitlab's auto DevOps.
+
+<!-- ## Libraries -->
+
+<!-- Not sure about where to put this, but I wanted to cite [generic-cl](https://github.com/alex-gutev/generic-cl/), a "generic function interface to standard Common Lisp functions". A common complain about Common Lisp is the number of equality predicates, and the fact that all core data structures are not based on the object system and, consequently, we can't define our own `=` operator for custom objects. This -->
+
 
 # Community
 

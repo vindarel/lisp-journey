@@ -1,6 +1,7 @@
 ---
 title: "Why is there no generic operators ?"
 date: 2017-04-14T16:27:44+02:00
+tags: ["tip", "libraries",]
 draft: false
 ---
 
