@@ -23,6 +23,8 @@ search libraries on
 
 ## Screencasts:
 
+Of course, see **[my Udemy Lisp course](https://www.udemy.com/course/common-lisp-programming/?referralCode=2F3D698BBC4326F94358)**!
+
 * [Little Bits of Lisp](https://www.youtube.com/playlist?list=PL2VAYZE_4wRJi_vgpjsH75kMhN4KsuzR_) -
   short videos on various topics: inspecting a condition, basics of
   lisp's evaluation model,…
