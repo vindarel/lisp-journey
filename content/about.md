@@ -1,6 +1,6 @@
 +++
 date = "2017-02-05T07:51:49+01:00"
-title = "Home"
+title = "About me"
 draft = false
 
 +++
@@ -10,18 +10,24 @@ started the blog when I was discovering the language and the
 ecosystem, wishing more people wrote about CL. Because Common Lisp ~~is~~ was
 the most hidden world I know.
 
-I now wrote tools, libraries and software, and I run a web app in
-production©.
+I now wrote tools, libraries and software, I run a web app in
+production©, and I am creating [videos on Youtube](https://www.youtube.com/channel/UC1l24uzOAt46O7F2NQhA4yw) and [a Common Lisp course on Udemy](https://www.udemy.com/course/common-lisp-programming/?referralCode=2F3D698BBC4326F94358)
 
 ---
 
-I write intensively about Common Lisp *on collaborative resources*. **My hidden plan is to make Common Lisp popular again**. For this, I contribute to the [Common Lisp Cookbook](https://github.com/LispCookbook/cl-cookbook/) (I am the main contributor, by far). I wrote about: CLOS, data structures, building executables, scripting, web scraping, debugging, error handling, testing, databases, GUI programming, web development, etc, and I added a theme, a sidebar and syntax highlighting. I also take time to maintain the [awesome-cl list](https://github.com/CodyReichert/awesome-cl/), an important resource in my eyes. I dig up, reference and sort Common Lisp libraries (and I still discover hidden gems three years after). I do community stuff for [Lisp Advocates](https://www.reddit.com/r/lispadvocates/) (not the creator).
+I write intensively about Common Lisp *on collaborative resources*. **My hidden plan is to make Common Lisp popular again**. For this, I contribute to the [Common Lisp Cookbook](https://github.com/LispCookbook/cl-cookbook/) (I am the main contributor, by far). I wrote about: CLOS, data structures, building executables, scripting, web scraping, debugging, error handling, testing, databases, GUI programming, web development, the LispWorks IDE etc, and I added a theme, a sidebar and syntax highlighting. I also take time to maintain the [awesome-cl list](https://github.com/CodyReichert/awesome-cl/), an important resource in my eyes. I dig up, reference and sort Common Lisp libraries (and I still discover hidden gems ~~three~~ five years after). I do community stuff for [Lisp Advocates](https://twitter.com/LispAdvocates) (not the creator).
 
-Now a newcomer has far more practical information for getting started than a few years ago. But there's still a lot to do, and I'd like to do more. You can thank me and encourage me by donations on the following platforms. As I currently don't have a fixed (nor big) income, that helps. Thanks!
+But I still want Common Lisp to be easier to learn. So I am creating this Lisp course in videos:
 
-- ko-fi: https://ko-fi.com/vindarel (exempt of charges)
-- liberapay: https://liberapay.com/vindarel/ (exempt of charges)
-- patreon: https://www.patreon.com/vindarel
+ 🎥 [Common Lisp programming: from novice to effective programmer](https://www.udemy.com/course/common-lisp-programming/?referralCode=2F3D698BBC4326F94358) ([on GitHub](https://github.com/vindarel/common-lisp-course-in-videos))
+
+I truly think it is the most effective way to learn CL! I sum up in 5-15 minutes videos what took me a long time to learn or simply discover (a longer time to admit).
+
+So now a newcomer has far more practical information for getting started than a few years ago. But there's still a lot to do. Besides purchasing or sharing my course, you can thank and encourage me by donations on the following platforms. As I currently don't have a fixed (nor big) income, that helps. Thanks!
+
+- GitHub sponsors: https://github.com/sponsors/vindarel/
+- ko-fi: https://ko-fi.com/vindarel
+- liberapay: https://liberapay.com/vindarel/
 
 <div>
 <br/>
@@ -35,6 +41,7 @@ libraries:
 - [cl-str](https://github.com/vindarel/cl-str/), that fixed my first frustration with CL
 - [CIEL](https://github.com/ciel-lang/CIEL) (in development)
 - [replic](https://github.com/vindarel/replic/), to help create a readline application in no time
+  - see how I use it in cl-torrents or in [lyrics-cli](https://github.com/vindarel/lyrics-cli), there is [one commit](https://github.com/vindarel/lyrics-cli/commit/0a75ae78a172b2aba427d2a5911d8034174c43fd#) that adds replic support.
 - [fuzzy-match](https://github.com/vindarel/fuzzy-match)
 - [cl-sendgrid](https://github.com/vindarel/cl-sendgrid), to send emails easily with the Sendgrid API.
 - [progressons](https://github.com/vindarel/progressons) - a progress bar.
@@ -43,28 +50,35 @@ libraries:
 
 software:
 
- - [Abelujo](https://gitlab.com/vindarel/abelujo/), a free software for bookshops (Python)
  - [ABStock](https://github.com/vindarel/ABStock), a catalogue of books (and other products)
  - [OpenBookStore](https://github.com/OpenBookStore/openbookstore), a personal book manager, aiming to replace Abelujo
  - [cl-torrents](https://github.com/vindarel/cl-torrents), with an experimental [Weblocks front-end](https://github.com/vindarel/cl-torrents-web)
+ <!-- - [Abelujo](https://gitlab.com/vindarel/abelujo/), a free software for bookshops (Python) -->
 
 tools:
 
 - [colisper](https://github.com/vindarel/colisper), an interface to Comby, for syntactic code checking and refactoring of Lisp code.
 - [indent-tools](https://github.com/vindarel/indent-tools) (emacs package)
 - [print-licences](https://github.com/vindarel/print-licenses)
+- a simple tool to fetch the status of your Gitlab pipelines: [pipelines-viewer](https://github.com/vindarel/pipelines-viewer) (just a demo on how to access third-party APIs and how to build a binary, really)
+<!-- - [slime-load-this-project](https://github.com/vindarel/slime-load-this-project), an emacs package that wants to ease the … -->
+- [format-colors](https://github.com/vindarel/format-colors), a set of simple `format` directives to print colored text
 
 project skeletons and demos:
 
+- [cl-cookieproject](https://github.com/vindarel/cl-cookieproject)
+  - check out this video: 🎥 [How to create, run, build and load a new Common Lisp project](https://github.com/vindarel/cl-cookieproject)
+  - the companion skeleton for web apps: [cl-cookieweb](https://github.com/vindarel/cl-cookieweb)
 - [lisp-web-template-productlist](https://github.com/vindarel/lisp-web-template-productlist): Hunchentoot + easy-routes + Djula templates + Bulma CSS + a Makefile to build the project
-- [lisp-web-live-reload-example](https://github.com/vindarel/lisp-web-live-reload-example): an example of how image-based development is useful. Learn to interact with a running website, including with a remote one with Swank.
+- [demo-web-live-reload](https://github.com/vindarel/demo-web-live-reload): an example of how image-based development is useful. Learn to interact with a running website, including with a remote one with Swank.
+- [demo-ISSR-djula](https://github.com/vindarel/demo-ISSR-djula) - a demo on how to build a dynamic web app without JavaScript, but with ISSR, Interactive Server-Side Rendering (and Djula templates).
 - [Weblocks-todomvc](https://github.com/vindarel/weblocks-todomvc)
 
 and others:
 
 - the [lisp-maintainers](https://github.com/vindarel/lisp-maintainers) list.
 - the funny [Hacker Typer in Lisp](https://github.com/vindarel/Hacker-Typer).
-- the [list of languages implemented in Lisp](https://github.com/vindarel/Hacker-Typer).
+- the [list of languages implemented in Lisp](https://github.com/vindarel/list-of-languages-implemented-in-lisp).
 
 I contribute to awesome projects such as:
 
