@@ -20,12 +20,6 @@ identifier             = "blog"
 url                    = "/blog/"
 
 [[menu.main]]
-name                   = "Lisp software"
-weight                 = -110
-identifier             = "software"
-url                    = "/software/"
-
-[[menu.main]]
 name                   = "Web dev"
 weight                 = -108
 identifier             = "web-dev"
@@ -44,10 +38,17 @@ identifier             = "resources"
 url                    = "/resources/"
 
 [[menu.main]]
-name                   = "Who ?"
+name                   = "Companies?"
 weight                 = -100
 identifier             = "who"
 url                    = "/who/"
+
+[[menu.main]]
+name                   = "Software"
+weight                 = -50
+identifier             = "software"
+url                    = "/software/"
+
 
 [[menu.main]]
 name                   = "About"
